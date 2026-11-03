@@ -333,6 +333,7 @@
     '  background:rgba(201,100,66,.10)}' +
     '.ring{position:absolute;inset:0;pointer-events:none;border:1.5px dashed currentColor;' +
     '  opacity:.35;transition:border-color .12s,opacity .12s}' +
+    ':host(:not([data-over])) .ring{visibility:hidden}' +
     ':host([data-over]) .ring{border-color:#c96442;opacity:1}' +
     ':host([data-filled]) .ring{display:none}' +
     // Controls overlay INSIDE the frame, pinned to the top-right corner, so

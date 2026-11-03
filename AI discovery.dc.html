@@ -27,15 +27,18 @@ a:hover{opacity:.7}
       <div style="{{ navRowStyle }}">
         <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
         <a href="./Projects.dc.html" style="{{ navStyle }}">PROJECTS</a>
-        <a href="./AI discovery.dc.html" style="{{ navActiveStyle }}">AI DISCOVERY</a>
         <a href="./CV.dc.html" style="{{ navStyle }}">CV</a>
         <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
       </div>
     </div>
     <div style="{{ bandCopyStyle }}">
       <h1 style="{{ titleStyle }}">AI discovery</h1>
-      <p style="{{ leadStyle }}">Experiments where I use AI as a design material - prototyping faster, testing interaction ideas and seeing where it helps a product and where it gets in the way.</p>
+      <p style="{{ leadStyle }}">A learning project in AI-native design - step by step, from information architecture and user flows to a design system, final screens and a consistency audit, using Figma MCP and AI agents along the way.</p>
     </div>
+  </div>
+
+  <div style="max-width:1440px; margin:0 auto; box-sizing:border-box; padding:96px 80px 0">
+    <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-style:italic; font-size:52px; line-height:105%; color:rgb(244,240,232); text-wrap:balance">Designing an app for unfinished projects</h2>
   </div>
 
   <div style="{{ gridStyle }}">
@@ -46,7 +49,6 @@ a:hover{opacity:.7}
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
           <span style="{{ item.nameStyle }}">{{ item.name }}</span>
-          <span style="{{ item.metaStyle }}">{{ item.meta }}</span>
         </div>
       </a>
     </sc-for>
@@ -63,7 +65,7 @@ const MOODS = {
 };
 
 const ITEMS = [
-  { slotId: "ai1", name: "Project name", meta: "AI experiment · Prototype", placeholder: "AI experiment" },
+  { slotId: "ai1", name: "1. Sitemap and user flow in FigJam via agent", meta: "Figma MCP · FigJam", placeholder: "Sitemap and user flow" },
   { slotId: "ai2", name: "Project name", meta: "AI experiment · Prototype", placeholder: "AI experiment" },
   { slotId: "ai3", name: "Project name", meta: "AI experiment · Prototype", placeholder: "AI experiment" },
   { slotId: "ai4", name: "Project name", meta: "AI experiment · Prototype", placeholder: "AI experiment" },
@@ -159,7 +161,7 @@ class Component extends DCLogic {
       titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 68, lineHeight: "100%", color: m.bandInk },
       leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "150%", color: m.bandInk, opacity: 0.72 },
       gridStyle: {
-        maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "96px 80px 200px",
+        maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "56px 80px 200px",
         display: "grid", gridTemplateColumns: "repeat(" + cols + ", minmax(0, 1fr))", columnGap: 40, rowGap: 72,
       },
     };
