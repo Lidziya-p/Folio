@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;padding:0;background:rgb(254,249,241)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ heroStyle }}">
+    <sc-if value="{{ showHeroImage }}" hint-placeholder-val="{{ true }}">
+      <div style="{{ heroMediaStyle }}">
+        <image-slot id="hero" shape="rect" fit="cover" src="./assets/hero.jpg" placeholder="Drop a hero image"></image-slot>
+      </div>
+      <div style="{{ heroScrimStyle }}"></div>
+    </sc-if>
+    <div style="{{ headerStyle }}">
+      <span style="{{ logoStyle }}">Lidziya Piatrova</span>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navStyle }}">
+        <a href="#" style="{{ navLinkStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navLinkStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:20px;line-height:44px;white-space:nowrap;color:rgb(255,255,255)">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navLinkStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navLinkStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <h1 style="{{ headlineStyle }}">Hello! I am an award-winning designer with 12 years of experience and a master degree in Interaction design.</h1>
+  </div>
+
+  <div id="projects" style="{{ projectsStyle }}">
+    <sc-for list="{{ groups }}" as="group" hint-placeholder-count="3">
+      <div style="{{ groupStyle }}">
+        <div data-reveal="head" style="width:100%;display:flex;flex-direction:row;gap:32px;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+          <h2 style="{{ group.titleStyle }}">{{ group.title }}</h2>
+          <a href="./Projects.dc.html" style="{{ allLinkStyle }}">All projects →</a>
+        </div>
+        <div style="{{ group.rowStyle }}">
+          <sc-for list="{{ group.items }}" as="item" hint-placeholder-count="2">
+            <a href="{{ item.href }}" data-reveal="card" style="{{ item.wrapStyle }}">
+              <div style="{{ item.mediaStyle }}">
+                <image-slot id="{{ item.slotId }}" shape="rect" fit="cover" src="{{ item.src }}" placeholder="{{ item.placeholder }}"></image-slot>
+                <sc-if value="{{ item.badgeCircles }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;left:32px;top:32px;width:231px;height:115px;pointer-events:none">
+                    <div style="position:absolute;left:0;top:0;width:115.159px;height:115px;border-radius:50%;background:rgb(255,255,255)"></div>
+                    <div style="{{ item.badgeDotStyle }}"></div>
+                    <img src="./assets/kuldmuna.svg" alt="Kuld Muna ’23" style="position:absolute;left:132.811px;top:19.176px;width:96.131px;height:82.024px">
+                  </div>
+                </sc-if>
+                <sc-if value="{{ item.badgeUnion }}" hint-placeholder-val="{{ false }}">
+                  <img src="./assets/union.svg" alt="Kuld Muna shortlist" style="position:absolute;left:52px;top:52px;width:158.708px;height:74.49px;pointer-events:none">
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+                <span style="{{ item.nameStyle }}">{{ item.name }}</span>
+                <span style="{{ item.descStyle }}">{{ item.desc }}</span>
+              </div>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cream editorial&quot;,&quot;Ink gallery&quot;,&quot;Acid studio&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;rhythm&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Even pairs&quot;,&quot;Editorial offset&quot;,&quot;Full-bleed stack&quot;],&quot;default&quot;:&quot;Even pairs&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;typeVoice&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Serif italic&quot;,&quot;Grotesk caps&quot;],&quot;default&quot;:&quot;Serif italic&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Split right&quot;,&quot;Full bleed&quot;,&quot;Solid - no image&quot;],&quot;default&quot;:&quot;Solid - no image&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", hero: "rgb(27,28,23)", card: "rgb(54,54,54)", accent: "rgb(234,225,10)", heroInk: "rgb(254,249,241)", frame: "rgb(254,249,241)" },
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", hero: "rgb(11,11,10)", card: "rgb(43,43,40)", accent: "rgb(214,160,110)", heroInk: "rgb(244,240,232)", frame: "rgb(11,11,10)" },
+  "Acid studio": { page: "rgb(234,225,10)", ink: "rgb(20,20,18)", hero: "rgb(20,20,18)", card: "rgb(20,20,18)", accent: "rgb(234,225,10)", heroInk: "rgb(234,225,10)", frame: "rgb(234,225,10)" },
+};
+
+const DATA = [
+  { title: "Awards and nominations", items: [
+    { slotId: "p1-home", name: "Iglucraft", desc: "Estonian hand-crafted saunas", placeholder: "Iglucraft - project image", src: "./assets/iglucraft-home.png", href: "./Iglucraft.dc.html" },
+    { slotId: "p2-home", name: "Jõekääru Linnak", desc: "Real estate development project south of Tallinn, Estonia.", placeholder: "Jõekääru Linnak - project image", href: "./Joekaaru Linnak.dc.html", src: "./assets/joekaaru-home.png" } ] },
+  { title: "Apps", items: [
+    { slotId: "p3", name: "Steed", desc: "Real-time health and performance insights for horse owners, trainers and breeders", placeholder: "Steed - app image", href: "./Steed.dc.html", src: "./assets/steed-cover.png" },
+    { slotId: "p4", name: "Spotify", desc: "Concept project presented at Spotify HQ", placeholder: "Spotify - app image", href: "./Spotify.dc.html", src: "./assets/spotify-cover.png" } ] },
+  { title: "Platforms", items: [
+    { slotId: "p5", name: "Warmeston", desc: "Business management platform for a wood pellet manufacturer", placeholder: "Warmeston - platform image", href: "./Warmeston.dc.html", src: "./assets/warmeston-cover@2x.png" },
+    { slotId: "p6", name: "PXL", desc: "Callsheet platform for film production teams", placeholder: "PXL - platform image", href: "./PXL.dc.html", src: "./assets/pxl-cover.png" } ] },
+];
+
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1440 };
+  componentDidMount() {
+    this.mountReveal();
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+  }
+  componentDidUpdate() {
+    const mode = this.props.reveal ?? "Fade up";
+    if (this._reveal && mode !== this._mode) {
+      this._mode = mode;
+      this._reveal.update({ mode });
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    if (this._reveal) this._reveal.destroy();
+  }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._mode = this.props.reveal ?? "Fade up";
+    this._reveal = new Reveal(root, { mode: this._mode });
+  }
+  renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Cream editorial"];
+    const voice = this.props.typeVoice ?? "Serif italic";
+    const rhythm = this.props.rhythm ?? "Even pairs";
+    const layout = this.props.heroLayout ?? "Solid - no image";
+    const serif = voice === "Serif italic";
+    const stack = rhythm === "Full-bleed stack";
+    const offset = rhythm === "Editorial offset";
+    const fullHero = layout === "Full bleed";
+    const mob = this.state.w <= 720;
+    const tab = !mob && this.state.w <= 1100;
+
+    const display = (size, color) => serif
+      ? { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: size, lineHeight: "100%", letterSpacing: "normal", textTransform: "none", color }
+      : { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontStyle: "normal", fontSize: Math.round(size * 0.84), lineHeight: "94%", letterSpacing: "-0.03em", textTransform: "uppercase", color };
+
+    const groups = DATA.map((g, gi) => ({
+      title: g.title,
+      titleStyle: Object.assign({ margin: 0 }, display(mob ? 42 : tab ? 56 : 68, m.ink)),
+      rowStyle: {
+        display: "flex",
+        flexDirection: stack ? "column" : "row",
+        gap: mob ? 56 : stack ? 96 : 40,
+        alignItems: "flex-start",
+        flexWrap: stack ? "nowrap" : "wrap",
+        width: "100%",
+      },
+      items: g.items.map((it, i) => {
+        const lead = offset && i === 0;
+        const trail = offset && i === 1;
+        return Object.assign({ href: "./Projects.dc.html" }, it, {
+          badgeCircles: it.badge === "circles",
+          badgeUnion: it.badge === "union",
+          badgeDotStyle: { position: "absolute", left: 48.381, top: 17.692, width: 49.062, height: 48.994, borderRadius: "50%", background: m.accent },
+          wrapStyle: {
+            flex: mob ? "1 1 100%" : stack ? "1 1 auto" : lead ? "1.6 1 520px" : trail ? "1 1 360px" : "1 1 420px",
+            width: stack ? "100%" : "auto",
+            minWidth: 0,
+            marginTop: trail && !mob ? 112 : 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: mob ? 20 : 34,
+            alignItems: "flex-start",
+          },
+          mediaStyle: {
+            position: "relative",
+            width: "100%",
+            height: mob ? "auto" : stack ? 640 : lead ? 520 : 400,
+            aspectRatio: mob ? "16 / 10" : "auto",
+            borderRadius: stack ? 0 : 12,
+            overflow: "hidden",
+            background: m.card,
+            color: m.page,
+          },
+          nameStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: mob ? 26 : 32, lineHeight: "100%", color: m.ink },
+          descStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: mob ? 16 : 18, lineHeight: "130%", color: m.ink, opacity: 0.78, maxWidth: 520 },
+        });
+      }),
+    }));
+
+    const open = mob && this.state.menuOpen;
+    const ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    return {
+      groups,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      burgerStyle: { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: open ? "fixed" : "relative", top: open ? 20 : "auto", right: open ? 16 : "auto", zIndex: 60 },
+      burgerLine1: Object.assign({}, ln, open ? { transform: "translateY(8px) rotate(45deg)" } : {}),
+      burgerLine2: Object.assign({}, ln, open ? { opacity: 0 } : {}),
+      burgerLine3: Object.assign({}, ln, open ? { transform: "translateY(-8px) rotate(-45deg)" } : {}),
+      headerStyle: mob
+        ? { position: "absolute", left: 0, top: 0, right: 0, display: "flex", flexDirection: "row", gap: 12, padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", boxSizing: "border-box", zIndex: 2 }
+        : { position: "absolute", left: 0, top: 0, right: 0, height: 126, display: "flex", flexDirection: "row", padding: "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", boxSizing: "border-box", pointerEvents: "none", zIndex: 2 },
+      navStyle: mob
+        ? (open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" })
+        : { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 40, alignItems: "flex-start", pointerEvents: "auto" },
+      navLinkStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: mob ? 34 : 20, lineHeight: mob ? "60px" : "44px", whiteSpace: "nowrap", color: "rgb(255,255,255)" },
+      groupStyle: { width: "100%", display: "flex", flexDirection: "column", gap: mob ? 28 : 44, alignItems: "flex-start" },
+      pageStyle: { width: "100%", background: m.page },
+      allLinkStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.04em", textTransform: "uppercase", whiteSpace: "nowrap", color: m.ink, opacity: 0.72, paddingBottom: 6, borderBottom: "1px solid " + m.ink },
+      heroStyle: {
+        position: "relative", width: "100%", minHeight: mob ? 560 : 620, overflow: "hidden", background: m.hero, display: "flex", alignItems: "center", justifyContent: "center", boxSizing: "border-box", padding: mob ? "170px 24px 72px" : tab ? "160px 48px 120px" : "160px 81px 120px",
+        boxShadow: mob ? "none" : "inset 16px 0 0 0 " + m.frame + ",inset -16px 0 0 0 " + m.frame + ",inset 0 16px 0 0 " + m.frame,
+      },
+      showHeroImage: layout !== "Solid - no image",
+      heroMediaStyle: {
+        position: "absolute", left: fullHero ? 0 : "50%", right: 0,
+        top: fullHero ? 0 : -8, bottom: fullHero ? 0 : -235,
+        filter: this.props.mood === "Acid studio" ? "grayscale(1) contrast(1.1)" : "none",
+      },
+      heroScrimStyle: {
+        position: "absolute", inset: 0, pointerEvents: "none",
+        background: fullHero
+          ? "linear-gradient(90deg," + m.hero + " 8%, rgba(0,0,0,0) 72%)"
+          : "linear-gradient(90deg," + m.hero + " 42%, rgba(0,0,0,0) 66%)",
+      },
+      logoStyle: { fontFamily: serif ? "'Instrument Serif',serif" : "'Cinzel Decorative',serif", fontWeight: 400, fontSize: mob ? 28 : 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.heroInk },
+      headlineStyle: Object.assign({ position: "relative", maxWidth: 1100, margin: 0, textWrap: "balance", textAlign: "center" }, display(mob ? 40 : tab ? 56 : 72, m.heroInk)),
+      projectsStyle: {
+        maxWidth: stack ? 1600 : 1440, margin: "0 auto", boxSizing: "border-box",
+        padding: mob ? "80px 20px 120px" : tab ? "120px 40px 160px" : stack ? "200px 40px 200px" : "148px 80px 200px",
+        display: "flex", flexDirection: "column", gap: mob ? 88 : stack ? 200 : 148, alignItems: "flex-start",
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

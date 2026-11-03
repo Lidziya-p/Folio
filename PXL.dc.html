@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;padding:0;background:rgb(11,11,10)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ bandStyle }}">
+    <div style="{{ headerRowStyle }}">
+      <a href="./Homepage.dc.html" style="{{ logoStyle }}">Lidziya Piatrova</a>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navRowStyle }}">
+        <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navActiveStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="{{ navStyle }}">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <div style="{{ bandCopyStyle }}">
+      <a href="./Projects.dc.html" style="{{ backStyle }}">&larr; Back to all projects</a>
+      <h1 style="{{ titleStyle }}">PXL</h1>
+      <p style="{{ leadStyle }}">PXL is a platform designed to support film production teams during film shooting. It allows production teams to create and manage callsheets, send them to everyone involved in filming that day, and review timecards of actors and crew members. The platform helps teams coordinate people and keep essential production information organised and accessible.</p>
+      <div style="{{ factsStyle }}">
+        <sc-for list="{{ facts }}" as="fact" hint-placeholder-count="3">
+          <div style="{{ factStyle }}">
+            <span style="{{ factLabelStyle }}">{{ fact.label }}</span>
+            <span style="{{ factValueStyle }}">{{ fact.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="{{ bodyStyle }}">
+
+    <div data-reveal="shot">
+      <img src="./assets/pxl-hero.png" alt="PXL platform overview" style="{{ fullImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Flexible table</h2>
+      <p style="{{ bodyCopyStyle }}">The main and most important function of PXL is creating callsheets for film production. A callsheet is essentially a large table created for each project that can be accessed by multiple collaborators. It works as a schedule that allows everyone involved to see when they need to be present on set each day.</p>
+      <p style="{{ bodyCopyStyle }}">It is also used to check whether people involved in the shoot have submitted their timecards on time, which is important for making sure they get paid on time.</p>
+      <p style="{{ bodyCopyStyle }}">I designed the table to be flexible, with a fixed header and collapsible additional information columns, such as status and rate, giving the calendar section more space when needed. Submitted timecards are indicated by a green calendar icon in the corner of each day cell, while a red icon indicates that a timecard was not submitted on time.</p>
+      <p style="{{ bodyCopyStyle }}">To make working with the table more efficient, I added bulk actions in a fixed floating bar that could act on multiple items at once.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+      <div style="{{ sliderStageStyle }}">
+        <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
+          <div style="{{ slide.style }}">
+            <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+              <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+            </sc-if>
+            <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="{{ sliderBarStyle }}">
+        <button type="button" onClick="{{ prevSlide }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+        <span style="{{ counterStyle }}">{{ counter }}</span>
+        <button type="button" onClick="{{ nextSlide }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Many actions, one table</h2>
+      <p style="{{ bodyCopyStyle }}">The table is heavily packed with actions related to team members. Users can edit their role, status, rate and other details, as well as indicate whether a person is working on set on a particular day.</p>
+      <p style="{{ bodyCopyStyle }}">The statuses can vary between projects, and it was impossible to anticipate every possible case, so I added an option to create custom statuses when the required one is not available.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+      <div style="{{ stage2Style }}">
+        <sc-for list="{{ slides2 }}" as="slide" hint-placeholder-count="3">
+          <div style="{{ slide.style }}">
+            <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+              <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+            </sc-if>
+            <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="{{ sliderBarStyle }}">
+        <button type="button" onClick="{{ prevSlide2 }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+        <span style="{{ counterStyle }}">{{ counter2 }}</span>
+        <button type="button" onClick="{{ nextSlide2 }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Calendar with a challenge</h2>
+      <p style="{{ bodyCopyStyle }}">The calendar was visually challenging because I had to find a clear way to show different stages of a project, as well as substages that could be added within each stage. This was important because multiple teams could be working simultaneously during the same stage.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+      <div style="{{ stage3Style }}">
+        <sc-for list="{{ slides3 }}" as="slide" hint-placeholder-count="3">
+          <div style="{{ slide.style }}">
+            <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+              <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+            </sc-if>
+            <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="{{ sliderBarStyle }}">
+        <button type="button" onClick="{{ prevSlide3 }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+        <span style="{{ counterStyle }}">{{ counter3 }}</span>
+        <button type="button" onClick="{{ nextSlide3 }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">A calendar per person</h2>
+      <p style="{{ bodyCopyStyle }}">An individual calendar for each team member can be seen in their profile. This way, a user can get a full overview of when that person was present on set and which timecards they submitted.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ shotWrapStyle }}">
+      <img src="./assets/pxl-profile.png" alt="Team member profile with individual calendar" style="{{ profileImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Callsheets and production reports</h2>
+      <p style="{{ bodyCopyStyle }}">All generated callsheets and reports are kept separately so that everyone involved in managing a film shoot can get a clear overview of them and their statuses. Callsheets are generated before each shooting day and sent out to all the team members who need to be present on set, including the time they are expected to arrive.</p>
+      <p style="{{ bodyCopyStyle }}">Reports are finalised at the end of the day, and include extra fields for the time each team member left work and took their lunch break. All the data can be edited individually or entered using bulk actions.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+      <div style="{{ stage4Style }}">
+        <sc-for list="{{ slides4 }}" as="slide" hint-placeholder-count="3">
+          <div style="{{ slide.style }}">
+            <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+              <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+            </sc-if>
+            <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="{{ sliderBarStyle }}">
+        <button type="button" onClick="{{ prevSlide4 }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+        <span style="{{ counterStyle }}">{{ counter4 }}</span>
+        <button type="button" onClick="{{ nextSlide4 }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Time cards</h2>
+      <p style="{{ bodyCopyStyle }}">Cast and crew members can log in and get an overview of their timecards. Because of the specifics of their work, timecards are available on both desktop and mobile.</p>
+      <p style="{{ bodyCopyStyle }}">When a user fills in a timecard for the first time, they have to provide their contact information and legal details, which are then stored in their account. They don’t have to enter their work hours because the data is automatically taken from callsheets and production reports, but they can still review and edit it if needed.</p>
+      <p style="{{ bodyCopyStyle }}">If they used a car for work or rented something for the production, they can add the relevant information and receipts to the timecard to request reimbursement.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ shotWrapStyle }}">
+      <img src="./assets/pxl-timecards.png" alt="Timecard overview for cast and crew" style="{{ profileImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Designed for the set</h2>
+      <p style="{{ bodyCopyStyle }}">I designed mobile versions of the list and detail pages because callsheets and reports had to be viewed and edited on the go - at shooting locations, in public transport or other public places.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ mobileWrapStyle }}">
+      <img src="./assets/pxl-mobile.png" alt="Mobile callsheet and timecard screens" style="{{ mobileImgStyle }}">
+    </div>
+
+    <div style="{{ nextStyle }}">
+      <h2 data-reveal="head" style="{{ nextTitleStyle }}">Discover more</h2>
+      <div style="{{ pairStyle }}">
+        <sc-for list="{{ nextItems }}" as="item" hint-placeholder-count="2">
+          <a href="{{ item.href }}" data-reveal="card" style="{{ nextCardStyle }}">
+            <div style="{{ nextMediaStyle }}">
+              <image-slot id="{{ item.slotId }}" shape="rect" fit="cover" src="{{ item.src }}" placeholder="{{ item.placeholder }}"></image-slot>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+              <span style="{{ nextNameStyle }}">{{ item.name }}</span>
+              <span style="{{ nextMetaStyle }}">{{ item.meta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cream editorial&quot;,&quot;Ink gallery&quot;,&quot;Acid studio&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", band: "rgb(27,28,23)", bandInk: "rgb(254,249,241)", rule: "rgba(27,27,27,0.14)", shot: "rgb(240,234,224)" },
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", band: "rgb(11,11,10)", bandInk: "rgb(244,240,232)", rule: "rgba(244,240,232,0.16)", shot: "rgb(24,24,22)" },
+  "Acid studio": { page: "rgb(234,225,10)", ink: "rgb(20,20,18)", band: "rgb(20,20,18)", bandInk: "rgb(234,225,10)", rule: "rgba(20,20,18,0.2)", shot: "rgb(20,20,18)" },
+};
+
+const FACTS = [
+  { label: "Year", value: "2024" },
+  { label: "Production", value: "Client project" },
+  { label: "Type of work", value: "UI, UX" },
+];
+
+const SLIDES = [
+  { src: "./assets/pxl-table-1.png", alt: "Callsheet table - default view" },
+  { src: "./assets/pxl-table-2.png", alt: "Callsheet table - fixed header while scrolling" },
+  { src: "./assets/pxl-table-3.png", alt: "Callsheet table - collapsed rate and status columns" },
+  { src: "./assets/pxl-table-4.png", alt: "Callsheet table - bulk actions on selected team members" },
+];
+
+const SLIDES2 = [
+  { src: "./assets/pxl-act-1.png", alt: "Edit role dialog" },
+  { src: "./assets/pxl-act-2.png", alt: "Select status dialog" },
+  { src: "./assets/pxl-act-3.png", alt: "Edit status with custom colour" },
+  { src: "./assets/pxl-act-4.png", alt: "Edit rate dialog" },
+  { src: "./assets/pxl-act-5.png", alt: "Day cell status selection" },
+];
+
+const SLIDES3 = [
+  { src: "./assets/pxl-cal-1.png", alt: "Create stage dialog with stage colours" },
+  { src: "./assets/pxl-cal-2.png", alt: "Calendar with a first stage added" },
+  { src: "./assets/pxl-cal-3.png", alt: "Calendar with multiple stages across the shoot" },
+  { src: "./assets/pxl-cal-4.png", alt: "Calendar with substages inside stages" },
+];
+
+const SLIDES4 = [
+  { src: "./assets/pxl-cs-1.png", alt: "Callsheets and production reports list" },
+  { src: "./assets/pxl-cs-2.png", alt: "Completed production report detail" },
+  { src: "./assets/pxl-cs-3.png", alt: "Callsheet detail with call times and statuses" },
+  { src: "./assets/pxl-cs-4.png", alt: "Editing a callsheet before sending" },
+];
+
+class Component extends DCLogic {
+  state = { slide: 0, slide2: 0, slide3: 0, slide4: 0 };
+  componentDidMount() { this.mountReveal(); }
+  componentWillUnmount() { if (this._reveal) this._reveal.destroy(); }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._reveal = new Reveal(root, { mode: this.props.reveal ?? "Fade up" });
+  }
+
+  __mob(v) {
+    if (!this._rz && typeof window !== "undefined") { this._rz = () => this.forceUpdate(); window.addEventListener("resize", this._rz); }
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const mob = w <= 720, tab = !mob && w <= 1100;
+    v.headerRowStyle = { display: "flex", flexDirection: mob ? "column" : "row", padding: mob ? "24px 20px 8px" : "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: mob ? 12 : 24 };
+    v.navRowStyle = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: mob ? 20 : 40, alignItems: "flex-start" };
+    const __open = mob && this._menuOpen;
+    v.toggleMenu = () => { this._menuOpen = !this._menuOpen; this.forceUpdate(); };
+    const __ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    v.burgerStyle = { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: __open ? "fixed" : "relative", top: __open ? 20 : "auto", right: __open ? 16 : "auto", zIndex: 60 };
+    v.burgerLine1 = Object.assign({}, __ln, __open ? { transform: "translateY(8px) rotate(45deg)" } : {});
+    v.burgerLine2 = Object.assign({}, __ln, __open ? { opacity: 0 } : {});
+    v.burgerLine3 = Object.assign({}, __ln, __open ? { transform: "translateY(-8px) rotate(-45deg)" } : {});
+    if (mob) {
+      v.headerRowStyle = { display: "flex", flexDirection: "row", padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", gap: 12 };
+      v.navRowStyle = __open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" };
+    }
+    if (!mob && !tab) return v;
+    const P = mob ? {
+      bandStyle: { boxShadow: "none" },
+      bandCopyStyle: { padding: "16px 20px 48px", gap: 20 },
+      logoStyle: { fontSize: 28 },
+      navStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" }, navActiveStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" },
+      titleStyle: { fontSize: 52 },
+      leadStyle: { fontSize: 18 },
+      factsStyle: { gap: "20px 40px" },
+      factValueStyle: { fontSize: 22 },
+      visitStyle: { padding: "14px 24px", fontSize: 14 },
+      bodyStyle: { padding: "24px 20px 120px", gap: 24 },
+      textBlockStyle: { padding: "40px 0 12px" },
+      h2Style: { fontSize: 34 },
+      bodyCopyStyle: { fontSize: 16 },
+      featTitleStyle: { fontSize: 24 },
+      rowStyle: { gap: 32, padding: "24px 0" },
+      shotColStyle: { flex: "1 1 100%" }, copyColStyle: { flex: "1 1 100%" },
+      pairStyle: { gap: 24 },
+      nextStyle: { paddingTop: 48, gap: 28 },
+      nextTitleStyle: { fontSize: 36 },
+      nextCardStyle: { flex: "1 1 100%" },
+      nextNameStyle: { fontSize: 26 },
+      nextMetaStyle: { fontSize: 16 },
+    } : {
+      bandCopyStyle: { padding: "32px 40px 56px" },
+      titleStyle: { fontSize: 72 },
+      leadStyle: { fontSize: 21 },
+      bodyStyle: { padding: "48px 40px 160px" },
+      h2Style: { fontSize: 40 },
+    };
+    for (const k in P) if (v[k] && typeof v[k] === "object") v[k] = Object.assign({}, v[k], P[k]);
+    return v;
+  }
+  renderVals() { return this.__mob(this.__renderVals()); }
+  __renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Ink gallery"];
+    const nav = { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 20, lineHeight: "44px", whiteSpace: "nowrap", color: m.bandInk };
+
+    const i = this.state.slide;
+    const pad = n => String(n).padStart(2, "0");
+    const go = d => () => this.setState(s => ({ slide: (s.slide + d + SLIDES.length) % SLIDES.length }));
+
+    return {
+      facts: FACTS,
+      slides: SLIDES.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === i ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === i ? "auto" : "none", color: m.ink },
+      })),
+      slideImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "contain", objectPosition: "top center" },
+      counter: pad(i + 1) + " / " + pad(SLIDES.length),
+      prevSlide: go(-1),
+      nextSlide: go(1),
+      slides2: SLIDES2.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === this.state.slide2 ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === this.state.slide2 ? "auto" : "none", color: m.ink },
+      })),
+      counter2: pad(this.state.slide2 + 1) + " / " + pad(SLIDES2.length),
+      prevSlide2: () => this.setState(s => ({ slide2: (s.slide2 - 1 + SLIDES2.length) % SLIDES2.length })),
+      nextSlide2: () => this.setState(s => ({ slide2: (s.slide2 + 1) % SLIDES2.length })),
+      stage2Style: { position: "relative", width: "100%", aspectRatio: "1440 / 400", borderRadius: 4, overflow: "hidden", background: "transparent" },
+      slides3: SLIDES3.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === this.state.slide3 ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === this.state.slide3 ? "auto" : "none", color: m.ink },
+      })),
+      counter3: pad(this.state.slide3 + 1) + " / " + pad(SLIDES3.length),
+      prevSlide3: () => this.setState(s => ({ slide3: (s.slide3 - 1 + SLIDES3.length) % SLIDES3.length })),
+      nextSlide3: () => this.setState(s => ({ slide3: (s.slide3 + 1) % SLIDES3.length })),
+      stage3Style: { position: "relative", width: "100%", maxWidth: 868, margin: "0 auto", aspectRatio: "868 / 360", borderRadius: 4, overflow: "hidden", background: "transparent" },
+      slides4: SLIDES4.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === this.state.slide4 ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === this.state.slide4 ? "auto" : "none", color: m.ink },
+      })),
+      counter4: pad(this.state.slide4 + 1) + " / " + pad(SLIDES4.length),
+      prevSlide4: () => this.setState(s => ({ slide4: (s.slide4 - 1 + SLIDES4.length) % SLIDES4.length })),
+      nextSlide4: () => this.setState(s => ({ slide4: (s.slide4 + 1) % SLIDES4.length })),
+      stage4Style: { position: "relative", width: "100%", maxWidth: 1000, margin: "0 auto", aspectRatio: "1452 / 1178", borderRadius: 4, overflow: "hidden", background: "transparent" },
+      sliderWrapStyle: { width: "100%", maxWidth: 1000, margin: "0 auto", display: "flex", flexDirection: "column", gap: 24 },
+      sliderStageStyle: { position: "relative", width: "100%", aspectRatio: "1290 / 570", borderRadius: 4, overflow: "hidden", background: "transparent" },
+      sliderBarStyle: { display: "flex", flexDirection: "row", gap: 20, alignItems: "center", justifyContent: "center" },
+      arrowStyle: { appearance: "none", cursor: "pointer", width: 48, height: 48, borderRadius: 999, border: "1px solid " + m.rule, background: "transparent", color: m.ink, fontFamily: "Inter,sans-serif", fontSize: 18, lineHeight: "1", display: "flex", alignItems: "center", justifyContent: "center" },
+      counterStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.08em", color: m.ink, opacity: 0.6, minWidth: 72, textAlign: "center" },
+      pageStyle: { width: "100%", background: m.page, minHeight: "100vh" },
+      bandStyle: { width: "100%", background: m.band, boxSizing: "border-box", boxShadow: "inset 16px 0 0 0 " + m.page + ",inset -16px 0 0 0 " + m.page + ",inset 0 16px 0 0 " + m.page },
+      bandCopyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "40px 80px 64px", display: "flex", flexDirection: "column", gap: 24, alignItems: "flex-start" },
+      logoStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.bandInk },
+      navStyle: nav,
+      navActiveStyle: Object.assign({}, nav, { textDecoration: "underline", textUnderlineOffset: "6px" }),
+      backStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.7 },
+      titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 89, lineHeight: "100%", color: m.bandInk },
+      leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "155%", color: m.bandInk, opacity: 0.72 },
+      factsStyle: { display: "flex", flexDirection: "row", gap: 64, flexWrap: "wrap", paddingTop: 12 },
+      factStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      factLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.5 },
+      factValueStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.bandInk },
+
+      bodyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "56px 80px 200px", display: "flex", flexDirection: "column", gap: 40 },
+      fullImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 12 },
+      pairStyle: { display: "flex", flexDirection: "row", gap: 40, flexWrap: "wrap", width: "100%" },
+
+      shotWrapStyle: { display: "flex", justifyContent: "center", width: "100%" },
+      shotImgStyle: { display: "block", width: "100%", maxWidth: 1290, height: "auto", borderRadius: 4 },
+      profileImgStyle: { display: "block", width: "100%", maxWidth: 1000, height: "auto", borderRadius: 4 },
+
+      textBlockStyle: { maxWidth: 730, margin: "0 auto", boxSizing: "border-box", padding: "68px 0 28px", display: "flex", flexDirection: "column", gap: 20 },
+      h2Style: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 46, lineHeight: "118%", color: m.ink },
+      bodyCopyStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "180%", color: m.ink, opacity: 0.74 },
+      mobileWrapStyle: { display: "flex", justifyContent: "center", width: "100%" },
+      mobileImgStyle: { display: "block", width: "100%", maxWidth: 1000, height: "auto" },
+
+      nextItems: [
+        { slotId: "px-nx1-v2", name: "Warmeston", meta: "Platform · Wood pellet manufacturer", placeholder: "Warmeston", href: "./Warmeston.dc.html", src: "./assets/warmeston-cover@2x.png" },
+        { slotId: "px-nx2-v2", name: "Apollo TV", meta: "Streaming platform", placeholder: "Apollo TV", href: "./Apollo TV.dc.html", src: "./assets/apollo-cover.png" },
+      ],
+      nextStyle: { display: "flex", flexDirection: "column", gap: 40, marginTop: 108, paddingTop: 72, borderTop: "1px solid " + m.rule },
+      nextTitleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 48, lineHeight: "100%", color: m.ink },
+      nextCardStyle: { display: "flex", flexDirection: "column", gap: 20, flex: "1 1 420px", minWidth: 0 },
+      nextMediaStyle: { position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", background: m.shot, color: m.ink },
+      nextNameStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 32, lineHeight: "100%", color: m.ink },
+      nextMetaStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "120%", letterSpacing: "0.02em", color: m.ink, opacity: 0.62 },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

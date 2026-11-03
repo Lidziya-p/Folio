@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;padding:0;background:rgb(11,11,10)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ bandStyle }}">
+    <div style="{{ headerRowStyle }}">
+      <a href="./Homepage.dc.html" style="{{ logoStyle }}">Lidziya Piatrova</a>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navRowStyle }}">
+        <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navActiveStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="{{ navStyle }}">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <div style="{{ bandCopyStyle }}">
+      <a href="./Projects.dc.html" style="{{ backStyle }}">&larr; Back to all projects</a>
+      <h1 style="{{ titleStyle }}">Spotify Memories</h1>
+      <p style="{{ leadStyle }}">A four-week concept project in collaboration between Spotify and the Estonian Academy of Arts interaction design course, presented at Spotify HQ in Stockholm.</p>
+      <div style="{{ factsStyle }}">
+        <sc-for list="{{ facts }}" as="fact" hint-placeholder-count="3">
+          <div style="{{ factStyle }}">
+            <span style="{{ factLabelStyle }}">{{ fact.label }}</span>
+            <span style="{{ factValueStyle }}">{{ fact.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="{{ bodyStyle }}">
+
+    <div style="{{ pairStyle }}">
+      <div data-reveal="shot" style="flex:1 1 420px;min-width:0">
+        <img src="./assets/spotify-mood-1.png" alt="Mood imagery - escaping into sound" style="{{ squareImgStyle }}">
+      </div>
+      <div data-reveal="shot" style="flex:1 1 420px;min-width:0">
+        <img src="./assets/spotify-mood-2.png" alt="Mood imagery - music and memory" style="{{ squareImgStyle }}">
+      </div>
+    </div>
+
+    <div style="{{ briefStyle }}">
+      <sc-for list="{{ brief }}" as="b" hint-placeholder-count="3">
+        <div data-reveal="head" style="{{ briefItemStyle }}">
+          <span style="{{ briefLabelStyle }}">{{ b.label }}</span>
+          <p style="{{ briefCopyStyle }}">{{ b.copy }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Understanding the user’s perspective</h2>
+      <p style="{{ bodyCopyStyle }}">To narrow the topic down I did desk research and interviewed people about music, mental health and the role music plays in their lives. What struck me most was a theme appearing in every interview: the connection of certain music to certain stages of people’s lives, or to certain events.</p>
+      <p style="{{ bodyCopyStyle }}">Bands one listened to in their teens, birthday party music or a summer hit can not only bring nostalgia but also make you feel happy and warm, like a cosy sweater and hot chocolate. Music from the past was seen as a way to escape the worries of today into days that felt safer and happier.</p>
+    </div>
+
+    <div data-reveal="head" style="{{ quoteStyle }}">
+      <span style="{{ quoteLabelStyle }}">The question</span>
+      <p style="{{ quoteTextStyle }}">How might we combine music and memories for better mental health?</p>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Brainstorming</h2>
+      <p style="{{ bodyCopyStyle }}">I generated several potential ideas and sketched out user stories connected with my chosen direction.</p>
+    </div>
+
+    <div style="{{ pairStyle }}">
+      <div data-reveal="shot" style="{{ tintBoxStyle }}">
+        <img src="./assets/spotify-sketches.png" alt="Sketched user stories" style="{{ coverImgStyle }}">
+      </div>
+      <div data-reveal="shot" style="{{ noteGridStyle }}">
+        <sc-for list="{{ notes }}" as="n" hint-placeholder-count="6">
+          <img src="{{ n.src }}" alt="Ideation note" style="{{ noteImgStyle }}">
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Solution</h2>
+      <p style="{{ bodyCopyStyle }}">Spotify Memories expands the idea of music as an escape from everyday life by bringing up people’s own memories. Here memories are treated as data we already generate - location, date and time, pictures, social activity, weather, fitness tracking and music - with playing music acting as the initiator of a memory event.</p>
+      <p style="{{ bodyCopyStyle }}">Say it’s your birthday. In the evening friends come over with presents, you turn on music, take pictures, dance. Data-wise, Spotify knows it’s your birthday, sees that you started a playlist and took photos, and your tracker logged some cardio. That rates as an event with high potential to become a memory - and can be given back to you later.</p>
+    </div>
+
+    <div style="{{ screensStyle }}">
+      <sc-for list="{{ screens }}" as="s" hint-placeholder-count="3">
+        <figure data-reveal="shot" style="margin:0;display:flex;flex-direction:column;gap:16px;min-width:0">
+          <img src="{{ s.src }}" alt="Spotify Memories screen" style="{{ screenImgStyle }}">
+          <figcaption style="{{ screenCapStyle }}">{{ s.caption }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+
+    <div data-reveal="shot" style="{{ videoFrameStyle }}">
+      <iframe src="https://player.vimeo.com/video/1167678970?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="spotify" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="{{ videoEmbedStyle }}"></iframe>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">A wrapped year of memories</h2>
+      <p style="{{ bodyCopyStyle }}">When the year is over, a user gets everything that happened to them in a familiar, shareable year-in-review format.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ videoWideStyle }}">
+      <iframe src="https://player.vimeo.com/video/1167680789?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="preview" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="{{ videoEmbedStyle }}"></iframe>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Conveying the vision</h2>
+      <p style="{{ bodyCopyStyle }}">As part of the project I made a short video supporting the solution.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ videoWideStyle }}">
+      <iframe src="https://player.vimeo.com/video/1167675987?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="Spotify concept video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="{{ videoEmbedStyle }}"></iframe>
+    </div>
+
+    <div style="{{ nextStyle }}">
+      <h2 data-reveal="head" style="{{ nextTitleStyle }}">Discover more</h2>
+      <div style="{{ pairStyle }}">
+        <sc-for list="{{ nextItems }}" as="item" hint-placeholder-count="2">
+          <a href="{{ item.href }}" data-reveal="card" style="{{ nextCardStyle }}">
+            <div style="{{ nextMediaStyle }}">
+              <image-slot id="{{ item.slotId }}" shape="rect" fit="cover" src="{{ item.src }}" placeholder="{{ item.placeholder }}"></image-slot>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+              <span style="{{ nextNameStyle }}">{{ item.name }}</span>
+              <span style="{{ nextMetaStyle }}">{{ item.meta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cream editorial&quot;,&quot;Ink gallery&quot;,&quot;Acid studio&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;tint&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;rgb(127,171,160)&quot;,&quot;rgb(241,252,255)&quot;,&quot;rgb(24,24,22)&quot;],&quot;default&quot;:&quot;rgb(127,171,160)&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", band: "rgb(27,28,23)", bandInk: "rgb(254,249,241)", rule: "rgba(27,27,27,0.14)", shot: "rgb(240,234,224)" },
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", band: "rgb(11,11,10)", bandInk: "rgb(244,240,232)", rule: "rgba(244,240,232,0.16)", shot: "rgb(24,24,22)" },
+  "Acid studio": { page: "rgb(234,225,10)", ink: "rgb(20,20,18)", band: "rgb(20,20,18)", bandInk: "rgb(234,225,10)", rule: "rgba(20,20,18,0.2)", shot: "rgb(20,20,18)" },
+};
+
+const FACTS = [
+  { label: "Year", value: "2019" },
+  { label: "Production", value: "University project" },
+  { label: "Type of work", value: "Concept, UX, video" },
+];
+
+const BRIEF = [
+  { label: "Background", copy: "The project was a collaboration between Spotify and the Estonian Academy of Arts interaction design course. It lasted four weeks and was presented at Spotify HQ in Stockholm." },
+  { label: "Task", copy: "Spotify wanted a solution for how audio could amplify a person’s workout - not only gym and physical activity, but also mindfulness and meditation. The solution had to help users achieve, control their mood, or escape." },
+  { label: "My direction", copy: "I explored how people use audio to escape their surroundings and their own thoughts - stressful moments, or thinking about work and school." },
+];
+
+class Component extends DCLogic {
+  componentDidMount() { this.mountReveal(); }
+  componentWillUnmount() { if (this._reveal) this._reveal.destroy(); }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._reveal = new Reveal(root, { mode: this.props.reveal ?? "Fade up" });
+  }
+
+  __mob(v) {
+    if (!this._rz && typeof window !== "undefined") { this._rz = () => this.forceUpdate(); window.addEventListener("resize", this._rz); }
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const mob = w <= 720, tab = !mob && w <= 1100;
+    v.headerRowStyle = { display: "flex", flexDirection: mob ? "column" : "row", padding: mob ? "24px 20px 8px" : "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: mob ? 12 : 24 };
+    v.navRowStyle = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: mob ? 20 : 40, alignItems: "flex-start" };
+    const __open = mob && this._menuOpen;
+    v.toggleMenu = () => { this._menuOpen = !this._menuOpen; this.forceUpdate(); };
+    const __ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    v.burgerStyle = { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: __open ? "fixed" : "relative", top: __open ? 20 : "auto", right: __open ? 16 : "auto", zIndex: 60 };
+    v.burgerLine1 = Object.assign({}, __ln, __open ? { transform: "translateY(8px) rotate(45deg)" } : {});
+    v.burgerLine2 = Object.assign({}, __ln, __open ? { opacity: 0 } : {});
+    v.burgerLine3 = Object.assign({}, __ln, __open ? { transform: "translateY(-8px) rotate(-45deg)" } : {});
+    if (mob) {
+      v.headerRowStyle = { display: "flex", flexDirection: "row", padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", gap: 12 };
+      v.navRowStyle = __open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" };
+    }
+    if (!mob && !tab) return v;
+    const P = mob ? {
+      bandStyle: { boxShadow: "none" },
+      bandCopyStyle: { padding: "16px 20px 48px", gap: 20 },
+      logoStyle: { fontSize: 28 },
+      navStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" }, navActiveStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" },
+      titleStyle: { fontSize: 52 },
+      leadStyle: { fontSize: 18 },
+      factsStyle: { gap: "20px 40px" },
+      factValueStyle: { fontSize: 22 },
+      visitStyle: { padding: "14px 24px", fontSize: 14 },
+      bodyStyle: { padding: "24px 20px 120px", gap: 24 },
+      textBlockStyle: { padding: "40px 0 12px" },
+      h2Style: { fontSize: 34 },
+      bodyCopyStyle: { fontSize: 16 },
+      featTitleStyle: { fontSize: 24 },
+      rowStyle: { gap: 32, padding: "24px 0" },
+      shotColStyle: { flex: "1 1 100%" }, copyColStyle: { flex: "1 1 100%" },
+      pairStyle: { gap: 24 },
+      nextStyle: { paddingTop: 48, gap: 28 },
+      nextTitleStyle: { fontSize: 36 },
+      nextCardStyle: { flex: "1 1 100%" },
+      nextNameStyle: { fontSize: 26 },
+      nextMetaStyle: { fontSize: 16 },
+    } : {
+      bandCopyStyle: { padding: "32px 40px 56px" },
+      titleStyle: { fontSize: 72 },
+      leadStyle: { fontSize: 21 },
+      bodyStyle: { padding: "48px 40px 160px" },
+      h2Style: { fontSize: 40 },
+    };
+    for (const k in P) if (v[k] && typeof v[k] === "object") v[k] = Object.assign({}, v[k], P[k]);
+    return v;
+  }
+  renderVals() { return this.__mob(this.__renderVals()); }
+  __renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Ink gallery"];
+    const tint = this.props.tint ?? "rgb(127,171,160)";
+    const nav = { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 20, lineHeight: "44px", whiteSpace: "nowrap", color: m.bandInk };
+
+    return {
+      facts: FACTS,
+      brief: BRIEF,
+      notes: [1, 2, 3, 4, 5, 6].map(i => ({ src: "./assets/spotify-note-" + i + ".png" })),
+      screens: [
+        "Once in a while there is a new banner appearing on the user home screen.",
+        "When a user taps on it, they see all the memory bubbles available for them,",
+        "A user can scroll through the playlist and save it to their memory box to keep it.",
+      ].map((caption, n) => ({ src: "./assets/spotify-screen-" + (n + 1) + "-crop.png", caption })),
+
+      pageStyle: { width: "100%", background: m.page, minHeight: "100vh" },
+      bandStyle: { width: "100%", background: m.band, boxSizing: "border-box", boxShadow: "inset 16px 0 0 0 " + m.page + ",inset -16px 0 0 0 " + m.page + ",inset 0 16px 0 0 " + m.page },
+      bandCopyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "40px 80px 64px", display: "flex", flexDirection: "column", gap: 24, alignItems: "flex-start" },
+      logoStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.bandInk },
+      navStyle: nav,
+      navActiveStyle: Object.assign({}, nav, { textDecoration: "underline", textUnderlineOffset: "6px" }),
+      backStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.7 },
+      titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 89, lineHeight: "100%", color: m.bandInk },
+      leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "155%", color: m.bandInk, opacity: 0.72 },
+      factsStyle: { display: "flex", flexDirection: "row", gap: 64, flexWrap: "wrap", paddingTop: 12 },
+      factStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      factLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.5 },
+      factValueStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.bandInk },
+
+      bodyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "56px 80px 200px", display: "flex", flexDirection: "column", gap: 40 },
+      fullImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 12 },
+      videoFrameStyle: { position: "relative", width: "100%", padding: "75% 0 0 0", borderRadius: 12, overflow: "hidden", background: "rgb(0,0,0)" },
+      videoWideStyle: { position: "relative", width: "100%", padding: "56.25% 0 0 0", borderRadius: 12, overflow: "hidden", background: "rgb(0,0,0)" },
+      videoEmbedStyle: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "0" },
+      squareImgStyle: { display: "block", width: "100%", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: 12 },
+      pairStyle: { display: "flex", flexDirection: "row", gap: 40, flexWrap: "wrap", width: "100%" },
+
+      briefStyle: { maxWidth: 730, margin: "0 auto", boxSizing: "border-box", padding: "68px 0 28px", display: "flex", flexDirection: "column", gap: 40 },
+      briefItemStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      briefLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 22, lineHeight: "44px", color: m.ink },
+      briefCopyStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "180%", color: m.ink, opacity: 0.74 },
+
+      textBlockStyle: { maxWidth: 730, margin: "0 auto", boxSizing: "border-box", padding: "68px 0 28px", display: "flex", flexDirection: "column", gap: 20 },
+      h2Style: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 46, lineHeight: "118%", color: m.ink },
+      bodyCopyStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "180%", color: m.ink, opacity: 0.74 },
+
+      quoteStyle: { maxWidth: 1000, margin: "0 auto", boxSizing: "border-box", padding: "56px 64px", display: "flex", flexDirection: "column", gap: 18, alignItems: "flex-start", borderTop: "1px solid " + m.rule, borderBottom: "1px solid " + m.rule },
+      quoteLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.ink, opacity: 0.5 },
+      quoteTextStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 52, lineHeight: "120%", color: m.ink, textWrap: "pretty" },
+
+      tintBoxStyle: { flex: "1 1 420px", minWidth: 0, aspectRatio: "1 / 1", background: tint, borderRadius: 12, overflow: "hidden" },
+      tintWideStyle: { width: "100%", aspectRatio: "16 / 9", background: tint, borderRadius: 12, overflow: "hidden" },
+      coverImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "cover" },
+      noteGridStyle: { flex: "1 1 420px", minWidth: 0, aspectRatio: "1 / 1", background: "rgb(241,252,255)", borderRadius: 12, padding: 24, boxSizing: "border-box", display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 16 },
+      noteImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: 6 },
+
+      screensStyle: { display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 24, width: "100%" },
+      screenImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 12 },
+      screenCapStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "160%", color: m.ink, opacity: 0.74, textWrap: "pretty" },
+
+      nextItems: [
+        { slotId: "sp-nx1-v2", name: "E-Estonia Briefing Centre", meta: "Website", placeholder: "E-Estonia", href: "./E-Estonia.dc.html", src: "./assets/eestonia-cover.png" },
+        { slotId: "sp-nx2-v2", name: "Iglucraft", meta: "Saunas & cabins · Kuld Muna ’23", placeholder: "Iglucraft", href: "./Iglucraft.dc.html", src: "./assets/iglucraft-home.png" },
+      ],
+      nextStyle: { display: "flex", flexDirection: "column", gap: 40, marginTop: 108, paddingTop: 72, borderTop: "1px solid " + m.rule },
+      nextTitleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 48, lineHeight: "100%", color: m.ink },
+      nextCardStyle: { display: "flex", flexDirection: "column", gap: 20, flex: "1 1 420px", minWidth: 0 },
+      nextMediaStyle: { position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", background: m.shot, color: m.ink },
+      nextNameStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 32, lineHeight: "100%", color: m.ink },
+      nextMetaStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "120%", letterSpacing: "0.02em", color: m.ink, opacity: 0.62 },
+    };
+  }
+}
+</script>
+</body>
+</html>

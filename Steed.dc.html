@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;padding:0;background:rgb(11,11,10)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ bandStyle }}">
+    <div style="{{ headerRowStyle }}">
+      <a href="./Homepage.dc.html" style="{{ logoStyle }}">Lidziya Piatrova</a>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navRowStyle }}">
+        <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navActiveStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="{{ navStyle }}">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <div style="{{ bandCopyStyle }}">
+      <a href="./Projects.dc.html" style="{{ backStyle }}">&larr; Back to all projects</a>
+      <h1 style="{{ titleStyle }}">Steed</h1>
+      <p style="{{ leadStyle }}">STEED provides millions of devoted horse owners, trainers and breeders, unparalleled access to critical information about the well-being of their precious horses in real time 24/7, and with it, “peace of mind and reassurance” that they have never known before.</p>
+      <p style="{{ leadStyle }}">Steed aims to enhance the well-being, health, and performance of equines by providing real-time data and actionable insights to breeders, trainers, and horse owners. The app connects to Steed - a device attached to the horse - which tracks vital signs, activity levels and emotional states, enabling users to monitor their horses’ well-being and address potential issues proactively.</p>
+      <div style="{{ factsStyle }}">
+        <sc-for list="{{ facts }}" as="fact" hint-placeholder-count="3">
+          <div style="{{ factStyle }}">
+            <span style="{{ factLabelStyle }}">{{ fact.label }}</span>
+            <span style="{{ factValueStyle }}">{{ fact.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="{{ bodyStyle }}">
+
+    <div data-reveal="shot">
+      <img src="./assets/steed-hero.png" alt="Steed app hero" style="{{ fullImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Variety of needs and roles</h2>
+      <p style="{{ bodyCopyStyle }}">What was special about this project was that the client had extensive knowledge of the industry, having been involved with horse breeding and equestrians throughout his life. This gave a lot of insight into users, their needs and common pain points that I could work on.</p>
+      <p style="{{ bodyCopyStyle }}">The main roles I had to design for were a horse owner, a stable manager and a vet.</p>
+      <p style="{{ bodyCopyStyle }}">A horse owner could have one or several horses and needed to quickly see how their horse was doing at the moment. For this reason, an overview of the horse and its key health data had to be accessible directly from the dashboard, without extra clicks.</p>
+      <p style="{{ bodyCopyStyle }}">For a stable manager, the focus was on being able to manage and access information about multiple horses, as well as manage other stable workers.</p>
+      <p style="{{ bodyCopyStyle }}">For a vet, the main goal was to access horses’ health data and current status, as well as create and manage appointments.</p>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Creating user flows and wireframes</h2>
+      <p style="{{ bodyCopyStyle }}">Based on the information about the roles and their needs and pain points, I created user flows and, after several revisions, translated them into wireframes.</p>
+      <p style="{{ bodyCopyStyle }}">Below you can see how I worked on the flow for adding a horse manually to the digital stable and connecting it to a Steed device.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/steed-flow.png" alt="User flow for adding a horse and connecting a Steed device" style="{{ fullImgStyle }}">
+    </div>
+    <div data-reveal="shot" style="width:100%;position:relative;aspect-ratio:1280 / 747;border-radius:12px;overflow:hidden;background:rgb(24,24,22)">
+      <iframe src="https://player.vimeo.com/video/1218525953?h=cd922a9c4a&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1" title="Steed prototype video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Going into visuals</h2>
+      <p style="{{ bodyCopyStyle }}">Based on the CVI created at DUX by my colleague, I translated my wireframes into the final visual design. Usually, I don’t treat wireframes as a fixed solution, but see the UI design phase as an opportunity to review UX decisions and iterate on them.</p>
+      <p style="{{ bodyCopyStyle }}">For example, on the screen below, I reviewed the placement of the buttons and decided that the Add button could become the most prominent action in the tab bar, because it provides access to the main actions, such as adding a horse, creating a stable, adding an event to the calendar or adding a team member.</p>
+    </div>
+
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/steed-visuals.png" alt="Wireframe versus final visual of the horse list" style="{{ fullImgStyle }}">
+    </div>
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/steed-screens.png" alt="Overview of Steed app screens" style="{{ fullImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h2 data-reveal="head" style="{{ h2Style }}">Tailored dashboards</h2>
+      <p style="{{ bodyCopyStyle }}">As I mentioned earlier, I had to design for three main roles: a horse owner, a stable manager and a vet. This meant that I had to design dashboards for different scenarios: a user could have one horse, several horses, manage an entire stable, or manage multiple stables as a vet. I had to define which data was most important and should be displayed in each case.</p>
+      <p style="{{ bodyCopyStyle }}">Some elements remained the same across the roles, for example, add button, dashboard customization, geofences, events and important contacts.</p>
+    </div>
+
+    <div style="{{ phonesStyle }}">
+      <img data-reveal="shot" src="./assets/steed-dash-1.png" alt="Add menu" style="{{ phoneImgStyle }}">
+      <img data-reveal="shot" src="./assets/steed-dash-2.png" alt="Dashboard customization" style="{{ phoneImgStyle }}">
+      <img data-reveal="shot" src="./assets/steed-dash-3.png" alt="Geofences, events and contacts" style="{{ phoneImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <p style="{{ bodyCopyStyle }}">The main challenge was figuring out how to display the horses’ current status and highlight those that needed attention.</p>
+    </div>
+
+    <sc-for list="{{ dashRows }}" as="row" hint-placeholder-count="4">
+      <div style="{{ rowStyle }}">
+        <sc-if value="{{ row.video }}" hint-placeholder-val="{{ false }}">
+          <div data-reveal="shot" style="flex:1.55 1 480px;min-width:0;max-width:605px;position:relative;aspect-ratio:1 / 1;border-radius:4px;overflow:hidden;background:rgb(24,24,22)">
+            <iframe src="{{ row.video }}" title="{{ row.placeholder }}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+        </sc-if>
+        <sc-if value="{{ row.noVideo }}" hint-placeholder-val="{{ true }}">
+          <div data-reveal="shot" style="{{ slotColStyle }}">
+            <image-slot id="{{ row.slotId }}" shape="rect" fit="contain" placeholder="{{ row.placeholder }}"></image-slot>
+          </div>
+        </sc-if>
+        <div style="{{ copyColStyle }}">
+          <sc-for list="{{ row.paras }}" as="p" hint-placeholder-count="2">
+            <p style="{{ bodyCopyStyle }}">{{ p }}</p>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+
+    <div data-reveal="shot" style="{{ bleedStyle }}">
+      <img src="./assets/steed-band.png" alt="Connect a Steed device screen over a stable at sunset" style="{{ bleedImgStyle }}">
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+        <div style="{{ sliderStageStyle }}">
+          <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+                <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+                <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ prevSlide }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ counter }}</span>
+          <button type="button" onClick="{{ nextSlide }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h2 data-reveal="head" style="{{ h2Style }}">Horse details</h2>
+        <p style="{{ bodyCopyStyle }}">Horse Details gathers important information about an individual horse in one place. It shows the horse’s current location within a geofence, vital signs such as temperature, pulse and respiration, and what the horse is doing at the moment. This is the most important information for helping users understand whether a horse may be showing early signs of colic or another acute condition.</p>
+        <p style="{{ bodyCopyStyle }}">Other information is accessible through tabs because it is not tied to an immediate action.</p>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+        <div style="{{ sliderStageStyle }}">
+          <sc-for list="{{ bulkSlides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+                <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+                <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ prevBulk }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ bulkCounter }}</span>
+          <button type="button" onClick="{{ nextBulk }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h2 data-reveal="head" style="{{ h2Style }}">Bulk upload</h2>
+        <p style="{{ bodyCopyStyle }}">The simplest flow for manually adding a horse was described above through the wireframes. But the trickiest part was solving the use case where a user needs to add a large number of horses and adding them manually one by one is not an option.</p>
+        <p style="{{ bodyCopyStyle }}">I solved the bulk upload flow by introducing the option to upload a CSV/XLS file - a format already used by stables for their internal management and existing software.</p>
+        <p style="{{ bodyCopyStyle }}">If a user selects this option, instructions on how to prepare and upload the file are sent to their email. I also added flows that allow users to delegate the task of adding horses to other team members, which is especially useful for larger stables with many people involved in their management.</p>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+        <div style="{{ sliderStageStyle }}">
+          <sc-for list="{{ vetSlides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <sc-if value="{{ slide.isSlot }}" hint-placeholder-val="{{ false }}">
+                <image-slot id="{{ slide.slotId }}" shape="rect" fit="contain" placeholder="{{ slide.placeholder }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ slide.src }}" hint-placeholder-val="{{ true }}">
+                <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ prevVet }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ vetCounter }}</span>
+          <button type="button" onClick="{{ nextVet }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h2 data-reveal="head" style="{{ h2Style }}">Vet</h2>
+        <p style="{{ bodyCopyStyle }}">I decided to keep the main screens, such as horse details and calendar, the same as for other roles because they already met the users’ needs.</p>
+        <p style="{{ bodyCopyStyle }}">Apart from the dashboard, I changed the design of the stables list and stable cards to better suit a vet working with multiple stables. For horses list I added contact details of the main stable workers, so that a vet could contact them immediately in case of an emergency.</p>
+      </div>
+    </div>
+
+    <div data-reveal="shot" style="{{ bleedStyle }}">
+      <img src="./assets/steed-closing.png" alt="Overview of Steed app screens" style="{{ bleedImgStyle }}">
+    </div>
+
+    <div style="{{ nextStyle }}">
+      <h2 data-reveal="head" style="{{ nextTitleStyle }}">Discover more</h2>
+      <div style="{{ pairStyle }}">
+        <sc-for list="{{ nextItems }}" as="item" hint-placeholder-count="2">
+          <a href="{{ item.href }}" data-reveal="card" style="{{ nextCardStyle }}">
+            <div style="{{ nextMediaStyle }}">
+              <image-slot id="{{ item.slotId }}" shape="rect" fit="cover" src="{{ item.src }}" placeholder="{{ item.placeholder }}"></image-slot>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+              <span style="{{ nextNameStyle }}">{{ item.name }}</span>
+              <span style="{{ nextMetaStyle }}">{{ item.meta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cream editorial&quot;,&quot;Ink gallery&quot;,&quot;Acid studio&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", band: "rgb(27,28,23)", bandInk: "rgb(254,249,241)", rule: "rgba(27,27,27,0.14)", shot: "rgb(240,234,224)" },
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", band: "rgb(11,11,10)", bandInk: "rgb(244,240,232)", rule: "rgba(244,240,232,0.16)", shot: "rgb(24,24,22)" },
+  "Acid studio": { page: "rgb(234,225,10)", ink: "rgb(20,20,18)", band: "rgb(20,20,18)", bandInk: "rgb(234,225,10)", rule: "rgba(20,20,18,0.2)", shot: "rgb(20,20,18)" },
+};
+
+const FACTS = [
+  { label: "Year", value: "2025" },
+  { label: "Production", value: "Client project" },
+  { label: "Type of work", value: "UI, UX" },
+];
+
+const DASH_ROWS = [
+  { slotId: "steed-dash-owner", placeholder: "Owner with one horse - dashboard", video: "https://player.vimeo.com/video/1218926743?h=2c59f8d065&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&dnt=1", paras: [
+    "For an owner with one horse, I designed a dashboard with a single card showing whether the device attached to the horse is working and connected. Next to the avatar, an animation shows what the horse is currently doing. If any vital parameters, such as temperature, pulse or respiration, are outside the normal range, the card changes colour to red.",
+    "I also created a card that shows how active the horse has been throughout the day, because changes in activity can also indicate potential health issues."] },
+  { slotId: "steed-dash-stable", placeholder: "Small stable - dashboard", video: "https://player.vimeo.com/video/1218926742?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&dnt=1", paras: [
+    "For a stable with a small number of horses, I designed a dashboard with an overview of all the horses, their health parameters and current activities.",
+    "There is also a card showing the total number of horses in the stable, which works as a shortcut to the full list of horses."] },
+  { slotId: "steed-dash-manager", placeholder: "Manager of several stables - dashboard", video: "https://player.vimeo.com/video/1218926748?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&dnt=1", paras: [
+    "For a manager managing several stables, I created cards showing the number of horses in each stable, which lead to the corresponding horse lists.",
+    "Current activities block looks different for this type of user: I chose to show cards with different activity types and the number of horses currently performing each activity. This is important because certain activities can be signs of colic or other serious health issues.",
+    "For a manager, it is also important to identify horses that have been added to the app but don’t yet have a device connected to monitor their vitals."] },
+  { slotId: "steed-dash-vet", placeholder: "Vet - dashboard", video: "https://player.vimeo.com/video/1218926746?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&dnt=1", paras: [
+    "For a vet I used similar blocks as a stable manager, because a vet can work with multiple stables and have many clients. But I added a block with horses that need more monitoring. Horses are added there by a vet and the block serves as a shortcut."] },
+];
+
+const SLIDES = [
+  { src: "./assets/steed-details.png", alt: "Horse details screens" },
+  { src: "./assets/steed-details-2.png", alt: "Current activity and vitals cards - normal and alert states" },
+  { src: "./assets/steed-details-3.png", alt: "Medical info and activity tabs" },
+  { src: "./assets/steed-details-4.png", alt: "Temperature detail screens" },
+];
+
+const BULK_SLIDES = [
+  { src: "./assets/steed-bulk.png", alt: "Bulk upload screens" },
+  { src: "./assets/steed-bulk-2.png", alt: "Instructions email for uploading a data file" },
+  { src: "./assets/steed-bulk-3.png", alt: "Step-by-step upload instructions page" },
+  { src: "./assets/steed-bulk-4.png", alt: "Upload success and connecting Steed devices to each horse" },
+];
+
+const VET_SLIDES = [
+  { src: "./assets/steed-vet.png", alt: "Vet screens" },
+  { src: "./assets/steed-vet-2.png", alt: "Stable horse list with stable workers' contact details" },
+];
+
+class Component extends DCLogic {
+  state = { slide: 0, bulk: 0, vet: 0 };
+  componentDidMount() { this.mountReveal(); }
+  componentWillUnmount() { if (this._reveal) this._reveal.destroy(); }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._reveal = new Reveal(root, { mode: this.props.reveal ?? "Fade up" });
+  }
+
+  __mob(v) {
+    if (!this._rz && typeof window !== "undefined") { this._rz = () => this.forceUpdate(); window.addEventListener("resize", this._rz); }
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const mob = w <= 720, tab = !mob && w <= 1100;
+    v.headerRowStyle = { display: "flex", flexDirection: mob ? "column" : "row", padding: mob ? "24px 20px 8px" : "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: mob ? 12 : 24 };
+    v.navRowStyle = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: mob ? 20 : 40, alignItems: "flex-start" };
+    const __open = mob && this._menuOpen;
+    v.toggleMenu = () => { this._menuOpen = !this._menuOpen; this.forceUpdate(); };
+    const __ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    v.burgerStyle = { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: __open ? "fixed" : "relative", top: __open ? 20 : "auto", right: __open ? 16 : "auto", zIndex: 60 };
+    v.burgerLine1 = Object.assign({}, __ln, __open ? { transform: "translateY(8px) rotate(45deg)" } : {});
+    v.burgerLine2 = Object.assign({}, __ln, __open ? { opacity: 0 } : {});
+    v.burgerLine3 = Object.assign({}, __ln, __open ? { transform: "translateY(-8px) rotate(-45deg)" } : {});
+    if (mob) {
+      v.headerRowStyle = { display: "flex", flexDirection: "row", padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", gap: 12 };
+      v.navRowStyle = __open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" };
+    }
+    if (!mob && !tab) return v;
+    const P = mob ? {
+      bandStyle: { boxShadow: "none" },
+      bandCopyStyle: { padding: "16px 20px 48px", gap: 20 },
+      logoStyle: { fontSize: 28 },
+      navStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" }, navActiveStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" },
+      titleStyle: { fontSize: 52 },
+      leadStyle: { fontSize: 18 },
+      factsStyle: { gap: "20px 40px" },
+      factValueStyle: { fontSize: 22 },
+      visitStyle: { padding: "14px 24px", fontSize: 14 },
+      bodyStyle: { padding: "24px 20px 120px", gap: 24 },
+      textBlockStyle: { padding: "40px 0 12px" },
+      h2Style: { fontSize: 34 },
+      bodyCopyStyle: { fontSize: 16 },
+      featTitleStyle: { fontSize: 24 },
+      rowStyle: { gap: 32, padding: "24px 0" },
+      shotColStyle: { flex: "1 1 100%" }, copyColStyle: { flex: "1 1 100%" },
+      pairStyle: { gap: 24 },
+      nextStyle: { paddingTop: 48, gap: 28 },
+      nextTitleStyle: { fontSize: 36 },
+      nextCardStyle: { flex: "1 1 100%" },
+      nextNameStyle: { fontSize: 26 },
+      nextMetaStyle: { fontSize: 16 },
+    } : {
+      bandCopyStyle: { padding: "32px 40px 56px" },
+      titleStyle: { fontSize: 72 },
+      leadStyle: { fontSize: 21 },
+      bodyStyle: { padding: "48px 40px 160px" },
+      h2Style: { fontSize: 40 },
+    };
+    for (const k in P) if (v[k] && typeof v[k] === "object") v[k] = Object.assign({}, v[k], P[k]);
+    return v;
+  }
+  renderVals() { return this.__mob(this.__renderVals()); }
+  __renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Ink gallery"];
+    const nav = { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 20, lineHeight: "44px", whiteSpace: "nowrap", color: m.bandInk };
+    const shadow = "0 0 6px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.1)";
+
+    const i = this.state.slide;
+    const pad = n => String(n).padStart(2, "0");
+    const go = d => () => this.setState(s => ({ slide: (s.slide + d + SLIDES.length) % SLIDES.length }));
+    const b = this.state.bulk;
+    const goB = d => () => this.setState(s => ({ bulk: (s.bulk + d + BULK_SLIDES.length) % BULK_SLIDES.length }));
+    const v = this.state.vet;
+    const goV = d => () => this.setState(s => ({ vet: (s.vet + d + VET_SLIDES.length) % VET_SLIDES.length }));
+    return {
+      vetSlides: VET_SLIDES.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === v ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === v ? "auto" : "none", color: m.ink },
+      })),
+      vetCounter: pad(v + 1) + " / " + pad(VET_SLIDES.length),
+      prevVet: goV(-1),
+      nextVet: goV(1),
+      bulkSlides: BULK_SLIDES.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === b ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === b ? "auto" : "none", color: m.ink },
+      })),
+      bulkCounter: pad(b + 1) + " / " + pad(BULK_SLIDES.length),
+      prevBulk: goB(-1),
+      nextBulk: goB(1),
+      slides: SLIDES.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === i ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === i ? "auto" : "none", color: m.ink },
+      })),
+      slideImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "contain", objectPosition: "top center" },
+      counter: pad(i + 1) + " / " + pad(SLIDES.length),
+      prevSlide: go(-1),
+      nextSlide: go(1),
+      sliderWrapStyle: { flex: "1.55 1 480px", minWidth: 0, maxWidth: 605, display: "flex", flexDirection: "column", gap: 24 },
+      sliderStageStyle: { position: "relative", width: "100%", aspectRatio: "605 / 520", borderRadius: 4, overflow: "hidden" },
+      sliderBarStyle: { display: "flex", flexDirection: "row", gap: 20, alignItems: "center", justifyContent: "center" },
+      arrowStyle: { appearance: "none", cursor: "pointer", width: 48, height: 48, borderRadius: 999, border: "1px solid " + m.rule, background: "transparent", color: m.ink, fontFamily: "Inter,sans-serif", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" },
+      counterStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.08em", color: m.ink, opacity: 0.6, minWidth: 72, textAlign: "center" },
+      facts: FACTS,
+      dashRows: DASH_ROWS.map(r => Object.assign({}, r, { noVideo: !r.video })),
+      pageStyle: { width: "100%", background: m.page, minHeight: "100vh" },
+      bandStyle: { width: "100%", background: m.band, boxSizing: "border-box", boxShadow: "inset 16px 0 0 0 " + m.page + ",inset -16px 0 0 0 " + m.page + ",inset 0 16px 0 0 " + m.page },
+      bandCopyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "40px 80px 64px", display: "flex", flexDirection: "column", gap: 24, alignItems: "flex-start" },
+      logoStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.bandInk },
+      navStyle: nav,
+      navActiveStyle: Object.assign({}, nav, { textDecoration: "underline", textUnderlineOffset: "6px" }),
+      backStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.7 },
+      titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 89, lineHeight: "100%", color: m.bandInk },
+      leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "155%", color: m.bandInk, opacity: 0.72 },
+      factsStyle: { display: "flex", flexDirection: "row", gap: 64, flexWrap: "wrap", paddingTop: 12 },
+      factStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      factLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.5 },
+      factValueStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.bandInk },
+
+      bodyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "56px 80px 200px", display: "flex", flexDirection: "column", gap: 40 },
+      fullImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 12 },
+      wideStyle: { width: "100%" },
+      bleedStyle: { width: "100%", margin: "72px 0" },
+      bleedImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 12 },
+      phonesStyle: { display: "flex", flexDirection: "row", gap: 24, flexWrap: "wrap", justifyContent: "center", width: "100%", maxWidth: 1000, margin: "0 auto" },
+      phoneImgStyle: { display: "block", flex: "1 1 240px", minWidth: 0, maxWidth: 317, height: "auto" },
+      rowStyle: { display: "flex", flexDirection: "row", gap: 72, flexWrap: "wrap", alignItems: "center", width: "100%", padding: "48px 0" },
+      shotColStyle: { flex: "1.55 1 480px", minWidth: 0, maxWidth: 605 },
+      slotColStyle: { flex: "1.55 1 480px", minWidth: 0, maxWidth: 605, position: "relative", aspectRatio: "605 / 371", borderRadius: 4, overflow: "hidden", background: m.shot, color: m.ink },
+      shotImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 4 },
+      copyColStyle: { flex: "1 1 340px", minWidth: 0, display: "flex", flexDirection: "column", gap: 20 },
+      textBlockStyle: { width: "100%", maxWidth: 730, margin: "0 auto", boxSizing: "border-box", padding: "68px 0 28px", display: "flex", flexDirection: "column", gap: 20 },
+      h2Style: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 46, lineHeight: "118%", color: m.ink },
+      bodyCopyStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "180%", color: m.ink, opacity: 0.74, textWrap: "pretty" },
+
+      pairStyle: { display: "flex", flexDirection: "row", gap: 40, flexWrap: "wrap", width: "100%" },
+      nextItems: [
+        { slotId: "st-nx1-v2", name: "Warmeston", meta: "Data platform", placeholder: "Warmeston", href: "./Warmeston.dc.html", src: "./assets/warmeston-cover@2x.png" },
+        { slotId: "st-nx2-v2", name: "PXL", meta: "Production platform", placeholder: "PXL", href: "./PXL.dc.html", src: "./assets/pxl-cover.png" },
+      ],
+      nextStyle: { display: "flex", flexDirection: "column", gap: 40, marginTop: 108, paddingTop: 72, borderTop: "1px solid " + m.rule },
+      nextTitleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 48, lineHeight: "100%", color: m.ink },
+      nextCardStyle: { display: "flex", flexDirection: "column", gap: 20, flex: "1 1 420px", minWidth: 0 },
+      nextMediaStyle: { position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", background: m.shot, color: m.ink },
+      nextNameStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 32, lineHeight: "100%", color: m.ink },
+      nextMetaStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "120%", letterSpacing: "0.02em", color: m.ink, opacity: 0.62 },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

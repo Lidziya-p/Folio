@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:rgb(11,11,10)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ bandStyle }}">
+    <div style="{{ headerRowStyle }}">
+      <a href="./Homepage.dc.html" style="{{ logoStyle }}">Lidziya Piatrova</a>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navRowStyle }}">
+        <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navActiveStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="{{ navStyle }}">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <div style="{{ bandCopyStyle }}">
+      <a href="./Projects.dc.html" style="{{ backStyle }}">&larr; Back to all projects</a>
+      <h1 style="{{ titleStyle }}">BodyTwins</h1>
+      <p style="{{ leadStyle }}">Building body confidence in women through the shopping experience. My MA thesis started from one finding: shopping for clothes is the main trigger of body dissatisfaction for women.</p>
+      <p style="{{ leadStyle }}">BodyTwins connects women with the same body parameters into location-based micro-communities, and shows their reviews of clothes right in the shop through augmented reality.</p>
+      <div style="{{ factsStyle }}">
+        <sc-for list="{{ facts }}" as="fact" hint-placeholder-count="3">
+          <div style="{{ factStyle }}">
+            <span style="{{ factLabelStyle }}">{{ fact.label }}</span>
+            <span style="{{ factValueStyle }}">{{ fact.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="{{ bodyStyle }}">
+
+    <div data-reveal="shot" style="{{ heroTrioStyle }}">
+      <img src="./assets/bt-f-welcome.jpg" alt="Welcome screen with body twins" style="{{ trioImgStyle }}">
+      <img src="./assets/bt-f-ar.jpg" alt="Reviews in augmented reality" style="{{ trioImgStyle }}">
+      <img src="./assets/bt-f-review.jpg" alt="Review details" style="{{ trioImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">01 - Context</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Unattainable ideals</h2>
+      <p style="{{ bodyCopyStyle }}">People’s concern about their body image has never been more serious, and the ideals have never been so unattainable. In a 2019 UK survey only 19% of women felt satisfied with their body, and 25% felt shame because of it.</p>
+      <p style="{{ bodyCopyStyle }}">Inspired by Naomi Wolf’s ‘The Beauty Myth’, I set out to explore what influences body dissatisfaction in women and to design a solution that helps them resist social pressure and build body confidence.</p>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">Approach</h3>
+      <p style="{{ bodyCopyStyle }}">I structured the project with the Double Diamond, alternating between exploring widely and focusing down.</p>
+    </div>
+    <div style="{{ gridStyle }}">
+      <sc-for list="{{ phases }}" as="ph" hint-placeholder-count="4">
+        <div data-reveal="card" style="{{ cardStyle }}">
+          <span style="{{ cardNumStyle }}">{{ ph.n }}</span>
+          <span style="{{ cardTitleStyle }}">{{ ph.title }}</span>
+          <span style="{{ cardTextStyle }}">{{ ph.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-model.jpg" alt="Cognitive-behavioural model of body image" style="{{ diagramImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <span style="{{ stepStyle }}">02 - Focus</span>
+        <h2 data-reveal="head" style="{{ h2Style }}">Defining body image</h2>
+        <p style="{{ bodyCopyStyle }}">Body image is the picture we form in our minds of our own body: beliefs, feelings and behaviours around it. Using the cognitive-behavioural model, I mapped what shapes it, from cultural socialisation and relationships to everyday activating situations.</p>
+        <p style="{{ bodyCopyStyle }}">Existing solutions worked on therapy, mindfulness or education, but none focused on the everyday situations that trigger dissatisfaction. That became my direction. I designed for women aged 27–35, who still compare themselves to media ideals rather than to women their age.</p>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">03 - User research</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Collage session</h2>
+      <p style="{{ bodyCopyStyle }}">The topic is personal and emotional, so I started with a collage session instead of questions. Three women tore images out of Vogue, Cosmopolitan, Shape and National Geographic and explained their choices. I made my own collage beforehand, as a reminder of my confirmation bias.</p>
+      <p style="{{ bodyCopyStyle }}">My collage turned out very different from theirs. Most women said that body confidence has a lot to do with clothes.</p>
+    </div>
+
+    <div style="{{ pairStyle }}">
+      <img data-reveal="shot" src="./assets/bt-my-collage.jpg" alt="My collage about body" style="{{ pairImgNarrowStyle }}">
+      <img data-reveal="shot" src="./assets/bt-collages.jpg" alt="Collages made by participants" style="{{ pairImgWideStyle }}">
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-interviews.jpg" alt="Women interviewed for the project" style="{{ shotImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h2 data-reveal="head" style="{{ h2Style }}">Eight interviews</h2>
+        <p style="{{ bodyCopyStyle }}">I ran unstructured interviews with eight women aged 27–35 who are university graduates with careers. I started broad and narrowed down whenever a pattern repeated.</p>
+        <p style="{{ bodyCopyStyle }}">Women already had ways of coping: fitness for mental health, supportive people and critical awareness of media. But shopping kept coming back as the moment it all fell apart. Not finding clothes that fit meant failing to build a personal style, which affected their professional and social lives.</p>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">What women told me</h3>
+    </div>
+    <div style="{{ gridStyle }}">
+      <sc-for list="{{ insights }}" as="ins" hint-placeholder-count="4">
+        <div data-reveal="card" style="{{ cardStyle }}">
+          <span style="{{ cardTitleStyle }}">{{ ins.title }}</span>
+          <span style="{{ cardTextStyle }}">{{ ins.text }}</span>
+          <span style="{{ cardQuoteStyle }}">{{ ins.quote }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">Shopping as the trigger</h3>
+      <p style="{{ bodyCopyStyle }}">Every woman said she felt worse after shopping. Brands don’t account for individual proportions: clothes fit the hips but not the waist, are too long or too short, and bigger sizes are often just a small size scaled up. Online, clothes are shown on standard models, so the only way to know is to try them on.</p>
+      <p style="{{ quoteStyle }}">‘When I go shopping I expect that most likely I won’t find anything. I take all the clothes I like, and with this pile I go to the dressing room, hoping I will be lucky.’</p>
+      <p style="{{ bodyCopyStyle }}">Failing to find clothes meant failing to build a personal style, and that reached into work and social life.</p>
+      <p style="{{ quoteStyle }}">‘I am a grown woman, I have money, but I still dress like a student.’</p>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">04 - Desk research</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">The bigger picture</h2>
+      <p style="{{ bodyCopyStyle }}">The interviews showed that shopping goes far beyond wasted time. It has a real emotional cost. To understand why, I looked at it from four angles: the retail industry, psychology and culture, what women already do themselves, and existing technology.</p>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-vanity.jpg" alt="Same size jeans from different brands" style="{{ shotImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 data-reveal="head" style="{{ h3Style }}">Retail</h3>
+        <p style="{{ bodyCopyStyle }}">Zara releases 24 collections a year, and H&amp;M refreshes stock weekly, so what fits today is gone tomorrow. Brands use vanity sizing, labelling clothes smaller than their actual cut to make shoppers feel slim. Smaller women then disappear from the size range entirely, and the same label means something different in every shop.</p>
+        <p style="{{ bodyCopyStyle }}">Ready-to-wear can’t be adjusted to every body, so I decided not to try to change the system but to work with it.</p>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-shame-web.jpg" alt="Shame web" style="{{ diagramImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 data-reveal="head" style="{{ h3Style }}">Psychology &amp; culture</h3>
+        <p style="{{ bodyCopyStyle }}">Fashion balances two needs: standing out and fitting in. Clothes are how we communicate who we are, and image-based media constantly invites comparison.</p>
+        <p style="{{ bodyCopyStyle }}">Brené Brown describes shame as a web of conflicting expectations about who we should be. Taking a bigger size, or finding nothing at all, starts a chain of comparison that ends in feeling unworthy and alone. Her Shame Resilience Theory became the psychological backbone of the solution.</p>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+        <div style="{{ peopleStageStyle }}">
+          <sc-for list="{{ peopleSlides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ peoplePrev }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ peopleCounter }}</span>
+          <button type="button" onClick="{{ peopleNext }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 data-reveal="head" style="{{ h3Style }}">What women do themselves</h3>
+        <p style="{{ bodyCopyStyle }}">Models and influencers share stories of failing to find clothes. Women review brands’ sizing on Instagram, leave tips in comments and run Telegram channels for people with the same problem.</p>
+        <p style="{{ bodyCopyStyle }}">Sharing like this is an unconscious form of shame resilience: accepting vulnerability, practising empathy and building connection. Its weakness is that tips are tied to a place and time, and quickly become outdated.</p>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ sliderWrapStyle }}">
+        <div style="{{ deskStageStyle }}">
+          <sc-for list="{{ deskSlides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ deskPrev }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ deskCounter }}</span>
+          <button type="button" onClick="{{ deskNext }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 data-reveal="head" style="{{ h3Style }}">Technology</h3>
+        <p style="{{ bodyCopyStyle }}">Smart mirrors, virtual fitting rooms, AR try-ons and size predictors have reached a high level of visualisation. But they still can’t give realistic size recommendations, they’re run by retailers to drive sales, and they mostly target online shopping.</p>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">05 - Ideation</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Design principles</h2>
+      <p style="{{ bodyCopyStyle }}">I turned the research into five principles to keep every idea honest.</p>
+    </div>
+    <div style="{{ gridStyle }}">
+      <sc-for list="{{ principles }}" as="pr" hint-placeholder-count="5">
+        <div data-reveal="card" style="{{ cardStyle }}">
+          <span style="{{ cardNumStyle }}">{{ pr.n }}</span>
+          <span style="{{ cardTitleStyle }}">{{ pr.title }}</span>
+          <span style="{{ cardTextStyle }}">{{ pr.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">How might we…</h3>
+      <sc-for list="{{ hmw }}" as="q" hint-placeholder-count="3">
+        <p style="{{ hmwStyle }}">{{ q }}</p>
+      </sc-for>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-diverse.jpg" alt="Real women, real bodies" style="{{ shotImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 data-reveal="head" style="{{ h3Style }}">Meet Kate</h3>
+        <p style="{{ bodyCopyStyle }}">My persona brings together stories shared by all the women I interviewed. Kate is 29 and works in HR. She’s short and wears XS or XXS depending on the brand. She can’t shop in the kids’ department because she has a dress code, and buying online doesn’t work because she can’t tell what she’ll get. She’s an active Instagram user, loves new tech and believes that sharing is caring.</p>
+        <div style="{{ goalsStyle }}">
+          <div style="{{ goalColStyle }}">
+            <span style="{{ cardNumStyle }}">Goals</span>
+            <span style="{{ cardTextStyle }}">Feel good about herself when shopping. Spend less time on it.</span>
+          </div>
+          <div style="{{ goalColStyle }}">
+            <span style="{{ cardNumStyle }}">Frustrations</span>
+            <span style="{{ cardTextStyle }}">Doesn’t know what suits her height and shape. Often leaves with nothing, feeling worse about her body.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">Brainstorming and sketching</h3>
+      <p style="{{ bodyCopyStyle }}">I ran a ‘Yes, And!’ brainstorm with coursemates around the principles, questions and persona. Ideas clustered around a helper (an AI assistant or a friend), light or voice interfaces, and virtual avatars, but most broke at least one principle, usually by changing how sizes or delivery work.</p>
+      <p style="{{ bodyCopyStyle }}">Effective ideation needed deeper knowledge of the topic, so I continued on my own through sketching. I combined the principles in different ways until one concept held them all.</p>
+    </div>
+
+    <div style="{{ wideStyle }}">
+      <div data-reveal="shot" style="{{ sketchWrapStyle }}">
+        <div style="{{ sketchStageStyle }}">
+          <sc-for list="{{ sketchSlides }}" as="slide" hint-placeholder-count="4">
+            <div style="{{ slide.style }}">
+              <img src="{{ slide.src }}" alt="{{ slide.alt }}" style="{{ slideImgStyle }}">
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ sketchPrev }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ sketchCounter }}</span>
+          <button type="button" onClick="{{ sketchNext }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ shotColStyle }}">
+        <img src="./assets/bt-concept.jpg" alt="Concept sketch" style="{{ shotImgStyle }}">
+      </div>
+      <div style="{{ copyColStyle }}">
+        <span style="{{ stepStyle }}">06 - Concept &amp; validation</span>
+        <h2 data-reveal="head" style="{{ h2Style }}">Each shop, a place for body twins</h2>
+        <p style="{{ bodyCopyStyle }}">The concept: an AR overlay that only women with the same body parameters can see. Kate walks into a shop and sees what other XS and XXS women tried on, with their positive and negative reviews.</p>
+        <p style="{{ bodyCopyStyle }}">I showed the sketches to my target group early. Women saw it as a time saver and a way to reduce shopping dissatisfaction. They wanted a clear onboarding explaining where the information comes from. Nobody was interested in AR glasses, so the solution became a phone app.</p>
+      </div>
+    </div>
+
+    <div style="{{ pairStyle }}">
+      <img data-reveal="shot" src="./assets/bt-validation.jpg" alt="Validation sessions with participants" style="{{ pairHalfStyle }}">
+      <img data-reveal="shot" src="./assets/bt-matrix.jpg" alt="Feedback capture matrix" style="{{ pairHalfStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">07 - Concept development</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Mental model</h2>
+      <p style="{{ bodyCopyStyle }}">Before prototyping I went back to the interviews and wrote down every task women described: actions, thoughts, feelings and motivations. I grouped them into stages, from preparing for a shopping trip to going home empty-handed.</p>
+      <p style="{{ bodyCopyStyle }}">Under each stage I placed functions that could help women complete a task, or spare them from it altogether.</p>
+    </div>
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/bt-mental-1.jpg" alt="Mental model: tasks grouped by shopping stage" style="{{ diagramImgStyle }}">
+    </div>
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/bt-mental-2.jpg" alt="Functions covering users’ tasks" style="{{ diagramImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">Why AR, why a phone</h3>
+      <p style="{{ bodyCopyStyle }}">Smartphone AR is affordable and familiar, and it can provide an individual overlay on top of the existing retail space, which is exactly what the principles asked for. Time-of-flight sensors make body scanning possible, and the solution can move to AR glasses once they become mainstream.</p>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">08 - Prototyping &amp; testing</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Three rounds, five women each</h2>
+      <p style="{{ bodyCopyStyle }}">I ran remote usability tests in Lookback, recruiting participants through a Telegram channel for women looking for brands that fit them.</p>
+    </div>
+
+    <sc-for list="{{ rounds }}" as="round" hint-placeholder-count="3">
+      <div style="{{ rowStyle }}">
+        <div data-reveal="shot" style="{{ shotColStyle }}">
+          <img src="{{ round.src }}" alt="{{ round.alt }}" style="{{ shotImgStyle }}">
+        </div>
+        <div style="{{ copyColStyle }}">
+          <h3 data-reveal="head" style="{{ h3Style }}">{{ round.title }}</h3>
+          <sc-for list="{{ round.paras }}" as="p" hint-placeholder-count="2">
+            <p style="{{ bodyCopyStyle }}">{{ p }}</p>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">09 - Final solution</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">BodyTwins</h2>
+      <p style="{{ bodyCopyStyle }}">The app follows Kate from scanning her body at home to meeting her body twin in a shopping mall.</p>
+    </div>
+
+    <div style="{{ rowStyle }}">
+      <div data-reveal="shot" style="{{ finalWrapStyle }}">
+        <div style="{{ finalStageStyle }}">
+          <sc-for list="{{ finalSlides }}" as="slide" hint-placeholder-count="3">
+            <div style="{{ slide.style }}">
+              <img src="{{ slide.src }}" alt="{{ slide.title }}" style="{{ slideImgStyle }}">
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ sliderBarStyle }}">
+          <button type="button" onClick="{{ finalPrev }}" aria-label="Previous slide" style="{{ arrowStyle }}">&larr;</button>
+          <span style="{{ counterStyle }}">{{ finalCounter }}</span>
+          <button type="button" onClick="{{ finalNext }}" aria-label="Next slide" style="{{ arrowStyle }}">&rarr;</button>
+        </div>
+      </div>
+      <div style="{{ copyColStyle }}">
+        <h3 style="{{ h3Style }}">{{ finalTitle }}</h3>
+        <p style="{{ bodyCopyStyle }}">{{ finalText }}</p>
+      </div>
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <h3 data-reveal="head" style="{{ h3Style }}">Main flows</h3>
+      <p style="{{ bodyCopyStyle }}">Registration and body scanning: creating an account, uploading a photo, and scanning with voice guidance to turn left, right and around.</p>
+    </div>
+    <div data-reveal="shot" style="{{ wideStyle }}">
+      <img src="./assets/bt-flow.jpg" alt="Registration and body scanning flow" style="{{ diagramImgStyle }}">
+    </div>
+
+    <div style="{{ textBlockStyle }}">
+      <span style="{{ stepStyle }}">10 - Reflection</span>
+      <h2 data-reveal="head" style="{{ h2Style }}">Shame works only if we are alone in it</h2>
+      <p style="{{ bodyCopyStyle }}">Viewed through Brené Brown’s Shame Resilience Theory, BodyTwins doesn’t impose an ideal. It brings out real women who are usually invisible in media, and it gives them a way to reach out and share their stories in the context of shopping.</p>
+      <p style="{{ bodyCopyStyle }}">The project taught me to choose the right methods at the right time to narrow down a complex topic, and changed how I see research: not as something that takes creativity out of design, but as what gives it direction. The next step would be testing in a real shop, which wasn’t possible during the pandemic.</p>
+      <h3 data-reveal="head" style="{{ h3Style }}">Beyond shopping</h3>
+      <p style="{{ bodyCopyStyle }}">The same idea of connecting people with similar bodies could work for other activities women avoid because of insecurity, like going to the sauna together, working out with people like you, or a clothes swap where everyone finds something.</p>
+      <p style="{{ quoteStyle }}">‘Ironically, the myth that drives women apart also binds them together.’ - Naomi Wolf</p>
+    </div>
+
+    <div style="{{ nextStyle }}">
+      <h2 data-reveal="head" style="{{ nextTitleStyle }}">Discover more</h2>
+      <div style="{{ nextPairStyle }}">
+        <sc-for list="{{ nextItems }}" as="item" hint-placeholder-count="2">
+          <a href="{{ item.href }}" data-reveal="card" style="{{ nextCardStyle }}">
+            <div style="{{ nextMediaStyle }}">
+              <img src="{{ item.src }}" alt="{{ item.name }}" style="{{ nextImgStyle }}">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+              <span style="{{ nextNameStyle }}">{{ item.name }}</span>
+              <span style="{{ nextMetaStyle }}">{{ item.meta }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ink gallery&quot;,&quot;Cream editorial&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", band: "rgb(11,11,10)", bandInk: "rgb(244,240,232)", rule: "rgba(244,240,232,0.16)", shot: "rgb(24,24,22)" },
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", band: "rgb(27,28,23)", bandInk: "rgb(254,249,241)", rule: "rgba(27,27,27,0.14)", shot: "rgb(240,234,224)" },
+};
+
+const FACTS = [
+  { label: "Year", value: "2020" },
+  { label: "Production", value: "MA thesis · Estonian Academy of Arts" },
+  { label: "Type of work", value: "Research, UX, UI, AR" },
+];
+
+const PHASES = [
+  { n: "01", title: "Discover", text: "Collage session, user interviews and desk research to find the problem worth solving." },
+  { n: "02", title: "Define", text: "Interview analysis, opportunities and How Might We questions." },
+  { n: "03", title: "Develop", text: "Brainstorming, sketching and early validation to pick one concept." },
+  { n: "04", title: "Deliver", text: "Three rounds of prototyping and usability testing." },
+];
+const INSIGHTS = [
+  { title: "Fitness is for the mind", text: "Women use fitness to cope, not to chase a ‘beach body’.", quote: "‘Even if I do a bit better than yesterday, I feel proud of myself.’" },
+  { title: "Critical awareness", text: "They see how destructive media ideals are, and regret being influenced by them when younger.", quote: "‘I don’t see normal bodies, representing us.’" },
+  { title: "Shared values", text: "Self-acceptance, being valued for who you are, and support from people around.", quote: "‘You are given a certain body and you need to learn what to do with it.’" },
+  { title: "Shopping hurts", text: "The one situation that kept bringing negative emotions back.", quote: "‘I cried in a dressing room because I could not find anything.’" },
+];
+const PRINCIPLES = [
+  { n: "01", title: "Use the current paradigm", text: "Don’t redesign retail or sizing. Work with how shops are organised." },
+  { n: "02", title: "Positive comparison", text: "Normalise real bodies in real situations." },
+  { n: "03", title: "Sense of community", text: "Mutual support and shared experience: everyone in the same boat." },
+  { n: "04", title: "Real-time context", text: "Relevant information right when shopping." },
+  { n: "05", title: "Non-intrusive", text: "An assistant women choose to use, not a replacement for the fun parts." },
+];
+const HMW = [
+  "…help women find the right fits and sizes?",
+  "…help women cope with negative emotions while shopping?",
+  "…build positive comparison while shopping?",
+];
+
+const SLIDERS = {
+  people: [
+    { src: "./assets/bt-people-1.jpg", alt: "‘Apparently, I’m Too Fat to Ski’ article" },
+    { src: "./assets/bt-people-2.jpg", alt: "Instagram post reviewing brand sizes" },
+    { src: "./assets/bt-people-3.jpg", alt: "Telegram channel for women sharing clothes that fit" },
+  ],
+  desk: [
+    { src: "./assets/bt-desk-1.jpg", alt: "In-store technology overview" },
+    { src: "./assets/bt-desk-2.jpg", alt: "AR fitting solutions" },
+    { src: "./assets/bt-desk-3.jpg", alt: "Women sharing tips about clothes that fit" },
+  ],
+  sketch: [
+    { src: "./assets/bt-brainstorm.jpg", alt: "Brainstorming session with coursemates" },
+    { src: "./assets/bt-sketch-1.jpg", alt: "Ideation sketches" },
+    { src: "./assets/bt-sketch-2.jpg", alt: "Idea exploration sketch" },
+    { src: "./assets/bt-sketch-3.jpg", alt: "Concept sketch" },
+  ],
+  final: [
+    { src: "./assets/bt-f-scan.jpg", title: "Body scanning", text: "Kate registers with email or Instagram and scans her body with the phone’s time-of-flight sensor, guided by voice instructions. Instagram sign-in encourages women to follow their body twins there too, for a more realistic feed." },
+    { src: "./assets/bt-f-measure.jpg", title: "Measurements", text: "She sees her body in 3D. Testing showed some women doubted the model was really theirs, so I added the option to see and adjust measurements." },
+    { src: "./assets/bt-f-welcome.jpg", title: "Welcome", text: "The welcome screen shows avatars of her body twins already using the app. Kate used to ask friends whether a girl looked like her. Now she sees there are women like her around." },
+    { src: "./assets/bt-f-map.jpg", title: "Map view", text: "At home, Kate checks the map and sees that women have already left positive reviews on clothes nearby. She reads summaries of which sizes they tried, how they describe them and what looks they made." },
+    { src: "./assets/bt-f-filter.jpg", title: "Filtering", text: "She can filter reviews by category, for example to check if anyone found trousers in XXS." },
+    { src: "./assets/bt-f-ar.jpg", title: "Reviews in AR", text: "In the shop, AR mode shows labels on clothes, green or red depending on whether most reviews are positive. Closer labels grow into full buttons, a hint that they can be tapped. Arrows point to items in unexpected places, like the kids’ or men’s department." },
+    { src: "./assets/bt-f-ar-2.jpg", title: "Not alone", text: "Kate sees that her body twins have the same problems: lots of clothes don’t fit them either. She can relate, and realises she isn’t alone." },
+    { src: "./assets/bt-f-review.jpg", title: "Review details", text: "She opens a review and sees sizes tried, descriptions and looks on women like her, so she understands how it would look on her. Reviews read like a feed rather than floating in AR." },
+    { src: "./assets/bt-f-reactions.jpg", title: "Reactions", text: "She reacts with ‘Fire’ when a review helped, and ‘Poop’ to say the same happened to her." },
+    { src: "./assets/bt-f-post.jpg", title: "Posting a review", text: "After the fitting room she posts her own reviews. The app suggests sizes based on her measurements and offers text prompts that make reviews more helpful, such as whether a size runs small or big." },
+    { src: "./assets/bt-f-follow.jpg", title: "Following", text: "Kate follows Ann, whose reviews she keeps liking. In AR she can tap Ann’s avatar and see only her reviews, or follow her on Instagram." },
+    { src: "./assets/bt-f-meet.jpg", title: "Meeting your body twin", text: "If she opts in, Kate gets notified when a body twin is in the same mall, and they can go shopping together." },
+  ],
+};
+
+const ROUNDS = [
+  { src: "./assets/bt-paper.jpg", alt: "Paper prototype main screens", title: "Round 1 - Paper prototype", paras: [
+    "A paper sketch in InVision, left open to interpretation so I could still see how women ideated. Tasks: find feedback on a dress and leave a review.",
+    "Women understood the concept, but all five found the copy confusing, three couldn’t find how to add a review, and three read the rating icons as a mood selection."] },
+  { src: "./assets/bt-wireframes.jpg", alt: "Wireframes of the main screens", title: "Round 2 - Wireframes", paras: [
+    "Detailed wireframes with photos of a real shop for AR context, and more concrete tasks.",
+    "Ratings were still read as moods, four women wanted to write helpful reviews but didn’t know how, and three couldn’t switch from the map to the shop view."] },
+  { src: "./assets/bt-connotation.jpg", alt: "Connotation of holding a phone up in public", title: "Round 3 - Full design & AR", paras: [
+    "Fully designed screens in Figma with a neutral, friendly palette, plus reactions, map reviews, profiles and looks galleries. I also built an AR prototype in Torch.",
+    "Holding the phone up to read reviews in place felt socially awkward in a shop. So indicators stay in AR, but reviews open as a scrollable feed. I added tooltips for onboarding and rebuilt the tab bar so a review can be added from any screen."] },
+];
+
+class Component extends DCLogic {
+  state = { desk: 0, sketch: 0, final: 0, people: 0 };
+  componentDidMount() { this.mountReveal(); }
+  componentWillUnmount() { if (this._reveal) this._reveal.destroy(); }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._reveal = new Reveal(root, { mode: this.props.reveal ?? "Fade up" });
+  }
+
+  slider(key, m) {
+    const list = SLIDERS[key], i = this.state[key];
+    const pad = n => String(n).padStart(2, "0");
+    const go = d => () => this.setState(s => ({ [key]: (s[key] + d + list.length) % list.length }));
+    return {
+      [key + "Slides"]: list.map((s, n) => Object.assign({}, s, {
+        style: { position: "absolute", inset: 0, opacity: n === i ? 1 : 0, transition: "opacity 420ms ease", pointerEvents: n === i ? "auto" : "none" },
+      })),
+      [key + "Counter"]: pad(i + 1) + " / " + pad(list.length),
+      [key + "Prev"]: go(-1),
+      [key + "Next"]: go(1),
+    };
+  }
+
+  __mob(v) {
+    if (!this._rz && typeof window !== "undefined") { this._rz = () => this.forceUpdate(); window.addEventListener("resize", this._rz); }
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const mob = w <= 720, tab = !mob && w <= 1100;
+    v.headerRowStyle = { display: "flex", flexDirection: mob ? "column" : "row", padding: mob ? "24px 20px 8px" : "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: mob ? 12 : 24 };
+    v.navRowStyle = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: mob ? 20 : 40, alignItems: "flex-start" };
+    const __open = mob && this._menuOpen;
+    v.toggleMenu = () => { this._menuOpen = !this._menuOpen; this.forceUpdate(); };
+    const __ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    v.burgerStyle = { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: __open ? "fixed" : "relative", top: __open ? 20 : "auto", right: __open ? 16 : "auto", zIndex: 60 };
+    v.burgerLine1 = Object.assign({}, __ln, __open ? { transform: "translateY(8px) rotate(45deg)" } : {});
+    v.burgerLine2 = Object.assign({}, __ln, __open ? { opacity: 0 } : {});
+    v.burgerLine3 = Object.assign({}, __ln, __open ? { transform: "translateY(-8px) rotate(-45deg)" } : {});
+    if (mob) {
+      v.headerRowStyle = { display: "flex", flexDirection: "row", padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", gap: 12 };
+      v.navRowStyle = __open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" };
+    }
+    if (!mob && !tab) return v;
+    const P = mob ? {
+      bandStyle: { boxShadow: "none" },
+      bandCopyStyle: { padding: "16px 20px 48px", gap: 20 },
+      logoStyle: { fontSize: 28 },
+      navStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" }, navActiveStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" },
+      titleStyle: { fontSize: 52 },
+      leadStyle: { fontSize: 18 },
+      factsStyle: { gap: "20px 40px" },
+      factValueStyle: { fontSize: 22 },
+      visitStyle: { padding: "14px 24px", fontSize: 14 },
+      bodyStyle: { padding: "24px 20px 120px", gap: 24 },
+      textBlockStyle: { padding: "40px 0 12px" },
+      h2Style: { fontSize: 34 },
+      bodyCopyStyle: { fontSize: 16 },
+      featTitleStyle: { fontSize: 24 },
+      rowStyle: { gap: 32, padding: "24px 0" },
+      shotColStyle: { flex: "1 1 100%" }, copyColStyle: { flex: "1 1 100%" },
+      pairStyle: { gap: 24 },
+      nextStyle: { paddingTop: 48, gap: 28 },
+      nextTitleStyle: { fontSize: 36 },
+      nextCardStyle: { flex: "1 1 100%" },
+      nextNameStyle: { fontSize: 26 },
+      nextMetaStyle: { fontSize: 16 },
+    } : {
+      bandCopyStyle: { padding: "32px 40px 56px" },
+      titleStyle: { fontSize: 72 },
+      leadStyle: { fontSize: 21 },
+      bodyStyle: { padding: "48px 40px 160px" },
+      h2Style: { fontSize: 40 },
+    };
+    for (const k in P) if (v[k] && typeof v[k] === "object") v[k] = Object.assign({}, v[k], P[k]);
+    return v;
+  }
+  renderVals() { return this.__mob(this.__renderVals()); }
+  __renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Ink gallery"];
+    const nav = { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 20, lineHeight: "44px", whiteSpace: "nowrap", color: m.bandInk };
+    const fin = SLIDERS.final[this.state.final];
+    const img = { display: "block", height: "auto", borderRadius: 4, minWidth: 0 };
+
+    return Object.assign({}, this.slider("desk", m), this.slider("sketch", m), this.slider("final", m), this.slider("people", m), {
+      facts: FACTS,
+      phases: PHASES,
+      insights: INSIGHTS,
+      principles: PRINCIPLES,
+      hmw: HMW,
+      gridStyle: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16, width: "100%", maxWidth: 1000, margin: "0 auto" },
+      cardStyle: { display: "flex", flexDirection: "column", gap: 12, padding: "28px 24px", borderRadius: 12, border: "1px solid " + m.rule, boxSizing: "border-box" },
+      cardNumStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: m.ink, opacity: 0.5 },
+      cardTitleStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.ink },
+      cardTextStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "160%", color: m.ink, opacity: 0.74, textWrap: "pretty" },
+      cardQuoteStyle: { fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, fontSize: 20, lineHeight: "135%", color: m.ink, marginTop: "auto", paddingTop: 8 },
+      hmwStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, fontSize: 30, lineHeight: "130%", color: m.ink, paddingBottom: 16, borderBottom: "1px solid " + m.rule },
+      goalsStyle: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 24, paddingTop: 8 },
+      goalColStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      diagramImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 4, background: "rgb(255,255,255)" },
+      peopleStageStyle: { position: "relative", width: "100%", aspectRatio: "4 / 5", borderRadius: 4, overflow: "hidden" },
+      rounds: ROUNDS,
+      finalTitle: fin.title,
+      finalText: fin.text,
+      pageStyle: { width: "100%", background: m.page, minHeight: "100vh" },
+      bandStyle: { width: "100%", background: m.band, boxSizing: "border-box" },
+      bandCopyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "40px 80px 64px", display: "flex", flexDirection: "column", gap: 24, alignItems: "flex-start" },
+      logoStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.bandInk },
+      navStyle: nav,
+      navActiveStyle: Object.assign({}, nav, { textDecoration: "underline", textUnderlineOffset: "6px" }),
+      backStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.7 },
+      titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 89, lineHeight: "100%", color: m.bandInk },
+      leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "155%", color: m.bandInk, opacity: 0.72, textWrap: "pretty" },
+      factsStyle: { display: "flex", flexDirection: "row", gap: 64, flexWrap: "wrap", paddingTop: 12 },
+      factStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      factLabelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.bandInk, opacity: 0.5 },
+      factValueStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.bandInk },
+
+      bodyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "56px 80px 200px", display: "flex", flexDirection: "column", gap: 40 },
+      heroTrioStyle: { display: "grid", gridTemplateColumns: "repeat(3, minmax(0,1fr))", gap: 0, width: "100%", borderRadius: 12, overflow: "hidden" },
+      trioImgStyle: { display: "block", width: "100%", height: "auto" },
+      textBlockStyle: { width: "100%", maxWidth: 730, margin: "0 auto", boxSizing: "border-box", padding: "68px 0 28px", display: "flex", flexDirection: "column", gap: 20 },
+      stepStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: m.ink, opacity: 0.5 },
+      h2Style: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 46, lineHeight: "118%", color: m.ink, textWrap: "pretty" },
+      h3Style: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "118%", color: m.ink },
+      bodyCopyStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "180%", color: m.ink, opacity: 0.74, textWrap: "pretty" },
+      quoteStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, fontSize: 28, lineHeight: "130%", color: m.ink },
+
+      pairStyle: { display: "flex", flexDirection: "row", gap: 24, flexWrap: "wrap", width: "100%", maxWidth: 1000, margin: "0 auto", alignItems: "flex-start" },
+      pairImgNarrowStyle: Object.assign({}, img, { flex: "1 1 260px", maxWidth: "36%" }),
+      pairImgWideStyle: Object.assign({}, img, { flex: "1.6 1 420px" }),
+      pairHalfStyle: Object.assign({}, img, { flex: "1 1 360px" }),
+      wideStyle: { width: "100%", maxWidth: 1000, margin: "0 auto" },
+
+      rowStyle: { display: "flex", flexDirection: "row", gap: 72, flexWrap: "wrap", alignItems: "center", width: "100%", padding: "48px 0" },
+      shotColStyle: { flex: "1.55 1 480px", minWidth: 0, maxWidth: 605 },
+      shotImgStyle: { display: "block", width: "100%", height: "auto", borderRadius: 4 },
+      copyColStyle: { flex: "1 1 340px", minWidth: 0, display: "flex", flexDirection: "column", gap: 20 },
+
+      sliderWrapStyle: { flex: "1.55 1 480px", minWidth: 0, maxWidth: 605, display: "flex", flexDirection: "column", gap: 24 },
+      deskStageStyle: { position: "relative", width: "100%", aspectRatio: "613 / 418", borderRadius: 4, overflow: "hidden" },
+      sketchWrapStyle: { display: "flex", flexDirection: "column", gap: 24, width: "100%" },
+      sketchStageStyle: { position: "relative", width: "100%", aspectRatio: "16 / 10", borderRadius: 12, overflow: "hidden", background: "rgb(255,255,255)" },
+      finalWrapStyle: { flex: "1 1 360px", minWidth: 0, maxWidth: 480, display: "flex", flexDirection: "column", gap: 24 },
+      finalStageStyle: { position: "relative", width: "100%", aspectRatio: "800 / 1117", borderRadius: 4, overflow: "hidden" },
+      slideImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "contain" },
+      sliderBarStyle: { display: "flex", flexDirection: "row", gap: 20, alignItems: "center", justifyContent: "center" },
+      arrowStyle: { appearance: "none", cursor: "pointer", width: 48, height: 48, borderRadius: 999, border: "1px solid " + m.rule, background: "transparent", color: m.ink, fontFamily: "Inter,sans-serif", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center" },
+      counterStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.08em", color: m.ink, opacity: 0.6, minWidth: 72, textAlign: "center" },
+
+      nextItems: [
+        { name: "Steed", meta: "Platform", href: "./Steed.dc.html", src: "./assets/steed-cover.png" },
+        { name: "PXL", meta: "Production platform", href: "./PXL.dc.html", src: "./assets/pxl-cover.png" },
+      ],
+      nextStyle: { display: "flex", flexDirection: "column", gap: 40, marginTop: 108, paddingTop: 72, borderTop: "1px solid " + m.rule },
+      nextTitleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 48, lineHeight: "100%", color: m.ink },
+      nextPairStyle: { display: "flex", flexDirection: "row", gap: 40, flexWrap: "wrap", width: "100%" },
+      nextCardStyle: { display: "flex", flexDirection: "column", gap: 20, flex: "1 1 420px", minWidth: 0 },
+      nextMediaStyle: { position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: 12, overflow: "hidden", background: m.shot },
+      nextImgStyle: { display: "block", width: "100%", height: "100%", objectFit: "cover" },
+      nextNameStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 32, lineHeight: "100%", color: m.ink },
+      nextMetaStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 18, lineHeight: "120%", letterSpacing: "0.02em", color: m.ink, opacity: 0.62 },
+    });
+  }
+}
+
+</script>
+</body>
+</html>

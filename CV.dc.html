@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:rgb(11,11,10)}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.7}
+</style>
+</helmet>
+<div style="{{ pageStyle }}">
+
+  <div style="{{ bandStyle }}">
+    <div style="{{ headerRowStyle }}">
+      <a href="./Homepage.dc.html" style="{{ logoStyle }}">Lidziya Piatrova</a>
+      <button type="button" aria-label="Menu" onClick="{{ toggleMenu }}" style="{{ burgerStyle }}"><span style="{{ burgerLine1 }}"></span><span style="{{ burgerLine2 }}"></span><span style="{{ burgerLine3 }}"></span></button>
+      <div style="{{ navRowStyle }}">
+        <a href="./Homepage.dc.html" style="{{ navStyle }}">HOME</a>
+        <a href="./Projects.dc.html" style="{{ navStyle }}">PROJECTS</a>
+        <!-- hidden: <a href="./AI discovery.dc.html" style="{{ navStyle }}">AI DISCOVERY</a> -->
+        <a href="./CV.dc.html" style="{{ navActiveStyle }}">CV</a>
+        <a href="./Contact.dc.html" style="{{ navStyle }}">CONTACT</a>
+      </div>
+    </div>
+    <div style="{{ bandCopyStyle }}">
+      <h1 style="{{ titleStyle }}">Product designer, 12 years</h1>
+      <p style="{{ leadStyle }}">Award-winning designer working across digital products, web and mobile, with a Master’s degree in Interaction Design.</p>
+      <div style="display:flex;flex-direction:row;gap:40px;align-items:center;flex-wrap:wrap">
+        <a href="./assets/Lydia-Petrova-CV.pdf" target="_blank" rel="noopener" style="{{ downloadStyle }}">Download CV</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="{{ bodyStyle }}">
+
+    <div data-reveal="sec" style="{{ sectionStyle }}">
+      <h2 style="{{ secTitleStyle }}">Awards</h2>
+      <div style="{{ colStyle }}">
+        <sc-for list="{{ awards }}" as="a" hint-placeholder-count="2">
+          <div style="{{ rowStyle }}">
+            <div style="{{ rowMainStyle }}">
+              <span style="{{ roleStyle }}">{{ a.project }}</span>
+              <span style="{{ bodyTextStyle }}">{{ a.award }}</span>
+            </div>
+            <a href="{{ a.href }}" style="{{ metaLinkStyle }}">{{ a.site }}</a>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-reveal="sec" style="{{ sectionStyle }}">
+      <h2 style="{{ secTitleStyle }}">Experience</h2>
+      <div style="{{ colStyle }}">
+        <sc-for list="{{ jobs }}" as="job" hint-placeholder-count="5">
+          <div style="{{ rowStyle }}">
+            <div style="{{ rowMainStyle }}">
+              <span style="{{ roleStyle }}">{{ job.role }}</span>
+              <span style="{{ orgStyle }}">{{ job.org }}</span>
+              <sc-for list="{{ job.points }}" as="p" hint-placeholder-count="3">
+                <span style="{{ bodyTextStyle }}">{{ p }}</span>
+              </sc-for>
+            </div>
+            <span style="{{ metaStyle }}">{{ job.when }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-reveal="sec" style="{{ sectionStyle }}">
+      <h2 style="{{ secTitleStyle }}">Education</h2>
+      <div style="{{ colStyle }}">
+        <sc-for list="{{ education }}" as="ed" hint-placeholder-count="4">
+          <div style="{{ rowStyle }}">
+            <div style="{{ rowMainStyle }}">
+              <span style="{{ roleStyle }}">{{ ed.degree }}</span>
+              <span style="{{ orgStyle }}">{{ ed.school }}</span>
+              <sc-for list="{{ ed.points }}" as="p" hint-placeholder-count="0">
+                <span style="{{ bodyTextStyle }}">{{ p }}</span>
+              </sc-for>
+            </div>
+            <span style="{{ metaStyle }}">{{ ed.when }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-reveal="sec" style="{{ sectionStyle }}">
+      <h2 style="{{ secTitleStyle }}">Skills</h2>
+      <div style="{{ colStyle }}">
+        <div style="{{ rowStyle }}">
+          <div style="{{ rowMainStyle }}">
+            <span style="{{ roleStyle }}">Technical</span>
+            <span style="{{ bodyTextStyle }}">Figma, Principle, Claude, Affinity Designer, Adobe Creative Suite, basic HTML/CSS</span>
+          </div>
+        </div>
+        <div style="{{ rowStyle }}">
+          <div style="{{ rowMainStyle }}">
+            <span style="{{ roleStyle }}">Languages</span>
+            <span style="{{ bodyTextStyle }}">English - C1 · Russian - Native · Estonian - B1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mood&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Cream editorial&quot;,&quot;Ink gallery&quot;,&quot;Acid studio&quot;],&quot;default&quot;:&quot;Ink gallery&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Comfortable&quot;,&quot;Compact&quot;],&quot;default&quot;:&quot;Comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Fade up&quot;,&quot;Scale in&quot;,&quot;Slide in&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Fade up&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const MOODS = {
+  "Cream editorial": { page: "rgb(254,249,241)", ink: "rgb(27,27,27)", band: "rgb(27,28,23)", bandInk: "rgb(254,249,241)", rule: "rgba(27,27,27,0.14)" },
+  "Ink gallery": { page: "rgb(11,11,10)", ink: "rgb(244,240,232)", band: "rgb(11,11,10)", bandInk: "rgb(244,240,232)", rule: "rgba(244,240,232,0.16)" },
+  "Acid studio": { page: "rgb(234,225,10)", ink: "rgb(20,20,18)", band: "rgb(20,20,18)", bandInk: "rgb(234,225,10)", rule: "rgba(20,20,18,0.2)" },
+};
+
+const AWARDS = [
+  { project: "Iglucraft website", award: "Kuld Muna 2023 - Gold", site: "iglucraft.com", href: "https://iglucraft.com" },
+  { project: "Jõekääru", award: "Kuld Muna 2025 - Shortlist", site: "joekaarulinnak.ee", href: "https://joekaarulinnak.ee" },
+];
+
+const JOBS = [
+  { role: "UI/UX Designer", org: "DUX design studio · dux.ee", when: "Dec 2018 - Present · Tallinn, Estonia", points: [
+    "Collaborated with Telia, Swedbank, Bob W, Iglucraft, Thermory and Silen.",
+    "Created wireframes, prototypes and UI design using clients’ brand identity and visual guidelines.",
+    "Worked with early-stage startups, from MVPs to ongoing feature development based on user and business feedback.",
+    "Designed and iterated on new features for web and mobile, using existing design systems or creating new ones.",
+    "Worked closely with developers so live products matched the designs, including micro-interactions and animations.",
+    "Conducted usability testing to validate ideas and find UX issues." ] },
+  { role: "Course mentor", org: "Estonian Academy of Arts - Interaction Design", when: "Mar 2023 - May 2023 · Tallinn, Estonia", points: [
+    "Mentored first-year students during an Interaction Design course." ] },
+  { role: "UI/UX Designer", org: "Upwork · Freelance", when: "Jan 2017 - Dec 2018 · Remote", points: [
+    "Managed end-to-end design projects, from client communication and UX/content reviews to UI design and developer handoff.",
+    "Designed websites and landing pages for small businesses." ] },
+  { role: "User Experience Designer", org: "iKantam", when: "Dec 2015 - Mar 2017 · Minsk, Belarus", points: [
+    "Wireframes, high-fidelity prototypes and design of platforms and mobile interfaces for e-commerce and service platforms." ] },
+  { role: "Graphic Designer", org: "NEKLO LLC", when: "Dec 2013 - Jun 2015 · Minsk, Belarus", points: [
+    "Created promotional materials for print and web, layouts for website banners and e-mail." ] },
+];
+
+const EDU = [
+  { degree: "Master of Arts - Interaction Design", school: "Estonian Academy of Arts", when: "Sep 2018 - May 2020 · Tallinn, Estonia", points: [
+    "Graduated Cum Laude.",
+    "Collaborated with Spotify, Bolt, Elisa and Statistics Estonia on student projects.",
+    "Master’s thesis on building body confidence in women through shopping - defended with grade A." ] },
+  { degree: "Bachelor’s degree - Web Page, Digital/Multimedia", school: "School of Business and Management of Technology, Belarusian State University", when: "Sep 2011 - Jun 2013 · Minsk, Belarus", points: [] },
+  { degree: "Intensive course", school: "British Higher School of Art and Design", when: "Feb 2015 · Moscow, Russia", points: [] },
+  { degree: "Bachelor’s degree - English and Literature", school: "Minsk State Linguistic University", when: "Sep 2005 - May 2010 · Minsk, Belarus", points: [] },
+];
+
+class Component extends DCLogic {
+  state = { contactOpen: false, name: "", email: "", message: "" };
+  componentDidMount() { this.mountReveal(); }
+  componentWillUnmount() { if (this._reveal) this._reveal.destroy(); }
+  async mountReveal() {
+    const { Reveal } = await import("./reveal.js");
+    const root = document.getElementById("dc-root") || document.body;
+    this._reveal = new Reveal(root, { mode: this.props.reveal ?? "Fade up" });
+  }
+
+  __mob(v) {
+    if (!this._rz && typeof window !== "undefined") { this._rz = () => this.forceUpdate(); window.addEventListener("resize", this._rz); }
+    const w = typeof window !== "undefined" ? window.innerWidth : 1440;
+    const mob = w <= 720, tab = !mob && w <= 1100;
+    v.headerRowStyle = { display: "flex", flexDirection: mob ? "column" : "row", padding: mob ? "24px 20px 8px" : "40px 32px 40px 40px", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: mob ? 12 : 24 };
+    v.navRowStyle = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: mob ? 20 : 40, alignItems: "flex-start" };
+    const __open = mob && this._menuOpen;
+    v.toggleMenu = () => { this._menuOpen = !this._menuOpen; this.forceUpdate(); };
+    const __ln = { display: "block", width: 26, height: 2, background: "rgb(244,240,232)", transition: "transform .25s, opacity .2s" };
+    v.burgerStyle = { display: mob ? "flex" : "none", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 6, width: 44, height: 44, padding: 0, border: 0, background: "transparent", cursor: "pointer", position: __open ? "fixed" : "relative", top: __open ? 20 : "auto", right: __open ? 16 : "auto", zIndex: 60 };
+    v.burgerLine1 = Object.assign({}, __ln, __open ? { transform: "translateY(8px) rotate(45deg)" } : {});
+    v.burgerLine2 = Object.assign({}, __ln, __open ? { opacity: 0 } : {});
+    v.burgerLine3 = Object.assign({}, __ln, __open ? { transform: "translateY(-8px) rotate(-45deg)" } : {});
+    if (mob) {
+      v.headerRowStyle = { display: "flex", flexDirection: "row", padding: "20px 16px 8px 20px", justifyContent: "space-between", alignItems: "center", gap: 12 };
+      v.navRowStyle = __open ? { position: "fixed", inset: 0, zIndex: 50, background: "rgb(11,11,10)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", gap: 8, padding: "0 28px" } : { display: "none" };
+    }
+    if (!mob && !tab) return v;
+    const P = mob ? {
+      bandStyle: { boxShadow: "none" },
+      bandCopyStyle: { padding: "16px 20px 48px", gap: 20 },
+      sectionStyle: { gridTemplateColumns: "minmax(0,1fr)", rowGap: 8 },
+      secTitleStyle: { paddingTop: 0, fontSize: 36 },
+      rowMainStyle: { flex: "1 1 100%" },
+      logoStyle: { fontSize: 28 },
+      navStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" }, navActiveStyle: { fontSize: 34, lineHeight: "60px", color: "rgb(244,240,232)" },
+      titleStyle: { fontSize: 52 },
+      leadStyle: { fontSize: 18 },
+      factsStyle: { gap: "20px 40px" },
+      factValueStyle: { fontSize: 22 },
+      visitStyle: { padding: "14px 24px", fontSize: 14 },
+      bodyStyle: { padding: "24px 20px 120px", gap: 24 },
+      textBlockStyle: { padding: "40px 0 12px" },
+      h2Style: { fontSize: 34 },
+      bodyCopyStyle: { fontSize: 16 },
+      featTitleStyle: { fontSize: 24 },
+      rowStyle: { gap: 12, padding: "22px 0" },
+      shotColStyle: { flex: "1 1 100%" }, copyColStyle: { flex: "1 1 100%" },
+      pairStyle: { gap: 24 },
+      nextStyle: { paddingTop: 48, gap: 28 },
+      nextTitleStyle: { fontSize: 36 },
+      nextCardStyle: { flex: "1 1 100%" },
+      nextNameStyle: { fontSize: 26 },
+      nextMetaStyle: { fontSize: 16 },
+    } : {
+      bandCopyStyle: { padding: "32px 40px 56px" },
+      titleStyle: { fontSize: 72 },
+      leadStyle: { fontSize: 21 },
+      bodyStyle: { padding: "48px 40px 160px" },
+      h2Style: { fontSize: 40 },
+    };
+    for (const k in P) if (v[k] && typeof v[k] === "object") v[k] = Object.assign({}, v[k], P[k]);
+    return v;
+  }
+  renderVals() { return this.__mob(this.__renderVals()); }
+  __renderVals() {
+    const m = MOODS[this.props.mood] || MOODS["Ink gallery"];
+    const dense = (this.props.density ?? "Comfortable") === "Compact";
+    const nav = { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 20, lineHeight: "44px", whiteSpace: "nowrap", color: m.bandInk };
+    const body = { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: dense ? 16 : 17, lineHeight: "155%", color: m.ink, opacity: 0.76, maxWidth: 760 };
+
+    const send = () => {
+      const s = this.state;
+      const subject = encodeURIComponent(s.name ? "Portfolio enquiry - " + s.name : "Portfolio enquiry");
+      const body = encodeURIComponent([s.message, "", "- " + (s.name || ""), s.email || ""].join("\n"));
+      window.location.href = "mailto:4zangao@gmail.com?subject=" + subject + "&body=" + body;
+      this.setState({ contactOpen: false });
+    };
+
+    return {
+      awards: AWARDS, jobs: JOBS, education: EDU,
+      contactOpen: this.state.contactOpen,
+      openContact: () => this.setState({ contactOpen: true }),
+      closeContact: () => this.setState({ contactOpen: false }),
+      sendContact: send,
+      formName: this.state.name,
+      formEmail: this.state.email,
+      formMessage: this.state.message,
+      setName: e => this.setState({ name: e.target.value }),
+      setEmail: e => this.setState({ email: e.target.value }),
+      setMessage: e => this.setState({ message: e.target.value }),
+      secondaryStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.04em", textTransform: "uppercase", color: m.bandInk, background: "transparent", padding: "17px 30px", border: "1px solid " + m.bandInk, borderRadius: 999, cursor: "pointer", lineHeight: "normal" },
+      overlayStyle: { position: "fixed", inset: 0, zIndex: 50, background: "rgba(8,8,7,0.72)", display: "flex", alignItems: "center", justifyContent: "center", padding: 24, boxSizing: "border-box" },
+      modalStyle: { width: "100%", maxWidth: 560, maxHeight: "88vh", overflowY: "auto", boxSizing: "border-box", background: m.page, border: "1px solid " + m.rule, borderRadius: 16, padding: 40, display: "flex", flexDirection: "column", gap: 24 },
+      modalTitleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 40, lineHeight: "100%", color: m.ink },
+      modalLeadStyle: { margin: 0, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 16, lineHeight: "150%", color: m.ink, opacity: 0.7 },
+      closeStyle: { fontFamily: "Inter,sans-serif", fontSize: 26, lineHeight: 1, color: m.ink, background: "transparent", border: "none", cursor: "pointer", padding: 4 },
+      fieldStyle: { display: "flex", flexDirection: "column", gap: 8 },
+      labelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", color: m.ink, opacity: 0.6 },
+      inputStyle: { fontFamily: "Inter,sans-serif", fontSize: 16, color: m.ink, background: "transparent", border: "1px solid " + m.rule, borderRadius: 8, padding: "14px 16px", outline: "none" },
+      textareaStyle: { fontFamily: "Inter,sans-serif", fontSize: 16, lineHeight: "150%", color: m.ink, background: "transparent", border: "1px solid " + m.rule, borderRadius: 8, padding: "14px 16px", outline: "none", resize: "vertical" },
+      modalSendStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.04em", textTransform: "uppercase", color: m.page, background: m.ink, padding: "17px 30px", border: "none", borderRadius: 999, cursor: "pointer" },
+      modalCancelStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.04em", textTransform: "uppercase", color: m.ink, background: "transparent", padding: "16px 30px", border: "1px solid " + m.rule, borderRadius: 999, cursor: "pointer" },
+      pageStyle: { width: "100%", background: m.page, minHeight: "100vh" },
+      bandStyle: { width: "100%", background: m.band, boxSizing: "border-box", boxShadow: "inset 16px 0 0 0 " + m.page + ",inset -16px 0 0 0 " + m.page + ",inset 0 16px 0 0 " + m.page },
+      bandCopyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: "72px 80px 96px", display: "flex", flexDirection: "column", gap: 28, alignItems: "flex-start" },
+      logoStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 34, lineHeight: "100%", whiteSpace: "nowrap", color: m.bandInk },
+      navStyle: nav,
+      navActiveStyle: Object.assign({}, nav, { textDecoration: "underline", textUnderlineOffset: "6px" }),
+      titleStyle: { margin: 0, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 68, lineHeight: "100%", color: m.bandInk },
+      leadStyle: { margin: 0, maxWidth: 760, fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 24, lineHeight: "150%", color: m.bandInk, opacity: 0.72 },
+      downloadStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.04em", textTransform: "uppercase", color: m.band, background: m.bandInk, padding: "18px 32px", borderRadius: 999, alignSelf: "flex-start" },
+      pillStyle: { fontFamily: "'Plus Jakarta Sans',sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.04em", textTransform: "uppercase", color: m.bandInk, padding: "10px 18px", border: "1px solid " + m.bandInk, borderRadius: 999 },
+      bodyStyle: { maxWidth: 1440, margin: "0 auto", boxSizing: "border-box", padding: dense ? "88px 80px 160px" : "120px 80px 200px", display: "flex", flexDirection: "column", gap: dense ? 88 : 120 },
+      sectionStyle: { display: "grid", gridTemplateColumns: "minmax(0,240px) minmax(0,1fr)", columnGap: 64, rowGap: 32, alignItems: "start" },
+      secTitleStyle: { margin: 0, paddingTop: 32, fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontStyle: "italic", fontSize: 44, lineHeight: "100%", color: m.ink },
+      colStyle: { display: "flex", flexDirection: "column", gap: 0 },
+      rowStyle: { display: "flex", flexDirection: "row", gap: 40, justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", padding: dense ? "22px 0" : "30px 0", borderTop: "1px solid " + m.rule },
+      rowMainStyle: { display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-start", flex: "1 1 420px", minWidth: 0 },
+      roleStyle: { fontFamily: "'Instrument Serif',serif", fontWeight: 400, fontSize: 28, lineHeight: "115%", color: m.ink },
+      orgStyle: { fontFamily: "Inter,sans-serif", fontWeight: 500, fontSize: 17, lineHeight: "140%", color: m.ink, opacity: 0.9, marginBottom: 6 },
+      bodyTextStyle: body,
+      contactLinkStyle: Object.assign({}, body, { opacity: 1, borderBottom: "1px solid " + m.rule, alignSelf: "flex-start" }),
+      metaStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 15, lineHeight: "150%", letterSpacing: "0.02em", color: m.ink, opacity: 0.55, flex: "0 0 auto", textAlign: "right" },
+      metaLinkStyle: { fontFamily: "Inter,sans-serif", fontWeight: 400, fontSize: 15, lineHeight: "150%", letterSpacing: "0.02em", color: m.ink, opacity: 0.55, flex: "0 0 auto", borderBottom: "1px solid " + m.rule },
+    };
+  }
+}
+</script>
+</body>
+</html>
