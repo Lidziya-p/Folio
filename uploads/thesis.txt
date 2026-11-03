@@ -1,0 +1,2011 @@
+Building body confidence in women
+through shopping experience
+MA Degree Project
+IxD Interaction Design Estonian Academy of Arts
+Lidziya Piatrova, May 2020
+Advisor: Riina Raudne
+Supervisors: Tanel Kärp, Nesli Hazal Akbulut
+1
+
+-- 1 of 88 --
+
+2
+I dedicate this work to:
+all brilliant women, who’s advancement was undermined by
+‘beauty myth’
+all women questioning the ‘beauty myth’
+good people of DUX, who brought out the best in me
+Riina Raudne I look up to
+Tanel Kärp and Nesli Hazal Akbulut, giving me creative
+freedom
+
+-- 2 of 88 --
+
+Abstract
+People’s concern about their body image has never been
+more serious, and yet the set ideals have never been so
+unattainable.
+Through research I discovered that shopping is the main body
+dissatisfaction factor affecting women. Therefore I aimed at
+not only providing women with a practical solution of effective
+size search but also help them reduce their body
+dissatisfaction.
+My solution offers an alternative way of shopping by creating
+location-based micro-communities of shoppers sharing
+similar body traits and showing relevant reviews in real-time
+context through augmented reality.
+On psychological level it provides means of resisting shame by
+practicing critical awareness, reaching out to other women
+and speaking up about shame in the context of shopping.
+Kokkuvõte
+Inimeste mure oma keha kuvandi osas pole kunagi olnud nii
+suur, siiski on seatud ideaalid aga kättesaamatud.
+Uurimistöö käigus avastasin, et ostmine on peamine keha
+rahulolematuse tegur, mis naisi mõjutab. Sellele tuginedes
+seadsin eesmärgi mitte disainida ainult efektiivne suuruse
+otsingu lahendus, vaid samuti aidata neil vähendada
+rahulolematust oma keha üle.
+Minu lahendus pakub alternatiivset ostlemisviisi, luues
+asukoha põhiseid mini keskkondi, milles saavad sarnase
+kehatüübiga ostlejad jagada usaldusväärseid arvustusi
+reaalajas, kasutades liitreaalsust.
+Psühholoogilisel tasandil pakub lahendus tuge häbile vastu
+seismiseks, rakendades kriitilist teadlikkust, pöördudes teiste
+naiste poole ja rääkides häbist poodlemise kontekstis.
+3
+
+-- 3 of 88 --
+
+1. Introduction 	6	..............................................................................
+1.1 Background 	6
+1.2 Personal interest 	6
+1.3 Project goals 	7
+2. Design Approach 	8	...................................................................
+3 Key definitions and focus 	9	...................................................
+3.1 Body image 	9
+3.2 Target audience 	9
+3.3 Focus areas 	9
+3.4 Thesis direction 	11
+4. User research 	13	........................................................................
+4.1 Collage Session 	13
+4.2 User Interviews 	16
+4.3 Interview results 	16
+5. Desk Research 	23	......................................................................
+5.1 Retail industry overview 	23
+5.2 Psychological and socio-cultural factors of shopping and
+fashion 	26
+5.3 Solutions initiated by people 	29
+5.4 Overview of technological solutions 	32
+5.5 Desk research summary 	37
+6. Ideation 	38	...................................................................................
+6.1 Design principles 	38
+6.2 Generating opportunities 	39
+6.3 Persona 	39
+6.4 Brainstorming 	41
+6.5 Ideation through sketching 	42
+6.6 Final Concept and Validation 	46
+6.8 Conclusion 	49
+7. Concept development 	50	.....................................................
+7.1 State of Augmented Reality 	50
+7.2 Mental Model 	51
+7.3 Prototyping and testing 	54
+4
+
+-- 4 of 88 --
+
+8. Final solution 	62	.........................................................................
+8.1 Design component 	62
+8.2 Psychology behind the solution 	76
+8.3 Main flows 	77
+9. Reflections 	81	.............................................................................
+9.1 Process reflection 	81
+9.2 Future development 	81
+9.3 Solution within a context of bigger trends 	82
+References 	84	.................................................................................
+5
+
+-- 5 of 88 --
+
+1. Introduction
+1.1 Background
+Due to the vast influence of social media and dominance of
+visual content across the majority of channels of
+communication, people’s concern about their body image has
+never been so serious, and yet the set ideals have never been
+so unattainable.
+According to Mental Health Foundation survey [1], carried out
+in 2019 in the UK, only 21% of adults (23% of men and 19% of
+women) felt satisfied with their body image, 20% (15% of men
+and 25% of women) felt shame and 34% (25% of men and 43%
+of women) felt low, and 19% (12% of men and 26% of women)
+felt disgusted because of their body image. In Mail.Ru survey,
+carried out in 2017 in Russia [2], 70% of women and 63% of men
+admitted being dissatisfied with their body. Based on World
+Health Organization data [3] published in 2015, 38% of 15-year-
+old girls and 22% of boys in Estonia think that they are too fat,
+although same statistics indicated that the real percentage of
+overweight and obese people in this age group was 9%
+among females and 19% among males [4].
+Body dissatisfaction has become a global tendency, but
+women have higher rates of body image concern, that can
+result in serious mental health problems, such as depression,
+anxiety, eating disorders and influence all spheres of a
+person’s life.
+1.2 Personal interest
+For my thesis project, I got inspired by Naomi Wolf, who in her
+book ‘Beauty Myth’ [5], explored the concept of beauty as a
+social currency, and stated that ‘beauty myth and attainment
+of beauty is a new virtue that is well suited for a new consumer
+imperative and a new justification for economic unfairness in
+the workplace. Somehow, somewhere, someone must have
+figured out that women will buy more things if they are kept in
+the self-hating, ever-failing, hungry, and sexually insecure
+state of being aspiring “beauties.”
+6
+
+-- 6 of 88 --
+
+It started me thinking that all women to a certain degree
+participate in mass culture that is imposed by media and
+advertisement, see false images selling certain lifestyles and
+are shamed into buying things. Even female magazines as a
+part of mass culture have no right to write the way they want,
+because they will lose lots of advertisers. This led me to the
+idea of finding a solution for adjusting current situation in a
+way that it could promote body confidence and realistic
+standards.
+1.3 Project goals
+My goal for this project is to explore factors influencing body
+satisfaction/dissatisfaction in women and develop a solution
+that can help women resist social pressure and build their
+body confidence. To achieve this, I will:
+1. 	find opportunities for how to adjust current paradigm to the
+needs of women
+2. 	sketch and design concept
+3. 	test my prototype with my target audience and iterate on it
+My personal goal with this project is to apply the acquired
+knowledge during the course, in particular:
+• improve my skills of interviewing people and analyzing the
+results
+• learn how to conduct usability testing using specialized tools
+• explore new technologies that can add to my solution.
+7
+
+-- 7 of 88 --
+
+2. Design Approach
+I followed the Double Diamond framework, developed by
+Design Council in 2005. The two diamonds represent a process
+of exploring an issue more widely or deeply
+(divergent thinking) and then taking focused action
+(convergent thinking)[6]. Using The Double Diamond, I
+structured my project in four phases:
+• Discover, where I started with the initial question of how to
+build body confidence in women, looked for the problem to
+solve by using the collage method, doing user interviews and
+carrying out desk research.
+• Define, where I made sense of my research by analyzing
+user interviews, generating opportunities and formulating
+How Might We Questions.
+• Develop, where I looked for potential solutions by
+brainstorming and sketching, evaluated my ideas and
+picked a concept for further development.
+• Deliver, where I created prototypes and tested them with
+potential users.
+8
+Figure 1: My adaptation of Double Diamond
+
+-- 8 of 88 --
+
+3 Key definitions and focus
+3.1 Body image
+Body image is defined as the picture an individual forms in
+their mind that constitutes beliefs, feelings, sensations,
+behaviours and self-perception, concerning their own body
+[7]. It also includes experiences of embodiment and
+investment in appearance. Body dissatisfaction can be
+defined as a negative evaluation of body size, shape, muscle
+tone, weight, and it usually involves a perceived difference
+between a person’s assessment of their body and their ideal
+body.
+3.2 Target audience
+When defining my target audience for the project, I found out
+that same body dissatisfaction concerns are assigned to
+women from late teens till late 30s. And only middle-aged
+women (40–49) were reported as having more realistic age-
+based comparisons, being concerned to “look good for their
+age,” rather than to look like women in magazine pictures or
+on television, seeing body-related changes such as weight
+gain as an inevitable[8]. That’s why I decided to see what
+happens in the mid-period and design for women between 27
+- 35, the age when women most likely have already graduated
+from university and have less peer pressure, have a career or
+family life, in other words, changed their lifestyle from the one
+they had when they were younger.
+3.3 Focus areas
+To define my focus in this broad and complex topic, I have
+reviewed existing models of body image formation and picked
+the one that provided the most extensive overview and could
+help me define what parts I could research and create impact
+on as a designer.
+Cognitive-behavioural model
+According to cognitive-behavioural model [9], body image is
+influenced by events from the past and present (figure 2).
+9
+
+-- 9 of 88 --
+
+10
+Figure 2: Cognitive-behavioral model
+
+-- 10 of 88 --
+
+Interpersonal influences manifest themselves in our relations
+with people, especially peers, family or romantic partners.
+Parents can influence the body image of their children by
+commenting about a child’s weight or appearance,
+introducing particular food rules or by setting an example
+through dieting and overexercising.
+Peers influence women through “fat talk” (discussion about
+their and other people’s weight loss or weight gain),
+comments and conversations about weight and shape, and
+the belief that popularity is dependent on being thin, or having
+an ‘idol’ to copy.
+Cultural socialization implies that people learn from an early
+age how society values different physical characteristics and
+what meanings are assigned to them. For example, if we think
+about what a superhero might look like, we will probably
+imagine a muscular man.
+Physical characteristics are connected with the fact that a
+body is dynamic and changes over time. Even if puberty, facial
+acne or extra weight were a matter of an individual’s past,
+body image could still remember them. That’ why, for example,
+people who lost weight might still feel fat.
+Personality traits such as perfectionism or insecure
+attachment patterns can be catalysts to body dissatisfaction.
+Everyday situations and events trigger certain emotions,
+thoughts and feelings, and some of them can be painful and
+disturbing, and initiate a chain of responses. Based on those
+events, an individual can formulate certain assumptions about
+themselves, and starts performing certain actions, aimed at
+appearance fixing.
+All emotions, comments from people, assumptions make
+foundation for schemas, which determine how an individual
+perceives reality, thinks about events and themselves.
+3.4 Thesis direction
+Using the cognitive -behavioural model, I reviewed solutions
+that are already suggested to people and found out that there
+are solutions that:
+11
+
+-- 11 of 88 --
+
+• deal with cognitive and emotional part, for example,
+Perspectives app that offers digital cognitive behavioural
+therapy by offering simple exercises to help with body image
+concerns,
+• offer coping strategies, for example, Headspace teaches how
+to practice mindfulness for body confidence,
+• influence cultural socialization and interpersonal
+experiences. For example, Dove Self Esteem Project hosts
+resources for teachers and parents to help them raise body
+confident and critically aware children,
+• some solutions address body schema using virtual reality to
+reduce psychological body size overestimation.
+I didn’t find solutions focused on everyday situations and
+events that cause body dissatisfaction and decided that
+during a user research I could find such situation and develop
+a solution for it. In my opinion addressing everyday situations
+can have a higher impact on women and provide a more
+continuous support, and prevent women from creating
+distractive and negative assumptions about themselves.
+12
+
+-- 12 of 88 --
+
+4. User research
+4.1 Collage Session
+I decided to use the collage method as a starting point of my
+research for three reasons. Firstly, it could provide me with a
+way to narrow down without defining any specific questions.
+Secondly, images are powerful triggers of unconscious
+emotions and past experiences, and it could be at hand with
+such a personal and very emotional topic as relations with the
+body. Thirdly, it could help me understand how sensitive
+women are about it and how careful I should be during
+interviews.
+For the collage session I invited 3 women matching my target
+audience:
+• 	Kate, school teacher, 32,
+• 	Helen, 30, jewellery maker,
+• 	Ann, 28, QA engineer.
+I gave them different types of magazines, such as Vogue,
+Cosmopolitan, Shape and National Geographic. I suggested to
+tear out all the images they like and put them in a stack, and
+only then start creating collages. Before the collage session, I
+created my variant of collage to check how my ideas and
+expectations align with others or how different they are. Also, it
+could serve me as a reminder of confirmation biases all
+people have (Figure 3) and stop me from taking a direction I
+want to go instead of focusing on what women are
+experiencing.
+After collage session (Figure 4), I asked all women to tell about
+their choice of images. Most women admitted that body
+confidence has a lot to do with clothes, and my collage was
+very different compared to theirs.
+I singled out the themes, that can have further development
+during interviews:
+• clothes as a part of being body confident,
+• expressing yourself and being brave and showing yourself to
+the world,
+• receiving attention from men.
+13
+
+-- 13 of 88 --
+
+14
+Figure 3: My collage about body
+
+-- 14 of 88 --
+
+15
+Figure 4: Collages made by participants
+
+-- 15 of 88 --
+
+4.2 User Interviews
+I conducted eight interviews (Figure 5), of women matching
+my age, profession and background requirements:
+• 	age between 27 - 35
+• 	university graduates
+• 	having a career
+I chose the form of an unstructured interview, and prepared
+some questions in advance, but tried to keep it informal and
+free-flowing, so that my interviewees could feel as if they are
+having a normal conversation. I started with broader questions
+and narrowed down when I saw a recurring pattern in
+women’s stories.
+Main goals of the interviews:
+• find out what everyday situations and events trigger
+negative emotions, and what emotions and thoughts women
+experience during those events and situations,
+• learn about coping techniques women worked out in
+response to activating events,
+• discover common values among women, that can be
+supported in the development of my concept,
+• see if themes discovered during the collage session have
+any development in what women were telling.
+4.3 Interview results
+When I analyzed the interviews, I found out that women worked
+out specific ways how to cope with body dissatisfaction
+through fitness, finding people they feel support from, hobbies
+or raising their critical awareness of the social phenomena
+connected with body image.
+Fitness is for mental health, not for ‘beach body’.
+Women see fitness as a way of coping with body
+dissatisfaction, and use it together with other practices to feel
+better about themselves.
+‘Yoga and other body practices help me a lot,
+because they teach me that I am my own
+source of happiness.’
+16
+
+-- 16 of 88 --
+
+17
+Figure 5: Women interviewed for the project
+
+-- 17 of 88 --
+
+‘Fitness goals should be achievable. Even if I do a bit better
+than yesterday, I feel proud of myself.’
+‘I was depressed because of the weight gain, and one day I
+decided not to judge myself on how I look, because then I will
+never be happy until I get there. It is a vicious circle. I did pick
+up random stuff like art and horse riding. I didn't use makeup.
+Tried to get used to my own face because I felt ugly.’
+‘In the gym you're making your attempt to make your life
+better. And people know that.'
+‘I listed down my achievements and focused on them. ‘
+Critical awareness is already in a toolbox.
+Women are critical about what is shown in media and realize
+how destructive the current body ideal is. They look back at
+their past and regret being influenced by those ideals when
+they were younger.
+‘I don't see normal bodies, representing us. You
+know, only the skinny type that affects a lot of
+especially young girls because that's what they
+see and that's what they strive to be. And that’s
+a kind of the idealized image that they see.'
+‘Christina Aguilera and Britney Spears were very popular. Flat
+bellies, open clothes. I saw them and I was very much jealous
+of how they looked. Now I understand that I wasn't even
+mature enough to look the way that they did.’
+‘I follow FB group How Humans Look, and I noticed that no
+matter what a person looks like, plus size, fitness goddess, or
+a model looking nymph, there will be some comments about
+their ugliness.’
+Men are not the ultimate goal.
+Man come and go, but feeling self-worth and having good
+relations with their bodies is carried through the life. They
+confessed that the word ‘single’ does not scare them any
+more.
+‘My body is my most long-term partner.’
+18
+
+-- 18 of 88 --
+
+‘My husband might leave me somewhere in future, I think. Say
+that something is wrong with me. But I am confident, and I am
+happy that I didn’t lose myself in him.’
+‘I used to be very unconfident about my appearance, and
+tried to adjust myself to the tastes of men I dated. I dated a
+fitness trainer and I hit my record 51 kilos. But I was angry and
+miserable and could not sleep. I worked out a lot, drank
+energy drinks and took weight loss pills to do that. I looked at
+myself with my man’s eyes and saw only flaws. But when I
+became single, I realized that everything is amazing.’
+‘Pamela Anderson was their sexual ideal, and I even wanted to
+have breast implants. Now I think that it is not the outside that
+matters, and men fall for who I am as a person. It is interesting
+to hang out with me.’
+Main values
+Although I interviewed women from different countries and
+marital status, I found out that they share the same values and
+attitudes on body confidence.
+Need for belonging and positive comparison
+Women admitted that they value the feeling of togetherness
+and being part of a group of like-minded people.
+‘It is great when you have a community where
+you don't compare yourself with others because
+everyone is the same, and no one is looking at
+you with curiosity.’
+‘I felt my best body-wise when I was in a state rowing team,
+and everyone around me was as tall as me.’
+‘I try to look for people like me. Sometimes I ask my friends:
+‘Does this girl look like me? I am not that bad.’
+Accepting and working with what they have
+Over the years women realized that they might not ever lose
+weight or fix some features that they consider ugly because
+that’s how their bodies are, and it is better to bring out best
+sides.
+19
+
+-- 19 of 88 --
+
+‘I learnt to accept my body. Maybe it is
+a Stockholm syndrome.’
+‘What is a dream body? You are given a certain body and you
+need to learn what to do with it.’
+‘If you are short, curvy and dark-haired, you will never look like
+young Kate Moss.’
+Shopping as a body dissatisfaction factor
+During the interviews, women admitted that they feel worse
+when they go shopping. And this is caused by a variety of
+reasons:
+• brands do not provide sizes and fits considering
+individual parameters
+Individual parameters vary greatly. The problems women
+described were:
+•clothes don't fit in the chest or hips,
+•if clothes fit in the hips, they can be too loose in the waist,
+•clothes are too short or too long,
+•clothes of bigger sizes are very often made just by scaling up
+a small size and don’t consider that a woman wearing XL can
+have a larger chest.
+’25 jeans size is the smallest, but I look like I have
+pooped in them.’
+‘Clothes are made for bad posture. I look like I am wearing
+a pillow cover. Yes, I fill in the clothes space, but it looks so
+unnatural on me.’
+‘There are so many things that don't look good on big chest.
+And no clothes can make me look as if I have a normal figure.’
+• finding sizes takes time and lots of energy.
+Women admitted that they need to try hard and try on a lot of
+clothes before they find something that fits. For them, it is a
+trial and error process, and errors are more common. And for
+many of them, who fall out of the standard size grid it can
+result in having nothing to wear or having no particular
+clothing items, for example, swimming suits for small chest
+and hips, jeans for tall women.
+20
+
+-- 20 of 88 --
+
+‘I have the same model of underwear in different colours
+because it is impossible to find anything else. I found it
+accidentally. I saw that they were much smaller than the size
+written on the label.’
+‘When I go shopping I expect that most likely
+I won’t find anything. I take all the clothes I like,
+and with this pile I go to the dressing room,
+hoping I will be lucky.’
+‘Once I found mom jeans that fitted me, but I had no money
+at that time. I didn't buy them and the brand stopped making
+them. And it took me half a year to find a proper pair.’
+• shopping causes lots of negative emotions
+‘I think it is humiliating to look for XXS clothes. It is
+humiliating when you realize that you can dress
+yourself in kids department only.’
+‘Sometimes I feel anger, pain or disappointment.’
+‘Once I had a very fancy party and needed a cocktail dress.
+I cried in a dressing room because I could not find anything.’
+• it is not possible to evaluate how clothes will fit without
+trying them on
+Online shops demonstrate clothes on standard models, even if
+they are plus size or tall. And based on them it is still hard to
+imagine what clothes would look like on a particular woman’s
+body. Women admitted that they send lots of clothes back
+and don’t shop online because of frequent returns.
+‘Sometimes I order delivery, and realize that a
+dress on a model can not look the same way on
+me.’
+‘Now I can see clothes on models of my size, but not my
+height. Maybe on the website dwarf.com'
+• finding sizes require knowledge many women don’t
+have or have no time to acquire
+21
+
+-- 21 of 88 --
+
+It takes time to learn about brand's sizes and characteristics,
+train your eye to see fashionable clothes and learn to pair
+them together.
+‘I know certain brands that will definitely fit me.
+For example, Levi's have size 24 jeans. Even 23.’
+'I love petite clothes line. You just try them on, and if
+something is supposed to be knee length, it will definitely be
+knee-length. I even don't need to see it on a model.’
+‘New look has 6 size, many other brands start from 8.’
+‘I don't know how clothes should fit and take a friend with me.’
+‘Once I impulsively bought leather leggings, and then could
+not make up any look. A friend of mine suggested wearing
+them with a white shirt, and it has been one of my favourite
+looks recently.’
+•clothes influence professional life
+Failing to find clothes results in failing to create a personal
+style, which can influence professional and social spheres of
+women’s lives or what message they convey through clothes.
+‘People do judge by appearance, especially at
+work. And if I wear a T-shirt and leggings
+(because I can always find them in my size), I
+won’t be seen as a professional.’
+‘I think I express myself more through accessories. Because It
+is hard to do the same with clothes.’
+‘I am especially unhappy with how I look when seasons
+change. You have just got used to winter and then spring
+comes. Everyone looks beautiful but me.’
+‘Am a grown woman, I have money, but I still dress like
+a student.’
+22
+
+-- 22 of 88 --
+
+5. Desk Research
+Interviews provided me with sufficient amount of evidence
+that shopping for clothes is an everyday trigger for many
+women, and it goes far beyond wasting time and not finding
+the right size, but has a negative impact on emotional life. But
+my research would be incomplete without seeing a bigger
+picture behind collected insights. To see how the problem is
+shaped by psychology, culture and retail industry I conducted
+desk research and set the following aims:
+• explore what industry factors make shopping for clothes
+complex and not capable of catering for all women,
+• review what characteristics of the retail industry have an
+opportunity to be adjusted by my solution,
+• discover why failed shopping experience creates so many
+negative emotions from the point of view of culture and
+psychology
+• have an overview of existing solutions
+• see how women challenge the situation and what solutions
+they come up with
+5.1 Retail industry overview
+Fast change of collections
+Zara offers 24 new clothing collections each year; H&M offers
+12 to 16 and refreshes them weekly. Among all European
+apparel companies, the average number of clothing
+collections has more than doubled, from two a year in 2000 to
+about five a year in 2011 [10]. This is aimed at ‘creating the
+feeling that anything the customer could see at any given
+moment as an article they might possibly buy would cease to
+be available within a few days. [11]’
+Usage of psychological mechanisms
+Apart from scarcity, shops rely on coping mechanism called
+“compensatory consumption.” This mechanism means that
+even when a woman can only fit larger sizes at a specific
+retailer, she’ll purchase other products, such as jewellery or
+23
+
+-- 23 of 88 --
+
+make-up to boost her self-esteem. They also exploit ‘’self-
+discrepancy gap’ - a difference between the way you see
+yourself and the way you’d like to be. As April Lane Benson, a
+psychologist who specializes in the treatment of compulsive
+buying disorders, put it: ‘it nudges us to the world of fantasy, a
+world where what we wish to happen takes precedence over
+what we can reasonably expect to happen. Who you are
+becomes confused with what you have’ [12]. Those two
+phenomena manifest themselves in shopping as a way to
+camouflage a negative body image and strive to look like
+somebody else or make yourself a better version, instead of
+accepting who you are.
+Vanity Sizing
+Today, clothing manufacturers are often using “vanity sizing,”
+the labelling of clothes with sizes smaller than the actual cut of
+the items. So, those size 34 slacks might really be closer to size
+36, and perhaps even bigger [13]. (Figure 6). It is done both by
+mass market and luxury brands to increase sales and is based
+on shoppers’ desire to feel slim. Vanity sizing has a negative
+side, resulting in smaller women being removed from standard
+size range and introduction of 000 size of clothes and setting
+an even more unattainable body ideal to those having body
+dissatisfaction.
+24
+Figure 6: Vanity size in action: size 12 in different Credit:
+@chloemmx
+
+-- 24 of 88 --
+
+Size as a brand identity
+Brand’s clothing shape, proportions of each size and eases
+convey a brand’s philosophy and help a brand to stand out
+from other brands. In other words, brands sell not only clothes
+but also a certain lifestyle and a certain fashion body.
+Absence of Standards
+Throughout history, there were attempts to create a universal
+size charts. For example, the US National Bureau of Standards
+published “Body Measurements for the Sizing of Women’s
+Patterns and Apparel” in 1958 based on the 15,000 women
+interviews. Those standards were updated in 1970 and were
+ditched in 1983, after being proven not to be realistic. The
+reason why any standardization fails hides in our genetic
+variety of sizes and proportions (Figure 7). As a result, modern
+brands have to determine their size charts themselves.
+25
+Figure 7: Body diversity by We Are Living Cute’s
+
+-- 25 of 88 --
+
+5.2 Psychological and socio-cultural
+factors of shopping and fashion
+Being different while being the same
+According to Mari Grinde Arntzen [14], fashion is run by two
+human needs: stand out from the crowd and at the same time,
+comply and be like others. On the one hand, we want to
+demonstrate our personality and our individual features, but
+on the other hand, we want to be a part of society or a group
+of people. And every day we are balancing between those two
+needs, and this balance is powered by fashion.
+Fashion as communication
+Clothes act as a means of self-identification, because they are
+a way people interact with the world, transmit information
+about themselves and let other people interpret it. Nowadays,
+due to the overload of information and lack of time, people are
+guided by instincts more and thus tend to judge people more
+by their appearance. Otherwise, people would not be able to
+manage in this world.
+Fashion promotes comparison
+‘Considering that the majority of social media and
+advertisement is image-based, it becomes apparent that
+social comparison could be a serious issue for its users’
+mental health and well being’. [15], which results in negative
+changes in self-esteem, body satisfaction and mental health.
+Beauty as social must
+Naked body by itself does not bear any valuable information.
+Clothes serve as a body that we want to show to this world,
+hide our flaws and display a self-made and constructed ideal.
+This concept is especially evident in the fact that the fashion
+system itself is aimed mostly at women. According to a theory
+called ‘Beauty system’ [16], women are considered beautiful
+and feminine based on the amount of effort they put in
+themselves. That’s why women indulge themselves into
+beauty practices and buy more: naturally looking and
+unconstructed female appearance is not considered beautiful.
+But because it is a false identity imposed on women, it creates
+a conflict between what an individual wants to be and how
+others see her, and results in experiencing shame.
+26
+
+-- 26 of 88 --
+
+Shame
+Dr. Brené Brown, a research professor who has spent the past
+two decades studying courage, vulnerability, shame, and
+empathy, states that modern society does not talk about
+shame, it is a ‘silent epidemic’ [17].
+She describes it in a number of definitions:
+• A feeling that you can not talk about because then everyone
+would know your dirty little secret.
+• Shame is being rejected
+• You work hard to show the world what it wants to see, but
+your mask falls and everyone sees unlikeable parts of you.
+• Shame is feeling like an outsider - not belonging.
+• Self-loathing
+• Shame is like a prison, you deserve being in because
+something is wrong with you.
+• Shame is being exposed - the flawed parts of yourself that
+you want to hide.
+In other words, shame is an extremely painful feeling or
+experience of believing we are flawed and as a result,
+27
+Figure 8: Shame web
+
+-- 27 of 88 --
+
+unworthy of belonging and acceptance. It is an emotion of
+self-evaluation, and it shifts self-reflective thoughts from ‘I did
+something bad’ to ‘I am bad’, putting a focus on who we are,
+and if we repeat saying it to ourselves, we start believing in it
+and indulging in self-destructive behaviours. It creates feelings
+of fear, blame and disconnection (Figure 8).
+According to Brene Brown (Figure 9), women need to develop
+shame resilience by:
+• recognizing shame and understanding triggers,
+• practicing critical awareness,
+• reaching out, for example build connection, mutual support,
+shared experiences, acceptance and belonging, for example
+expanding social network or creating support groups,
+understanding cultural, political and economic influences on
+our personal experiences,
+• speaking shame.
+28
+Figure 9: Steps to shame resilience
+
+-- 28 of 88 --
+
+5.3 Solutions initiated by people
+Women themselves try to solve sizing issues with means
+available to them.
+Models, bloggers and body positivity activists try to raise
+awareness of this problem and share their personal stories of
+failing to find clothes that fit. For example, plus-size model
+Marielle Elizabeth (Figure 10) wrote her story in the article
+‘Apparently, I’m Too Fat to Ski’.
+‘I’ve always wondered why “bikini season” is the only time of
+year synonymous with size-based self-loathing. Seriously,
+have you tried being fat in winter? I speak as an expert: I know
+the true desperation that comes with trying to find plus-size
+snow pants. I have wept in a sporting goods store, with the
+temperatures dropping outside and a romantic getaway that
+required a ski jacket on the horizon. I have optimistically
+moved a pair of snowshoes from three apartments, despite
+not owning the clothes to wear with them for over a decade.
+Oh, I am bitterly aware that winter comes with a size limit.’ [18].
+29
+Figure 10: Marielle Elizabeth and her story
+
+-- 29 of 88 --
+
+Katie Sturino (Figure 11) and other influencers raise size
+problem on Instagram and review brands sizes, show that
+fashion has no size and anyone can look fashionable.
+30
+Figure 11: Sturino’s posts on the problem of sizes, taken from her instagram @katiesturino
+
+-- 30 of 88 --
+
+Such posts create emotional responses and become a place
+where women share their struggles and life hacks to be seen
+by other women (Figure 12).
+31
+Figure 12: Examples of comments under Sturino’s posts
+
+-- 31 of 88 --
+
+Women also create specialized groups, where they share life
+hacks and findings. Below is an example of such a group
+(Figure 13), called ‘Not your size’. The title of the groups is: ‘This
+is a group for fat women or women who think they are fat. Or
+for those feeling ‘like something is wrong with them.
+5.4 Overview of technological
+solutions
+I reviewed technological solutions available in retail and
+offered to customers and found out that they all fall into 3
+categories: AR-based solutions, AI-based recommendation
+systems and tangible solutions.
+Augmented reality
+Fashion brands use AR technology in a variety of ways:
+• showing products in real life via real models to help
+customers evaluate the fit or see how an actual product
+could look outdoors or in real life scenario (Figure 14),
+• installing smart mirrors in stores to provide visitors with
+dressing room alternative, offering clothes combinations and
+providing instant sharing. (Figure 15),
+32
+Figure 13: Example of specialized groups
+
+-- 32 of 88 --
+
+33
+Figure 14: Asos Catwalk AR 	Figure 15: Smart mirrors
+
+-- 33 of 88 --
+
+• bringing dressing rooms into homes of their customers. It is
+done by either creating a mannequin or a virtual avatar
+based on a customer’s height, weight and body
+measurements, or by helping to visualize clothes, shoes or
+jewellery on a body through a smartphone camera.
+Examples of such solutions are Gap fitting room(Figure 16)
+and Wanna kicks app (Figure 17).
+34
+Figure 16: GAP fitting room 	Figure 17: Wanna kicks app
+
+-- 34 of 88 --
+
+Although AR visualization can help customers to see how
+clothes can look on people, it can not be entirely accurate and
+does not take into account materials, shape and surrounding
+light, because developers either use images recognition and
+the body is seen as flat by the algorithm, or create an
+approximated 3D model of a human body (Figure 18).
+Even ASOS’ 'See My Fit' Tool (Figure 19), which was launched in
+2020,lets users see clothes on models of 16 different body
+shapes using AR, but the image is not completely accurate.
+35
+Figure 19: ASOS 'See my fit’
+Figure 18: Drawbacks of AR in placement of objects by
+Design eLearning Tutorials
+
+-- 35 of 88 --
+
+Tangible solutions
+Estonian start-up Fits.me uses a mannequin (Figure 20) that
+shifts into 2,000 different body shapes to let users try clothes
+online. Each size is placed on the robot and viewed on all the
+body shapes. Pictures taken during the process are stored in a
+database and when customers shop online and add their
+measurements, they can see corresponding pictures.
+Artificial Intelligence solutions
+Artificial Intelligence solutions are mostly focused on online
+style and fit advise. For example, Intelistyle uses an algorithm
+to recommend styles and outfits based on preferences, eye
+colour, skin and body shape online. EyeFitU app uses same
+approach, but also caters for in-store customers: users can
+look up an item in the app and find the size they need.
+Outfittery uses questionnaires and a combination of AI and
+real-life stylists to personalize shopping. Canadian/German
+start-up Twenty Billion Neurons (TwentyBN) created an avatar
+(Figure 21) that can interact with shoppers and advise on stock
+and pairing.
+36
+Figure 21: Millie
+Figure 20: Fits.me solution
+
+-- 36 of 88 --
+
+5.5 Desk research summary
+Interviews followed by a desk research helped me see a bigger
+picture behind an everyday shopping experience. I found out
+that:
+• from the point of view of technology, solutions reached a
+high level of visualization and accuracy, but still are unable
+to offer realistic recommendations/size predictions. They are
+run on retailer’s initiative and aimed mostly at online
+shopping,
+• from retail perspective, it is still impossible to adjust ready-
+to-wear clothes to all figures and sizes and change
+approach to sales in the near future: it is not only a complex
+economic and logistics system, but also a system exploiting
+psychology to drive sales.
+• on the level of psychology, not finding suitable clothes is an
+emotionally painful experience for women, because it means
+failing to conform to social norms and convey the right
+message about themselves. Taking a bigger size or not
+finding anything to wear starts the process of self-
+comparison with media images and other people, resulting
+in feeling of unworthiness, shame and being alone with those
+kinds of problems.
+• from people’s approach, creating groups and leaving
+comments is the most common way how to share
+information on clothes, and an unconscious way to practice
+shame resilience in a form of accepting vulnerability,
+practicing empathy, sharing personal stories and building
+connection. The biggest drawback of this solution is that
+findings are location and time based, and they lose their
+relevancy very fast. Also they require preparation for
+shopping: looking through the tips in advance and
+memorizing/saving useful information to use when going
+shopping.
+37
+
+-- 37 of 88 --
+
+6. Ideation
+6.1 Design principles
+Design principles are ‘the guardrails of your solution—quick,
+memorable recipes that will help keep further iterations
+consistent. These principles describe the most important
+elements of solution and give integrity and form to what you’re
+designing’ [19]. I formulated them based on my research.
+Usage of the current paradigm
+• My solution should not be aimed at redesign of retail system
+or its parts. It means that I can not redesign sizes creation
+because it can become one more means of psychologically
+nudging people into buying and lead to the creation of even
+more insecurities in women
+• My solution can take advantage of shops organization, for
+example, how clothes are displayed or how often they
+change collections.
+Promotion of positive comparison
+• My solution should aim at normalization of female bodies,
+showing real people with real bodies in real situations and
+support values common to my target group, described in
+user interviews results.
+Building a sense of community
+• The solution should incorporate principles of shame
+resilience, formulated by Brene Brown, such as practicing
+mutual support, sharing experiences, this way creating a
+feeling of everyone ‘being in the same boat’.
+Real-time contextual information
+• Solution should provide relevant information during
+shopping.
+Non Intrusiveness
+• Solution should not eliminate the pleasurable parts of
+shopping experience, but rather be an assistant, usage of
+which is initiated by users.
+38
+
+-- 38 of 88 --
+
+6.2 Generating opportunities
+According to IDEO ‘we use the How Might We format because it
+suggests that a solution is possible and because they offer you
+the chance to answer them in a variety of ways. [20]’ I
+translated my insights into the following opportunities:.
+• How might we help women find the right fits and sizes?
+• How might we help women cope with negative emotions
+while shopping?
+• How might we build positive comparison while shopping?
+6.3 Persona
+A persona is an ‘archetype, not a real person, but a synthesis
+of facts and observations about real users that leads to a
+memorable character. By creating these characters and
+taking them through scenarios, you and your stakeholders can
+gain a sense of familiarity and empathy with your users. [21]’
+The persona I am designing for is based on the interviews and
+desk research results and comprises characteristics and
+stories common to all women I interviewed.
+Meet Kate
+Kate is 29 years old, works in an HR department in a company
+(Figure 22).
+She is short and wears size XS or XSS, depending on the brand.
+Most of the brands overlook her size or make clothes bigger
+than stated, and she needs to be very inventive and spend lots
+of time to find something. She can not shop in kids
+departments because she has a dress code at work and
+needs to look professional. Ordering online is not an option for
+her either because it is hard to evaluate what she will get
+based on the picture and size description, and very often she
+sends all the orders back.
+When she goes shopping, she takes everything that might fit,
+and with this big pile goes to the dressing room. While trying
+things on she gets very disappointed and sad, realizing that
+everything is too big or too long. She looks at other women,
+walking out of the dressing cabin to show the outfits to their
+friends or waiting near the counter, and thinks that this is unfair
+and that everyone is normal but her.
+39
+
+-- 39 of 88 --
+
+She is an active social media user: has an Instagram account,
+likes to post pictures and stories, tags friends in them.
+She likes new technologies, and bought a drone to make
+videos when she made a trip around Asia together with her
+partner last year.
+She believes that sharing is caring. When they went to China,
+lots of people helped them without asking anything in return,
+even though they didn’t have to and could simply ignore them.
+That’s why she hosts couch serfers, believing that it is a way to
+pay back to the universe and people.
+Her goals are:
+• Feel good about herself when going shopping.
+• Spend little time on shopping and devote spare time to
+activities she enjoys instead.
+Her frustrations are:
+• Does not know how clothes should look on her and where to
+find them.
+40
+Figure 22: Persona
+
+-- 40 of 88 --
+
+• Spends too much time shopping and often ends up buying
+nothing.
+• Has no idea what people of her height and body shape
+should wear.
+• Gets very dissatisfied about her body after shopping.
+6.4 Brainstorming
+‘A brainstorm is a distinct segment of time when you amp up
+the generative part of your brain and turn down the evaluative
+part. The intention is to leverage the collective thinking of the
+group’ [22]. Brainstorming can be carried out using different
+techniques, such as brainwriting, “five whys”, negative
+brainstorming and etc. For my project I used ‘Yes, And!’
+technique to have more structure and constrains within the
+session and be able to build on top of others people’s ideas.
+I invited my coursemates and shared my design principles,
+How Might We Questions and persona with them so that they
+had a better context for brainstorming and build empathy on
+(Figure 23). I was especially interested in a way men would
+approach the problem and see how much they can empathize
+with my persona, which would be helpful preparing my thesis
+presentation.
+For each of my How Might We Questions my coursemates
+wrote down and idea, then we in turns started adding ideas to
+already existing ones (Figure 24). After the ideation I reviewed
+all the ideas, and grouped themes arising from them:
+• using a helper: AI assistant or a friend
+• showing clothes by light or voice interface
+• using a virtual avatar in the shop
+41
+Figure 23: Brainstorming session
+
+-- 41 of 88 --
+
+6.5 Ideation through sketching
+Brainstorming with other people showed that my design
+principles, especially not changing anything in the current
+retail system, are constraints that are easy to breach. And
+most of ideas breached at least one, for example suggesting
+to change the delivery method or reinventing how sizes are
+defined. In addition, brainstorming with coursemates showed
+that effective ideation required a deeper involvement in the
+project and knowledge of the topic. That’s why I decided to
+ideate on my own using sketching. ‘The process of sketching is
+a kind of cognitive scaffolding, a rich and efficient way to off-
+load part of the cognition, especially the mental visualization,
+to physical artifacts in the world. A sketch is not just a way to
+represent your thinking; the act of making the sketch is part of
+the thinking.’ [23].
+42
+Figure 24: Brainstorming results
+
+-- 42 of 88 --
+
+First concept
+First idea that seemed relevant to me was that a woman has a
+body profile in her phone and when she goes into the shop,
+she scans a size shown on the label and the app checks the
+parameters, compares them with her measurements and says
+if clothes will fit or not (Figure 25).
+I decided to validate this idea by using ASOS style assistant
+and size guides available online. I selected trousers on Asos
+similar to the ones I already have and used their size assistant.
+Unfortunately, it didn’t manage to help me, though the system
+had my measurements and some information about my body
+(Figure 26).
+Then I looked at the size guide published by Collusion brand,
+measured myself and found out I need size UK18 - 20. But I
+have them in UK16 already and they are even a bit big.
+This small experiment and industry overview done earlier
+proved, that no-one knows if clothes will fit or not unless tried
+on, and made my concept irrelevant.
+43
+Figure 25: First concept
+
+-- 43 of 88 --
+
+44
+Figure 26: ASOS size assistant
+
+-- 44 of 88 --
+
+Second concept
+For the second idea (Figure 27) I got inspired by my
+Belorussian friend, living in Korea. Once she told me: ‘When I
+see a fat Korean girl, and you know they are rare, I want to
+approach her and ask where she found her clothes.’
+My idea was that you could see what women are wearing,
+what sizes and what brands. But when I drew it, I started
+thinking that it is a bit ‘stalkish’, information may not be up-to-
+date, as the collection is long gone. What if a person passes-
+by quickly? You won’t have time to check your app? Will
+information about passers by be saved constantly on the
+phone? I started having lots of questions, and by questioning
+my concept, realized that it is irrelevant.
+45
+Figure 27: Second concept
+
+-- 45 of 88 --
+
+6.6 Final Concept and Validation
+After those first trials I started thinking of possible ways how to
+create an individual informational overlay, that could be
+accessible only by women having something in common, this
+way being able to relate to each other. And I came up with an
+idea that AR could be such a perfect overlay, and each shop -
+a place for women experiencing same size problems.
+Kate would go to the shop, and through the app find what
+other women wearing XS or XSS size tried on. She could see all
+positive and negative reviews left by her same-size
+community. In AR mode she can just look around in the shop
+and see what is there (Figure 28).
+To validate my idea as early as possible, I decided to show my
+sketches (Figure 29) to my target group (Figure 30).
+46
+Figure 29: Sketches shown to women	Figure 28: Concept
+
+-- 46 of 88 --
+
+47
+Figure 30: Participants
+
+-- 47 of 88 --
+
+My aim of the validation was to:
+• see how women relate to the situation I have sketched,
+• find out what was their attitude to the idea,
+• lean about device preferences.
+Based on the discussions I grouped my findings into 4
+categories (Figure 31).
+I found important points that need to be considered when
+working on a solution:
+• There needs to be a good on-boarding, explaining not only
+how to use an app, but also why the information is relevant
+to you and where it is received from
+• Women found the idea a time saver and a way to reduce
+shopping dissatisfaction
+• No one was interested in AR glasses solution, because at the
+moment they are expensive, and AR glasses launched
+previously failed, and women were skeptical about the new
+ones.
+48
+Figure 31: Feedback capture matrix
+
+-- 48 of 88 --
+
+Seeing how women ideated was extremely valuable to me
+because it helped me to think of other variants of the concept.
+What if it was initiated by shopping malls and what could be
+the way? This way we can embrace a big number of shops. But
+while sketching (Figure 32) I realized that most of the ideas are
+either too complex or expensive, and as a result, not realistic.
+6.8 Conclusion
+The process of ideation reminded me of a puzzle. I had all the
+information from my research and design principles, but the
+concept did not come together because one piece was
+missing. Most often the principle that was not covered by
+solution was using the current retail system and not applying
+any changes to its parts. Since I was well determined not to
+change or omit any of my design principles, I had to produce
+as many variations as I could through sketching,
+brainstorming and showing ideas to people. Thus I managed
+to see different combinations of my principles in action until I
+found the concept able to combine them all.
+49
+Figure 32: Idea exploration based on discussion
+with target audience
+
+-- 49 of 88 --
+
+7. Concept development
+7.1 State of Augmented Reality
+After having created my concept, I needed to conduct
+additional desk research and find out how popular AR
+technology is and what are the technological capabilities of
+Augmented Reality and the nearest future trends..
+Popularity of Augmented Reality
+AR technology has become democratized after introduction of
+Snapchat’s Lense Studio and Facebook’s Spark AR Studio,
+allowing everyone without developer skills design, build and
+share AR experiences. It opened new opportunities for brands
+and their online presence and increased involvement and
+interest of users in Augmented Reality. For example, in the first
+year (2017) of Lens Studio, creators have submitted more than
+250,000 Lenses that have been viewed more than 15 billion
+times [24].
+Current state of technology and it affordance
+Apple’s ARKit and Google’s ARCore software development kits
+(SDKs) were introduced in 2017 and have standardized the
+development tools, making mobile AR app creation accessible
+to the mass audience.
+Latest Apple’s ARKit 3 can [25]:
+• naturally show AR content in front of or behind people using
+People Occlusion,
+• track up to three faces at a time,
+• support collaborative sessions,
+• simultaneously use face and world tracking on the front and
+back cameras,
+• capture motion,
+• detect up to 100 images at a time,
+• get an automatic estimate of the physical size of the images,
+• recognize objects in complex environments
+• use machine learning to detect planes in the environment
+faster.
+50
+
+-- 50 of 88 --
+
+Hardware
+Smartphones have already become powerful devices, capable
+of supporting AR experience, and over upcoming years will
+acquire new features and sensors. For example, Time-of-flight
+sensor, measuring the time it takes for something (be it a laser,
+light, liquid, or gas particle) to travel a certain distance, will be
+able to calculate a detailed 3D map of the room and all of the
+objects in it.
+Return of AR glasses
+After the release of Google Glasses in 2013 and their later fail
+on the market, no one has attempted to introduce real AR
+wearables, but instead introduced limited functions to glasses.
+For example, Snap has the Spectacles 3 that allows integration
+of filters and recording of 3D video. Amazon created Echo
+Frames, that let users access Alexa on the go.
+Glasses can become a big game-changer in the industry with
+Apple, planning to release an augmented-reality headset in
+2022 and a pair of AR glasses by 2023, and aiming to replace
+the iPhone “in roughly a decade”. Supposedly, the glasses will
+synchronize with an iPhone to display texts, emails, maps, and
+games over the user’s field of vision. Facebook is also working
+on glasses, and plans to release them in 2023, 2024 or 2025
+latest.
+Key finding
+• AR technology is affordable and understandable by users.
+• It can support all the functions needed for my solution.
+• It can fully provide individual overlay to the current retail
+paradigm.
+• Over the time my solution can evolve with the appearance of
+AR-enabled glasses.
+7.2 Mental Model
+I decided to use Indi Young Mental Model to understand how
+my solution can or can not support people and help to define
+my solution’s functions. According to Indi Young, mental
+models can be applied to many different situations and
+stages of design and development. ‘Say you already have
+prototypes and usability test results. Say the users just don’t
+51
+
+-- 51 of 88 --
+
+get it. Sketching out a mental model will help you see exactly
+where your design veered off in a direction different than
+users.
+What if your beta application is faring well and you want to
+know in which direction to move next? It’s perfect timing to
+align functionality to a mental model and prioritize the gaps.
+[26]’
+To create my Mental Model diagram (Figure 33), I went
+through the interviews that I made previously, and wrote down
+all the tasks I found.
+In this approach “tasks” mean actions, thoughts, feelings,
+philosophies, and motivations that come up when a person
+accomplishes something or achieves a certain state. Then I
+grouped them and merged the ones that mean the same
+things.
+52
+Figure 33: Mental model
+
+-- 52 of 88 --
+
+Under the towers I added functions (Figure 34) that can be
+implemented in my solution to help women carry out their
+tasks or spare them from unnecessary ones.
+53
+Figure 34: Functions covering users’ tasks
+
+-- 53 of 88 --
+
+7.3 Prototyping and testing
+I decided to do 3 rounds of user tests with 5 users per round.
+According to Jakob Nielsen, ‘you want to run multiple tests
+because the real goal of usability engineering is to improve
+the design and not just to document its weaknesses. After the
+first study with five participants has found 85% of the usability
+problems, you will want to fix these problems in a redesign. The
+second study with 5 users will discover most of the remaining
+15% of the original usability problems that were not found in
+the first round of testing. (There will still be 2% of the original
+problems left — they will have to wait until the third study to be
+identified.[27]’
+I decided to conduct usability tests online using Lookback
+(Figure 35). I found my test participants through a Russian
+Telegram channel ‘Looking for brands’ which caters for a
+group of women similar to my target audience.
+Prototyping and testing - Round 1
+For the first round of tests I created a paper sketch (Figure 36)
+of my concept and created a prototype using Invision to share
+with participants. I decided to leave it very open to
+interpretation because it is the last step where I can see user
+ideation, not being limited by interface functions. Then I
+formulated task scenarios I wanted to test:
+• You are in a shop, and you want to find out if someone has
+already tried the dress you like and what feedback she left
+• You tried on a dress, and it looked terrible on you. You want to
+leave a review.
+After each session I had a follow-up interview to find out what
+women liked/disliked about the idea, and learn more about
+their shopping habits or problems that they face.
+54
+Figure 35: Lookback testing session
+
+-- 54 of 88 --
+
+Results
+Generally, women were interested in my idea and did
+understand the concept, but my paper prototype could not
+show the context of augmented reality well.
+The recurrent issues were:
+• all 5 women found copywriting confusing: everyone thought
+that learn more button was about reading information about
+the product
+• 3 did not find how to add clothes review
+• 3 found rating icons misleading and considered them to be a
+mood selection or too general
+• 2 clicked on clothes on the map, although my idea was that
+they are not clickable.
+55
+Figure 36: Paper prototype main screens
+
+-- 55 of 88 --
+
+Prototyping and testing - round 2
+For the second round of user tests I created detailed
+wireframes (Figure 37) of main screens with images of the
+shop so that users could have a better context for AR part and
+fixed copywriting and interface issues uncovered earlier.
+I gave more concrete tasks to women:
+• You walk in the shop and on the first mannequin you see the
+dress you like. You want to know what reviews women left
+about it.
+• You liked the purple dress with a bird pattern, but it was too
+small in your chest. You want to leave a review.
+Results
+• 5 women considered rating to be a mood selection
+• 4 women admitted that they wanted to write helpful reviews
+but had no idea how to do it
+• 3 women could not find how to switch from map to shop
+view
+56
+Figure 37: Wireframes of the main screens
+
+-- 56 of 88 --
+
+• 2 women had questions regarding such details as how to
+place phone so that it could scan a body, although creating
+a body scan process was clear to them
+Prototyping - round 3
+For the third round of user tests I created fully designed
+screens and created a prototype in Figma. I switched to Figma
+from Invision because I needed a function of automatic
+transition between screens, but Invision did not support it.
+During previous user testings I tested key functions, but for this
+round I:
+• 	defined the look of the whole app. I made it neutral and
+used friendly neutral colours, because potential users of my
+solution have similar problems, but they have different
+tastes.
+• 	added additional functions, such as reactions to the
+comments, viewing reviews on the map, welcome screen,
+profiles
+• 	brought out women faces more by introducing galleries of
+looks created by shoppers.
+AR prototype
+I still had lots of questions about how to see and add
+comments in augmented reality:
+• 	Should reviews be blended into the digital world or be part
+of a smartphone interface?
+• 	If UI elements are blended in, how will a user interact with
+them?
+I created an AR prototype in Torch (Figure 39) to find answers
+to those questions. I used Image tracking function of the app
+and my clothes stand. I chose patterns (Figure 38) that will be
+recognized, and once they are in focus, reviews indicators
+would appear.
+57
+Figure 38: Defining patterns tracked in Torch
+
+-- 57 of 88 --
+
+58
+Figure 39: Prototype made in Torch
+
+-- 58 of 88 --
+
+Key findings
+While testing AR prototype, I found out that having all reviews
+and comments blended into the real world is not very
+convenient because the phone should always be focused on
+the same place. Considering that the solution is used in a
+public place, such interaction with the device is not socially
+acceptable: shop assistance can be against making a video in
+the shop or people around can think that a person is playing
+Pokemon Go or just being weird (Figure 40).
+I decided that the best way to use my solution is to be able to
+see reviews indicators in AR as blended into the surroundings,
+but open and read them in a way we scroll Instagram feed.
+59
+Figure 40: Connotation behind smartphone interaction,
+unsplash.com
+
+-- 59 of 88 --
+
+Testing - round 3
+I tested my solution using the same scenarios I had in the
+previous round, but had longer follow up interviews to find out
+what are the general impressions on my solutions, what
+women liked or disliked about it, how logical was the
+experience. I invited people I interviewed for my research and
+people from the same Telegram group described previously.
+For those who I interviewed previously I customized the
+screens so that they could feel the context better and relate to
+them by using their Facebook avatars.
+I mostly got positive comments and also interesting
+suggestions, that could get further development.
+Body scanning
+‘I mostly don’t know my sizes and don’t remember the last
+time I measured something. So I think it is good that you have
+a model and then can check.’
+Map and filtering
+‘I would put shorts separately from jeans and trousers. Who
+wears shorts? I think it is a very specific item.’
+‘I don’t have skirts. The ones of my size are mini. Maybe I could
+finally find something?’
+Reviews
+‘I never read reviews on websites but it turned out to be very
+helpful. People usually write if size is bigger or smaller than
+stated. It is good that the app has it as well’
+‘I like that there is a summary of reviews. I never read reviews
+but this is a timesaver’
+Meeting a body twin
+‘What if you go shopping with you body twin and you like the
+same dress? But on the other hand all people have different
+tastes, and she might show you something you would never
+try on otherwise.’
+Key points I managed to achieve were:
+• making reviews useful for both readers of the reviews and
+those who don’t read them,
+60
+
+-- 60 of 88 --
+
+• finding text suggestions, that were important to women. All
+women said that knowing if a size is smaller or bigger then
+stated was important.
+Final improvements
+I managed to fix most of the issues, uncovered earlier, except
+the on-boarding. In my opinion it became a recurrent problem
+because the pattern of map and pin selection and the pattern
+of using AR are known to users separately, but when they are
+combined, it creates confusion. To make the process of using
+the app more understandable in the final version I decided to
+add instructions to the main elements of the screens.
+Adding tooltips (Figure 41) also influenced the design of the
+tab bar. Tooltips introduce main functions, adding a review
+button didn’t have to be that big and prominent any more. I
+reduced its size, and also added notifications and other
+functions to the same place, to have them less scattered
+around the screen (which was an issue during the previous
+test rounds) and make them more prominent on the white
+background. Also, this design of the tab bar would enable user
+access adding a review function from any screen of the app.
+61
+Figure 41: Variant 3 and final version
+
+-- 61 of 88 --
+
+8. Final solution
+8.1 Design component
+BodyTwins is an app which offers an alternative way of
+shopping by showing relevant reviews in real-time context
+through augmented reality. It connects women having the
+same body parameters in a network of contributors.
+Link to the prototype:
+https://bit.ly/3bWTPG4
+Link to the video:
+https://vimeo.com/user66347655
+62
+
+-- 62 of 88 --
+
+Body scanning
+Kate fills in basic registration about herself or logs in
+using either email or Instagram and gets to the
+process of body-scanning. Body is scanned using
+time of flight sensor. To do this, she needs to place
+her phone vertically and follow voice instructions on
+whether she is in the right position or she needs to
+turn. She can also see the tutorial on how to do it
+correctly before starting the process.
+I introduced registration through Instagram to
+encourage women follow their body twins there and
+thus influence creation of a more realistic instagram
+feed.
+63
+
+-- 63 of 88 --
+
+When the scan is done, voice instruction notifies her
+about it, and she can see her body in 3D. She can
+rotate and zoom in and out the created model.
+User testings showed that some women doubted if
+the 3D model is theirs, that’s why I added an option
+to see the measurements and adjust them if
+needed.
+A user can re-do her body scan immediately or be
+reminded to re-do it over time by a push
+notification. This option is also always available in
+account settings.
+64
+
+-- 64 of 88 --
+
+Welcome screens
+Kate finished registration and sees a welcome
+screen, that shows avatars of the people who are
+her body twins and are using this app. This screen
+serves as an introduction of what she will see next.
+Kate used to say:
+‘I try to look for people like me. Sometimes I ask my
+friends: ‘Does this girl look like me? I am not that
+bad.’
+Now she sees that there are women like her around.
+65
+
+-- 65 of 88 --
+
+Map view
+Kate is at home. She is having her business trip
+abroad soon and is planning what clothes she can
+take with her. She can not wear leggings or anything
+from kid's department because she is going to meet
+partners and needs to look professional. She realizes
+that she does not have summer trousers, but she
+doesn't want to go shopping. Last time she needed
+a new dress for New Year corporate event, and she
+ended up crying in a dressing room because
+everything was too long or too big.
+Kate used to think: 'When I go shopping, I expect that
+most likely I won't find anything.'
+Now she looks at the map and sees that women
+have already left positive reviews on the clothes. So
+there is hope for her. She can read a summary
+about clothes: which sizes women tried on, how they
+describe them and what looks they made with those
+clothes. Now she can get an idea of what she can
+buy and decides to go shopping.
+66
+
+-- 66 of 88 --
+
+She can also filter reviews by main categories to
+check if there is something she can wear. For
+example, she can see if someone found trousers in
+XXS size.
+67
+
+-- 67 of 88 --
+
+Reviews in augmented reality
+Kate goes to the shop and turns on AR mode of the
+app in one of the shops. It starts with an instruction
+on how to use her phone in AR mode. She quickly
+looks around through the screen and sees all the
+clothes with positive and negative reviews.
+Each label is marked with colour, red or green,
+indicating if the majority of reviews are positive or
+negative. The closer Kate is to the label, the bigger
+and prominent it is. The nearest ones are shown as
+full buttons with labels to serve as an additional hint
+that they can be clicked. It is also a way to instruct
+new users on how to use the app.
+If the clothes are invisible from her angle or are in a
+different section, there are arrow indicators with
+numbers showing her direction. This feature is
+introduced to point out clothes in unexpected
+locations: for example, kid's or men's departments.
+68
+
+-- 68 of 88 --
+
+Kate used to say:
+‘In the shop I see that there is a variety of choice for
+everyone. But this choice ends on me’.
+Kate sees that her body twins have the same
+problems, lots of clothes don’t fit them properly. This
+way she can relate to them and realize that she is
+not alone with her problem.
+69
+
+-- 69 of 88 --
+
+Review details
+Kate likes a dress nearby, and she reads reviews
+added by her body twins. She finds a summary with
+sizes tried on, main clothes descriptions and looks
+with those clothes.
+Kate used to say:
+‘Now I can see clothes on models of my size, but not
+my height. Maybe on the website dwarf.com'.
+Now she can see clothes on people like her and
+clearly understand what they would look like on her.
+70
+
+-- 70 of 88 --
+
+She can also read all reviews left by women. Kate
+can react to reviews by pressing 'Fire' to show that
+the review was very helpful to her, and 'Poop' to let a
+reviewer know that same happened to her.
+71
+
+-- 71 of 88 --
+
+Posting a review
+Although Kate went shopping for trousers, she
+considers other options. Usually, she takes a big pile
+of clothes and tries everything on, but this time her
+pile is a bit smaller. This time Kate doesn't take
+clothes already tried on by other women, but the
+ones without virtual labels. She goes to a dressing
+room, tries them on as usual. Some clothes fit fine,
+and some don’t. She believes that sharing is caring
+and sees that so many women helped her with their
+reviews. That’s why she decides to post reviews on
+the clothes she tried on as well.
+She can select a size that she tried on, add a
+description and a picture. Because app knows her
+measurements, it suggest sizes that she would
+probably choose to speed up the process of leaving
+a review, but she can also add a size herself. The
+app offers text suggestions on how to describe the
+clothes to make reviews more helpful. The
+suggestions are based on Kate’s measurements,
+research and words from other people’s reviews.
+72
+
+-- 72 of 88 --
+
+When the review is ready, she can attach it to the
+item she had tried on.
+'I know certain brand that will definitely fit me. For
+example Levi's have size 24 jeans. Even 23.’
+Now she can share this knowledge with her body
+twins.
+73
+
+-- 73 of 88 --
+
+Following other people
+Kate uses the app very often and started noticing
+that she mostly likes looks and reviews added by the
+same person. So she decides to follow Ann. Kate can
+also see the link to her Instagram account and start
+following her there as well. Now when she uses her
+AR mode, she can click on Ann's avatar and see
+reviews only by her.
+74
+
+-- 74 of 88 --
+
+Meeting your body twin
+Sometimes Kate can not decide if she likes clothes
+or not, and she is not sure if that’s the way they
+should look on her. Shop assistants are not very
+helpful because they want to sell their clothes and
+don’t really know how they are supposed to look on
+different body types.
+There is a special function in the app for this that
+Kate can activate if she wants to. If her body twin is
+also in the shopping mall, she will receive a
+notification about it. And they can meet and go
+shopping together.
+75
+
+-- 75 of 88 --
+
+8.2 Psychology behind the solution
+If we have a look at the app from Shame Resilience Theory,
+we can see that my solution provides several ways to build
+shame resilience.
+My whole solution is aimed at shopping as a body
+dissatisfaction trigger, and because of its purpose it already
+serves as a way of acknowledging personal vulnerability. In
+other words, if a woman downloads an app, it is already an
+unconscious first step to addressing her trigger.
+On the level of practicing critical awareness, the solution does
+not impose an ideal of how a woman should look, but brings
+out real people, usually invisible in media. By showing real
+women it creates a way to normalize real bodies in real
+situations. It provides a bigger context for feeling shame while
+shopping for clothes. As Brene Brown says, ‘shame works only if
+we are alone in it. If we think there is someone else, a group of
+women, a world full of women, struggling with the same issue,
+the concept of shame becomes bankrupt.’
+Reaching out manifests itself in the solution in the form of
+reviews and reactions, which are a way to share a personal
+story within a context of shopping.
+76
+
+-- 76 of 88 --
+
+8.3 Main flows
+77
+
+-- 77 of 88 --
+
+78
+
+-- 78 of 88 --
+
+79
+
+-- 79 of 88 --
+
+80
+
+-- 80 of 88 --
+
+9. Reflections
+9.1 Process reflection
+In my opinion, carrying out this thesis project has given a boost
+to me as a designer and added valuable skills and attitudes to
+my future work.
+Firstly, I managed to find efficient strategies of narrowing down
+and finding the right focus through choosing the right
+methods at the right time. It was especially important at the
+beginning, because the topic of body confidence is complex
+and consists of multiple levels.
+Secondly, I fully achieved my personal goals, stated in the
+beginning of the project: improved my skills of interviewing
+people and analyzing interviews and got new skills in user
+testing with professional tools.
+Thirdly, I overcame my personal biases and underestimating
+the power of research. Before the project it felt to me that it
+means researching all the creativity out of design, but now I
+can see the value of it and, what is more important, approach
+more critically my work and works of others, and see and
+evaluate the amount of research applied in other people’s
+solutions.
+Lastly, I mastered my time planning skills and learned a
+valuable lesson of meeting deadlines.
+9.2 Future development
+Despite reaching my goals for this project, I would like to refine
+my solution further. I plan to test my solution in a set up similar
+to the shop environment, which was impossible because of
+coronavirus. Although I tested functions of my solution and got
+feedback on it, I feel that testing in real environment can give a
+better understanding of psychology behind the solution. How
+women would feel if they saw their body twins? Would it be
+uncomfortable? Would their attitude to their body change over
+time?
+In addition to that, I would like to scale my solution to AR
+glasses and see how change of the device will influence
+interaction. Probably lot’s of interactions will happen just by
+81
+
+-- 81 of 88 --
+
+having an object in focus and won’t require any gestures. How
+could information be shown while a user is walking among the
+displays? What can they see when they decide to have a
+closer look at the clothes?
+This set of questions opens new opportunities for further
+development of the solution.
+9.3 Solution within a context of bigger
+trends
+Shopping after corona
+Lifestyle and shopping will change after coronavirus, especially
+in-store shopping, which my solution is aimed at. On the one
+hand, Report by the Business of Fashion (BoF) and consultants
+McKinsey products states that global fashion sales are
+predicted to fall by up to 30% in 2020, and the luxury end of the
+market will be even harder hit, with sales slumping by up to
+40%[28]. It also predicts that social distancing has already
+made digital an urgent priority. On the other hand, people do
+not always act logically, and we can not fully predict their
+behaviour. For example, Hermes's flagship store in
+Guangzhou recorded US$2.7 million in sales (S$3.8 million) just
+a day after reopening [29], due to "revenge spending" (a
+buying binge by shoppers emerging from lockdown). My
+solution can still be viable within both scenarios: either if
+women are happy and enjoy coming back to normal life more
+than ever, or if they need a way to minimize time spent in
+crowded places and a tool for faster decisions making when
+shopping.
+Search for meaningful connection
+GlobalWebIndex's Consumer Trends for 2019 report suggests
+that stepping away or downsizing on social media has
+become an increasing trend throughout the past year.
+According to, Reddit Co-founder Alexis Ohanian, people want
+to belong to a smaller community, where they can be heard
+and where they can meet like-minded people. "What people
+seem to be clamoring for more and more now is community,
+and so whether that goes to private group chats — like your
+WhatsApp group, your Signal group — or new platforms that
+have emerged," he said [30]. My solution can provide an active
+82
+
+-- 82 of 88 --
+
+experience around the subject of interest for people interested
+in fashion and those who need help and support.
+Overcoming insecurities
+Size and body shape is a topic widely discussed in media and
+among people, but rarely spoken out loud in a context of
+everyday activities. As one of the women I interviewed said: 'I
+like sauna, but I don't go there. Everyone around me will be slim
+and sporty, and I have a fat belly.' People think about it and
+avoid many pleasurable activities, where their body will be
+exposed. I believe my solution can be implemented in different
+ways: help people overcome their insecurities by organizing
+interest-based groups: go together to the sauna, start working
+out with people like you or organize an efficient clothes swap
+party and be sure that everyone will find something they like.
+Feminism
+I started my thesis with a quote by Naomi Wolf, and would like
+to finish it with another Naomi Wolf’s quote: ‘Ironically, the myth
+that drives women apart also binds them together.
+Commiserating about the myth is as good as a baby to bring
+strange women into pleasant contact, and break down the line
+of Other Woman wariness. A wry smile about calories, a
+complaint about one’s hair, can evaporate the sullen
+examination of a rival in the fluorescent light of a ladies’ room.
+On one hand, women are trained to be competitors against all
+others for “beauty”; on the other, when one woman—a bride, a
+shopper in a boutique—needs to be adorned for a big
+occasion, other women swoop and bustle around her in
+generous concentration in a team formation as effortlessly
+choreographed as a football play. These sweet and satisfying
+rituals of being all on the same side, these all-too-infrequent
+celebrations of shared femaleness, are some of the few
+shared female rituals left; hence their loveliness and power.
+But, sadly, these delightful bonds too often dissolve when the
+women reenter public space and resume their isolated,
+unequal, mutually threatening, jealously guarded “beauty”
+status.’ I believe that from feminist perspective my solution
+can be a digital way of practicing female culture and create
+invisible bonds and solidarity between women.
+83
+
+-- 83 of 88 --
+
+References
+1. 	‘Body image: How we think and feel about our bodies,’
+Mental Health Foundation, 2019, https://
+www.mentalhealth.org.uk/publications/body-image-report
+2. 	'Опрос Леди Mail.Ru: мужчины больше работают над
+внешностью, чем женщины’, Mai.Ru, 2017, https://
+corp.mail.ru/ru/press/releases/10115
+3. 	‘Body image’, European Health Information Getaway,
+accessed February 23, 2020, https://gateway.euro.who.int/
+en/indicators/hbsc_19-body-image
+4. 	‘Overweight and obese’, European Health Information
+Getaway, accessed February 23, 2020, https://
+gateway.euro.who.int/en/indicators/hbsc_49-overweight-
+and-obese
+5. 	Naomi Wolf. The Beauty Myth: How Images of Beauty Are
+Used Against Women (HarperCollins Publishers, 2002), 18.
+6. 	‘What is the framework for innovation?’ Design Council's
+evolved Double Diamond’, Design Council, accessed May 1,
+2020, https://www.designcouncil.org.uk/news-opinion/
+what-framework-innovation-design-councils-evolved-
+double-diamond
+7. 	Anke Jobsky. The Body-Image Meaning-Transfer Model: An
+investigation of the sociocultural impact on individuals‘
+body-image (Anchor Academic Publishing, 2014), 1, Google
+Books.
+8. 	Thomas F.Cash. Body Image a Handbook of Theory,
+Research, and Clinical Practice (New York, NY: Guilford
+Press,) 2012, 96, Kindle Edition.
+9. 	Thomas F.Cash. The Body Image Workbook: An Eight-step
+Program for Learning to Like Your Looks (New Harbinger
+Publications, 2008), Kindle Edition.
+10. 	Nathalie Remy, Eveline Speelman, and Steven Swartz ‘Style
+that’s sustainable: A new fast-fashion formula’ McKinsey,
+October 2016, https://www.mckinsey.com/business-
+84
+
+-- 84 of 88 --
+
+functions/sustainability/our-insights/style-thats-
+sustainable-a-new-fast-fashion-formula
+11. 	Enruque Badía. Zara and her Sisters: The Story of the World’s
+Largest Clothing Retailer (Palgrave Macmillan, 2009), 123,
+Kindle Edition.
+12. April Lane Benson. To Buy or Not to Buy: Why We Overshop
+and How to Stop (Trumpeter, 2008),Kindle Edition.
+13. Roger Dooley, ‘The Psychology Of Vanity Sizing’, Forbes, 2013,
+https://www.forbes.com/sites/rogerdooley/2013/07/29/
+vanity-sizingt
+14. Mari Grinde Arntzen. Dress Code: The Naked Truth About
+Fashion (Reaktion Books,2015), Apple Books.
+15. Carolyn Mair. The Psychology of Fashion (Routledge, 2018),
+Kindle Edition.
+16. Lorraine Code. Encyclopedia of Feminist Theories
+(Routledge, 2000), Kindle Edition.
+17. Brene Brown. I Thought It Was Just Me: Women Reclaiming
+Power and Courage in a Culture of Shame (,2007), Kindle
+Edition.
+18. Marielle Elizabeth. ‘Apparently, I’m Too Fat to Ski’, The Cut,
+January 30, 2020, https://www.thecut.com/2020/01/
+apparently-im-too-fat-to-ski.html
+19. ‘Design Principles’ IDEO, accessed May 1, 2020, https://
+www.designkit.org/methods/27
+20. ‘How Might We’ IDEO, accessed May 1, 2020, https://
+www.designkit.org/methods/3
+21. Elizabeth Goodman Mike Kuniavsky Andrea Moed.
+Observing the User Experience: A Practitioner’s Guide to
+User Research (Elsevier ,2012).
+22. ‘Design Thinking Bootleg’ Stanford d.school, 2018, https://
+dschool.stanford.edu/resources/design-thinking-bootleg
+23. ‘Design Thinking, Ideation, and Sketching’ O’Reilly, accessed
+April 22, 2020, https://www.oreilly.com/library/view/the-ux-
+book/9780123852410/xhtml/CHP007.html
+85
+
+-- 85 of 88 --
+
+24. Lens Studio ‘2018: The Year of the AR Creator’, Medium,
+December 20, 2018
+25. ‘Human Interface Guidelines’ Apple Developper, accessed
+April 1, 2017.
+26. Indi Young. Mental Models:Aligning Design Strategy with
+Human Behavior (Rosenfeld Media, 2008), 13, Kindle Edition
+27. Jakob Nielsen. ‘Why You Only Need to Test with 5 Users’,
+March 18, 2000, https://www.nngroup.com/articles/why-
+you-only-need-to-test-with-5-users/
+28. ‘The State of Fashion 2020: Coronavirus Update — It's Time
+to Rewire the Fashion Industry.’ The business of Fashion,
+accessed May 1, 2020, https://www.businessoffashion.com/
+articles/intelligence/the-state-of-fashion-2020-
+coronavirus-update-bof-mckinsey-report-release-
+download
+29. ‘Revenge spending? Hermes store in China hauls in S$3.8m
+a day after reopening’, CNA Luxury, accessed May 12 2020,
+https://cnaluxury.channelnewsasia.com/obsessions/
+hermes-china-store-reopening-guangzhou-
+flagship-12640006
+30. Isobel Asher Hamilton. ’Reddit cofounder Alexis Ohanian
+issued an ominous warning for Facebook: 'We've hit peak
+social’, December 4, 2018, https://
+www.businessinsider.com/reddit-cofounder-alexis-
+ohanian-says-tech-has-hit-peak-social-2018-12?
+r=US&IR=T
+86
+
+-- 86 of 88 --
+
+Copyright Declaration
+I hereby declare that:
+1. 	the present Master’s thesis is the result of my personal contribution
+and it has not been submitted (for defence) earlier by anyone else;
+2. 	all works and important viewpoints by other authors as well as any
+other data from other sources used in the compilation of the Master’s
+thesis are duly acknowledged in the references;
+3. 	I give consent to the Estonian Academy of Arts to publish my Master’s
+thesis in the repository thus making it available for the general public
+by means of the Internet.
+Pursuant to the above, I state that:
+- 	I as the author of the thesis am the sole owner of the individual
+copyright of the present Master’s thesis and the works included and/
+or described within the thesis and the disposal of the proprietary
+rights related with the Master’s thesis is subject to the procedures in
+force at the Estonian Academy of Arts;
+- 	as the Master’s thesis published in the repository may be accessed
+by an unlimited number of persons, I presume that the readers of the
+thesis comply with laws and other legal acts and good practices in
+good faith, in a fair manner and with respect to and consideration of
+the rights of other people.
+The copying, plagiarising or any use of the present Master’s thesis and the
+works included and/or described within the thesis that infringes the
+copyright is prohibited.
+15 May, 2020
+Lidziya Piatrova
+(the name and signature of the author of the Master’s thesis)
+The thesis complies with the Master’s thesis requirements:
+__________________
+(date)
+_________________________________
+(the signature of the Master’s thesis supervisor, academic or research degree)
+87
+
+-- 87 of 88 --
+
+88
+
+-- 88 of 88 --
+
